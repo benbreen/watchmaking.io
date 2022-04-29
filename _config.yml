@@ -26,4 +26,3 @@ transfer:
   source: _site/
   destination: ~/Git/clayh53.github.com/
 
-theme: jekyll-theme-cayman
