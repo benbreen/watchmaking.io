@@ -1,0 +1,73 @@
+<h1 id="daily-notes">Daily Notes</h1>
+
+<p>Daily notes allow you to quickly create and access notes for today.</p>
+
+<p>Try it out, run the <code class="language-plaintext highlighter-rouge">Foam: Open Daily Note</code> command.</p>
+
+<h2 id="shortcuts-and-snippets">Shortcuts and Snippets</h2>
+
+<p>You can quickly open today’s daily note by pressing <code class="language-plaintext highlighter-rouge">alt+d</code>.
+You can also automatically open today’s note via the <code class="language-plaintext highlighter-rouge">Foam › Open Daily Note: On Startup</code> setting.</p>
+
+<p>You can also quickly create link to your daily notes, in the configured format, using <a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">snippets</a>.</p>
+
+<p>Type <code class="language-plaintext highlighter-rouge">/today</code> and press <code class="language-plaintext highlighter-rouge">enter</code> to link to today’s note.
+You can also write:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Snippet</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/tomorrow</code></td>
+      <td>tomorrow</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/yesterday</code></td>
+      <td>yesterday</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/monday</code></td>
+      <td>next Monday</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/+1d</code></td>
+      <td>tomorrow</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/-3d</code></td>
+      <td>3 days ago</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/+1w</code></td>
+      <td>in a week</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/-1m</code></td>
+      <td>one month ago</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/+1y</code></td>
+      <td>in one year</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You get the idea ;)</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>It’s possible to customize path and heading of your daily notes, by following the <a href="https://github.com/felixge/node-dateformat#mask-options">dateformat masking syntax</a>.
+The following properties can be used:</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">  </span><span class="nl">"foam.openDailyNote.directory"</span><span class="p">:</span><span class="w"> </span><span class="s2">"journal"</span><span class="err">,</span><span class="w">
+  </span><span class="nl">"foam.openDailyNote.filenameFormat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"'daily-note'-yyyy-mm-dd"</span><span class="err">,</span><span class="w">
+  </span><span class="nl">"foam.openDailyNote.fileExtension"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mdx"</span><span class="err">,</span><span class="w">
+  </span><span class="nl">"foam.openDailyNote.titleFormat"</span><span class="p">:</span><span class="w"> </span><span class="s2">"'Journal Entry, ' dddd, mmmm d"</span><span class="err">,</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The above configuration would create a file <code class="language-plaintext highlighter-rouge">journal/daily-note-2020-07-25.mdx</code>, with the heading <code class="language-plaintext highlighter-rouge">Journal Entry, Sunday, July 25</code>.</p>

@@ -1,0 +1,80 @@
+<h1 id="writing-notes">Writing Notes</h1>
+
+<p>Notes are simple text files with some extra flavor, in the shape of Markdown syntax and support for extra properties (see [<a href="../features/note-properties" title="Note Properties">note-properties</a>]).</p>
+
+<h2 id="foam-syntax">Foam Syntax</h2>
+
+<p>Foam uses standard Markdown, with a few added twists:</p>
+
+<ul>
+  <li>the title of a note (e.g. in the [<a href="../features/graph-visualization" title="Graph Visualization">graph-visualization</a>]) is given by precedence based on:
+    <ul>
+      <li>the <code class="language-plaintext highlighter-rouge">title</code> property (see [<a href="../features/note-properties" title="Note Properties">note-properties</a>])</li>
+      <li>the first <code class="language-plaintext highlighter-rouge"># heading 1</code> of the file</li>
+      <li>the file name</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="markdown-syntax">Markdown Syntax</h2>
+
+<p>With Markdown, we can style our notes in a simple way, while keeping the document a simple text file (the best way to future-proof your writings!).</p>
+
+<p>You can see the formatted output by running the <code class="language-plaintext highlighter-rouge">Markdown: Open Preview to the Side</code> command.</p>
+
+<p>Here is a high level overview of Markdown, for more information on the Markdown syntax <a href="https://commonmark.org/help/">see here</a>.</p>
+
+<h1 id="heading-1">Heading 1</h1>
+
+<h2 id="heading-2">Heading 2</h2>
+
+<h3 id="heading-3">Heading 3</h3>
+
+<h4 id="heading-4">Heading 4</h4>
+
+<h5 id="heading-5">Heading 5</h5>
+
+<h6 id="heading-6">Heading 6</h6>
+
+<p>This is a <a href="https://www.google.com">link to google</a>.</p>
+
+<p>This is a wikilink (aka internal link) to [<a href="../features/note-properties" title="Note Properties">note-properties</a>].</p>
+
+<p>Here is an image:
+<img src="../../attachments/foam-icon.png" alt="image" /></p>
+
+<blockquote>
+  <p>this is a blockquote
+it can span multiple lines</p>
+</blockquote>
+
+<ul>
+  <li>list item</li>
+  <li>list item</li>
+  <li>list item</li>
+</ul>
+
+<ol>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+</ol>
+
+<p>This text is <strong>in bold</strong> and this is <em>italic</em>.</p>
+
+<p>The following is a horizontal rule</p>
+
+<hr />
+
+<p>This is a table:
+| Column 1 | Column 2 |
+| ——– | ——– |
+| R1C1     | R1C2     |
+| R2C1     | R2C2     |</p>
+
+<p>You can <code class="language-plaintext highlighter-rouge">inline code</code> or</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>you can create
+code blocks
+</code></pre></div></div>
+
