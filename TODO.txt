@@ -1,0 +1,22 @@
+Make menu bar static
+Make logo and FavIcon
+Analytics
+Gallery Module
+
+
+Separate Digital Garden from Posts
+Garden Variables and Display - Maturity
+Display Backlinks
+
+Find how to use backlinks as a substitute for Tags
+
+Get popup-preview working
+- Only show relevant Anchor section where linking to Anchor
+
+Investigate reddit etc instead of Discourse
+Also look into closer discourse integration
+
+Experiment with other fonts e.g. HBR
+Experiment with page colour
+Implement Dark Mode
+

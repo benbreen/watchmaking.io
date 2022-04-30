@@ -32,3 +32,8 @@ optional_front_matter:
   remove_originals: true
 #  enabled: false
 
+collections:
+  top_level_pages:
+    sort_by: page_order
+    output: true
+

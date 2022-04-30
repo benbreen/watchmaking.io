@@ -1,0 +1,63 @@
+---
+layout: full-width
+title: blog
+page_order: 1
+# Note that this index page uses a full-width layout!
+---
+
+  <h1 class="content-listing-header sans">Articles</h1>
+
+  <article>
+    <div>
+    <div id="page-description" title="Short description of page.">
+    Discussion of how to teach active reading and questioning of scientific research. Partially fake research papers may teach a critical attitude. Various ideas for games reviewed.
+    </div>
+    <div class="link-tags">
+    <p><a href="/docs/ai/gpt/index" class="link-tag link-local link-annotated has-annotation spawns-popup" rel="tag" data-link-icon-type="text" data-link-icon="𝔊" data-attribute-title="Link to ai/gpt tag index">GPT</a>⁠, <a href="/docs/design/index" class="link-tag link-local link-annotated has-annotation spawns-popup" rel="tag" data-link-icon-type="text" data-link-icon="𝔊" data-attribute-title="Link to design tag index">design</a>⁠, <a href="/docs/philosophy/index" class="link-tag link-local link-annotated has-annotation spawns-popup" rel="tag" data-link-icon-type="text" data-link-icon="𝔊" data-attribute-title="Link to philosophy tag index">philosophy</a>⁠, <a href="/" class="link-tag link-local link-annotated has-annotation spawns-popup" rel="tag" data-link-icon-type="text" data-link-icon="𝔊" data-attribute-title="Link to statistics tag index">statistics</a></p>
+    </div>
+    <div id="page-metadata-block">
+    <span id="page-date-range"><span id="page-creation" title="Date page contents were begun."><em>2022-03-07</em></span>–<span id="page-source"><a class="no-icon has-content spawns-popup" href="/Fake-Journal-Club.page" data-attribute-title="Link to latest revision of the raw Markdown text source for this page, 'Fake Journal Club: Teaching Critical Reading': /Fake-Journal-Club.page"><span class="indicator-hook"></span><span id="page-modified" title="Date of last major modification to this page."><em>⁠2022-04-23</em></span></a></span></span> <span id="page-status" title="Writing status of current page: ranges 'abandoned'/'notes'/'draft'/'in progress'/'finished'"><em>finished</em></span> <span id="page-confidence"><a href="/top_level_pages/about" class="link-local has-content spawns-popup" data-link-icon-type="text" data-link-icon="𝔊" data-attribute-title="Explanation of 'confidence' metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: 'certain'/'highly likely'/'likely'/'possible'/'unlikely'/'highly unlikely'/'remote'/'impossible')" style=""><span class="indicator-hook"></span>⁠certainty</a>: <em>log</em></span> <span id="page-importance" class="link-live has-content spawns-popup"><a href="http://127.0.0.1:4000/articles/20/tufte-style-jekyll-blog#fundamentals" class="link-live has-content spawns-popup" data-link-icon-type="text" data-link-icon="𝔊" data-attribute-title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world."><span class="indicator-hook"></span>⁠importance</a>: <em>4</em></span> <span class="backlinks"><a id="backlinks" class="backlinks has-content spawns-popup" href="https://en.wikipedia.org/wiki/Freedom_Movement_(Slovenia)" data-attribute-title="Reverse citations/backlinks for this page (the list of other pages which link to this page)."><span class="indicator-hook"></span>⁠backlinks</a></span> <span class="link-bibliography"><a id="link-bibliography-link" href="/docs/link-bibliography/Fake-Journal-Club" class="link-local has-content spawns-popup" data-link-icon-type="text" data-link-icon="𝔊" data-attribute-title="Bibliography of links cited in this page (forward citations)."><span class="indicator-hook"></span>⁠bibliography</a></span>
+    </div>
+    </div><noscript>
+          <div id="noscriptWarning" class="admonition warning">
+            <div class="admonition-title">
+              <p>[JS Disabled!]</p>
+            </div>
+            <p>[For support of <a href="/Design" title="About: Gwern.net Design: principles, features, links, tricks">website features</a> (tablesorting, collapsible sections, image zooming, link annotation popups/popins, sidenotes), please enable JavaScript.]</p>
+          </div></noscript>
+  
+    <ul>
+    <li>
+    <a href="#not-learning" class="has-content spawns-popup"><span class="indicator-hook"></span>⁠Not Learning</a>
+    </li>
+    <li>
+
+      <a href="https://www.lesswrong.com/posts/5JDkW4MYXit2CquLs/your-strength-as-a-rationalist" class="link-live has-content spawns-popup" data-link-icon="LW" data-link-icon-type="text" style=""><span class="indicator-hook"></span>⁠confused by fiction</a>
+    
+    </article>
+
+<!--
+  <span id="page-confidence"><a href="/About#confidence-tags" title="Explanation of 'confidence' metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: 'certain'/'highly likely'/'likely'/'possible'/'unlikely'/'highly unlikely'/'remote'/'impossible')">certainty</a>: <em>log</em></span>
+-->
+  <ul class="content-listing ">
+    {% for post in site.posts %}      
+        <li class="listing">
+          <hr class="slender">
+          <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="contrast">{{ post.title }}</h3></a>
+          <br><span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span>  <br/>
+          <div>{{ post.excerpt }}</div> 
+        </li>
+    {% endfor %}
+  </ul>
+
+
+<script src="/assets/js/popups.js?v=1650985358" defer></script>
+<script src="/assets/js/popins.js?v=1650617058" defer></script> 
+<script src="/assets/js/annotations.js?v=1651100175" defer></script>
+<script src="/assets/js/extracts.js?v=1651162646" defer></script>
+<script src="/assets/js/extracts-annotations.js?v=1650997383" defer></script>
+<script src="/assets/js/extracts-content.js?v=1651020041" defer></script>
+<script src="/assets/js/extracts-options.js?v=1649625806" defer></script> 
+
+
+
