@@ -17,7 +17,7 @@
     position: relative;
     z-index: 1;
 }
-.has-content .indicator-hook {
+/*.has-content .indicator-hook {
     padding-left: 0.3em;
     position: relative;
     z-index: -1;
@@ -69,7 +69,7 @@ body.index .has-content .indicator-hook::before {
 }
 .markdownBody a.has-annotation:hover {
     background-image: var(--GW-dotted-underline-hover-background-image);
-}
+}*/
 
 /*	TOCs in pop-frames, and also in link bibliographies, directory indexes, etc.
  */

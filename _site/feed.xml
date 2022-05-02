@@ -5,14 +5,16 @@
     <description>Making Mechanical Watches from Scratch</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 30 Apr 2022 22:19:30 +0100</pubDate>
-    <lastBuildDate>Sat, 30 Apr 2022 22:19:30 +0100</lastBuildDate>
+    <pubDate>Mon, 02 May 2022 19:32:30 +0100</pubDate>
+    <lastBuildDate>Mon, 02 May 2022 19:32:30 +0100</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
         <title>Edge Cases</title>
         <description>&lt;p&gt;Some edge cases and cautionary examples on using Markdown for writing content using this theme. In particular, list syntax can really knot things up.
 &lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/articles/20/tufte-style-jekyll-blog&quot;&gt;This links to another post&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;mathjax-improperly-parsing-greater-and-less-than-and-ampersands-inside-blocks&quot;&gt;Mathjax improperly parsing greater and less than and ampersands inside blocks&lt;/h3&gt;
 
@@ -74,6 +76,17 @@ using the standard Kramdown parser. Some examples sent to me by Quxiaofeng are n
 &lt;p&gt;However, a problem still exists for inline matrix notation, from an example &lt;a href=&quot;https://en.wikibooks.org/wiki/LaTeX/Mathematics#Matrices_in_running_text&quot;&gt;here&lt;/a&gt;:&lt;/p&gt;
 
 &lt;p&gt;A matrix in text must be set smaller: \(\bigl(\begin{smallmatrix}a &amp;amp; b \\ c &amp;amp; d\end{smallmatrix} \bigr)\) to not increase leading in a portion of text. The way this inline matrix is written is: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$$ \bigl(\begin{smallmatrix}a &amp;amp; b \\ c &amp;amp; d\end{smallmatrix} \bigr) $$&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;gallery-test&quot;&gt;Gallery Test&lt;/h2&gt;
+&lt;div class=&quot;image-gallery&quot;&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/783px-Test-Logo.svg.png&quot; class=&quot;no-popin&quot; title=&quot;783px-Test-Logo.svg&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/783px-Test-Logo.svg.png
+&quot; alt=&quot;783px-Test-Logo.svg&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/french-test-1750x660-1.jpeg&quot; class=&quot;no-popin&quot; title=&quot;french-test-1750x660-1&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/french-test-1750x660-1.jpeg
+&quot; alt=&quot;french-test-1750x660-1&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/test-english-home-Level-test.jpeg&quot; class=&quot;no-popin&quot; title=&quot;test-english-home-Level-test&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/test-english-home-Level-test.jpeg
+&quot; alt=&quot;test-english-home-Level-test&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/test-overview-thumb.png&quot; class=&quot;no-popin&quot; title=&quot;test-overview-thumb&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/test-overview-thumb.png
+&quot; alt=&quot;test-overview-thumb&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/testimages_screenshot.jpeg&quot; class=&quot;no-popin&quot; title=&quot;testimages_screenshot&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/testimages_screenshot.jpeg
+&quot; alt=&quot;testimages_screenshot&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;edge-case-1-from-quxiaofeng&quot;&gt;Edge Case 1 from Quxiaofeng:&lt;/h2&gt;
 
@@ -175,6 +188,10 @@ using the standard Kramdown parser. Some examples sent to me by Quxiaofeng are n
       <item>
         <title>Tufte-style Jekyll blog</title>
         <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;The Tufte Jekyll theme&lt;/span&gt;  is an attempt to create a website design with the look and feel of Edward Tufte’s books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.&lt;!--more--&gt; The idea for this project is essentially cribbed wholesale from Tufte and R Markdown’s Tufte Handout format&lt;label for=&quot;One&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;One&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;See &lt;a href=&quot;https://tufte-latex.github.io/tufte-latex/&quot;&gt;tufte-latex.github.io/tufte-latex/&lt;/a&gt; and &lt;a href=&quot;http://rmarkdown.rstudio.com/tufte_handout_format.html&quot;&gt;rmarkdown.rstudio.com/tufte_handout_format&lt;/a&gt; &lt;/span&gt; This page is an adaptation of the &lt;a href=&quot;http://rmarkdown.rstudio.com/examples/tufte-handout.pdf&quot;&gt;Tufte Handout PDF&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/articles/20/Edge-Cases&quot; class=&quot;link-live has-content spawns-popup&quot; data-link-icon-type=&quot;text&quot; data-link-icon=&quot;𝔊&quot; data-attribute-title=&quot;Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.&quot; style=&quot;&quot;&gt;zzzzz&lt;/a&gt;
+&lt;a href=&quot;/articles/20/tufte-style-jekyll-blog#epigraphs&quot; class=&quot;link-live has-content spawns-popup&quot; data-link-icon-type=&quot;text&quot; data-link-icon=&quot;𝔊&quot; data-attribute-title=&quot;Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.&quot; style=&quot;&quot;&gt;this page&lt;/a&gt;
+&lt;a href=&quot;http://rmarkdown.rstudio.com/examples/tufte-handout.pdf&quot; class=&quot;link-live has-content spawns-popup&quot; data-link-icon-type=&quot;text&quot; data-link-icon=&quot;𝔊&quot; data-attribute-title=&quot;Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.&quot; style=&quot;&quot;&gt;handout&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;jekyll-customizations&quot;&gt;Jekyll customizations&lt;/h2&gt;
 

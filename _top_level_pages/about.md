@@ -1,5 +1,5 @@
 ---
-layout: full-width
+layout: default
 title: About
 page_order: 2
 ---

@@ -122,7 +122,7 @@
                 "404 Not Found"
             ],
         
-            pageTitleRegexp: /^(.+?) Â· Gwern\.net$/,
+            pageTitleRegexp: /^(.+?)$/,
         
             rootDocument: document,
         
@@ -625,7 +625,7 @@
                     from an in-pop-frame TOC.
                  */
                 let fullTargetDocument = Extracts.targetDocument(target);
-                if (   target.hash > ""
+                if (   false //target.hash > "" // TODO: Disabled by Ben
                     && (   fullTargetDocument
                         || forceNarrow
                         || target.closest(".TOC"))) {
@@ -1009,7 +1009,9 @@
                         Extracts.cachedPageBodyClasses[target.pathname] = page.querySelector("meta[name='page-body-classes']").getAttribute("content").split(" ");
         
                         //  Get the page title.
-                        Extracts.cachedPageTitles[target.pathname] = 'bvvvaas';//page.querySelector("title").innerHTML.match(Extracts.pageTitleRegexp)[1];
+                        let title = page.querySelector("title").innerHTML.match(Extracts.pageTitleRegexp)[1];
+                        if (!title) {title = '[No Title]';}
+                        Extracts.cachedPageTitles[target.pathname] = title;
         
                         //  The content is the page body plus the metadata block.
                         let pageContent = page.querySelector("#markdownBody");

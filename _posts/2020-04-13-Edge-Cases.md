@@ -7,6 +7,8 @@ categories: post
 Some edge cases and cautionary examples on using Markdown for writing content using this theme. In particular, list syntax can really knot things up.
 <!--more-->
 
+[This links to another post](/articles/20/tufte-style-jekyll-blog)
+
 ### Mathjax improperly parsing greater and less than and ampersands inside blocks
 
 The mathjax HTML ```<head>``` scripts have been modified to properly render block style mathjax expressions inside a ```$$ ... $$``` set of character pairs,
@@ -83,6 +85,9 @@ $$
 However, a problem still exists for inline matrix notation, from an example [here](https://en.wikibooks.org/wiki/LaTeX/Mathematics#Matrices_in_running_text):
 
 A matrix in text must be set smaller: $$ \bigl(\begin{smallmatrix}a & b \\ c & d\end{smallmatrix} \bigr) $$ to not increase leading in a portion of text. The way this inline matrix is written is: ```$$ \bigl(\begin{smallmatrix}a & b \\ c & d\end{smallmatrix} \bigr) $$```
+
+## Gallery Test
+{% gallery '/assets/galleries/test' %}
 
 ## Edge Case 1 from Quxiaofeng:
 

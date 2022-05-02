@@ -1,13 +1,39 @@
 ---
 layout: default
 ---
+
+
+<div class="markdownBody" id="page-metadata"></div>
+<div id="markdownBody" class="markdownBody">
+    <article>
+    
+
 <h1>{{ page.title}}</h1>
 <p class="subtitle">{{ page.date | date: "%B %-d, %Y" }}</p>
 
 
-<div class="markdownBody" id="page-metadata"></div>
-    <div id="markdownBody" class="markdownBody">
+
+
     {{ content }}
+
+</article>
+
 </div>
 
+
+
+{% assign home = site.html_pages | where: 'url', '/' | first %}
+{% if page.url != home.url %}
+    {% if page.showbacklinks == true %}
+        {% if page.backlinks.size > 0 %}
+            <div class="backlink-box">
+                <ul>
+                {% for backlink in page.backlinks %}
+                    <li><a href="{{ site.url }}{{ backlink.url }}">{{ backlink.title }}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endif %}
 

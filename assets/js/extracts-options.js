@@ -26,7 +26,8 @@ Extracts = { ...Extracts, ...{
 	 */
 
 	//	Used in: extracts.js
-	popupOptionsEnabled: true,
+	// Ben Changed to False
+	popupOptionsEnabled: false,
 
 	popupsDisabledShowPopupOptionsDialogButton: null,
 	popupOptionsDialog: null,

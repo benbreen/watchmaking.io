@@ -25,7 +25,8 @@
 :root {
     --GW-sidenotes-max-width: 550px;
 
-    --GW-popups-popup-max-width: 640px;
+    /* Ben */
+    --GW-popups-popup-max-width: 700px;
     --GW-popups-popup-max-height: 480px;
     --GW-popups-popup-with-title-bar-min-width: 320px;
     --GW-popups-annotation-popup-min-width: 360px;

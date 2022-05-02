@@ -1,22 +1,74 @@
-Make menu bar static
-Make logo and FavIcon
-Analytics
-Gallery Module
+Bundle install
+Then use bundle exec and the Jekyll commands
+bundle exec jekyll build     
+bundle exec jekyll serve -w --baseurl ''
 
 
-Separate Digital Garden from Posts
-Garden Variables and Display - Maturity
-Display Backlinks
 
-Find how to use backlinks as a substitute for Tags
+x Make menu bar static
+H Make logo and FavIcon
+H Analytics
+1 Gallery Module
+-- TODO - Generate thumbnails
+-- Adapt this plugin: https://github.com/oturpe/jekyll-thumbnail-generator
+
+1 Separate Digital Garden from Posts
+1 Garden Variables and Display - Maturity
+3 Generate lists for Page Citations
+2 Generate lists for Page Backlinks
 
 Get popup-preview working
-- Only show relevant Anchor section where linking to Anchor
+1 Use my own future-proof markdown to create popup links
+3 Fix local pages looking squished
+2 Fix Background Colour
+X Fix page title not showing for local posts
+- Understand the page metadata
+X Remove option to disable popups
+X Check same-page Anchors <- Currently using a hack which renders whole page and jumps to section
+2 Add Icon for Certain link types (pdf, wikipedia, reddit), with option to disable per link
+2 Fix PDFs not rendering
 
-Investigate reddit etc instead of Discourse
-Also look into closer discourse integration
+4 Find how to use backlinks as a substitute for Tags
 
-Experiment with other fonts e.g. HBR
-Experiment with page colour
-Implement Dark Mode
+4 Investigate reddit etc instead of Discourse
+4 Also look into closer discourse integration
 
+5 Experiment with other fonts e.g. HBR
+5 Experiment with page colour
+6 Implement Dark Mode
+
+
+Ideas for Improvements
+----------------------
+Show favicon in toolbar of popups
+A better solution for Same Page Anchors - similar to on the Gwern site
+Re-Write popups in TypeScript
+
+----------
+Example Metadata of About Page
+---------
+<div class="markdownBody" id="page-metadata">
+<div id="page-description" title="Short description of page.">
+Meta page describing Gwern.net site ideals of stable long-term essays which improve over time; idea sources and writing methodology; metadata definitions; site statistics; copyright license.
+</div>
+<div class="link-tags">
+<p><a href="/docs/design/index" class="link-tag link-local link-annotated" rel="tag" title="Link to design tag index">design</a>⁠, <a href="/docs/linkrot/archiving/index" class="link-tag link-local link-annotated" rel="tag" title="Link to linkrot/archiving tag index">archiving</a>⁠, <a href="/docs/meta/index" class="link-tag link-local link-annotated" rel="tag" title="Link to meta tag index">meta</a>⁠, <a href="/docs/personal/index" class="link-tag link-local link-annotated" rel="tag" title="Link to personal tag index">personal</a>⁠, <a href="/docs/prediction/index" class="link-tag link-local link-annotated" rel="tag" title="Link to prediction tag index">prediction</a>⁠, <a href="/docs/psychology/index" class="link-tag link-local link-annotated" rel="tag" title="Link to psychology tag index">psychology</a>⁠, <a href="/docs/statistics/bayes/index" class="link-tag link-local link-annotated" rel="tag" title="Link to statistics/bayes tag index">Bayes</a>⁠, <a href="/docs/technology/google/index" class="link-tag link-local link-annotated" rel="tag" title="Link to technology/google tag index">Google</a></p>
+</div>
+<div id="page-metadata-block">
+<span id="page-date-range"><span id="page-creation" title="Date page contents were begun."><em>2010-10-01</em></span>–<span id="page-source"><a title="Link to latest revision of the raw Markdown text source for this page, 'About This Website': /About.page" class="no-icon" href="/About.page"><span id="page-modified" title="Date of last major modification to this page."><em>2021-02-20</em></span></a></span></span> <span id="page-status" title="Writing status of current page: ranges 'abandoned'/'notes'/'draft'/'in progress'/'finished'"><em>finished</em></span> <span id="page-confidence"><a href="/About#confidence-tags" title="Explanation of 'confidence' metadata: probability of overall being meaningfully correct, expressed as Kesselman Estimative Words (ranging 0–100%: 'certain'/'highly likely'/'likely'/'possible'/'unlikely'/'highly unlikely'/'remote'/'impossible')">certainty</a>: <em>highly likely</em></span> <span id="page-importance"><a href="/About#importance-tags" title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.">importance</a>: <em>3</em></span> <span class="backlinks"><a id="backlinks" class="backlinks" href="/metadata/annotations/backlinks/%252FAbout.html" title="Reverse citations/backlinks for this page (the list of other pages which link to this page).">backlinks</a></span> <span class="link-bibliography"><a id="link-bibliography-link" href="/docs/link-bibliography/About" title="Bibliography of links cited in this page (forward citations).">bibliography</a></span>
+</div>
+</div>
+
+
+
+-----
+Local Hash links
+-----
+in extract.js this line find the relevant part of the document being linked to:
+    let linkedElement = fullTargetDocument.querySelector(selectorFromHash(target.hash));
+The above query selector finds the first note with a name the same as the has link name.
+For example it finds a section with markdown-checker which contains all the content, including a sub-node with href="#markdown-checker"
+
+--- Creating Custom Sections in Markdown ---
+This Ruby script shows how to create a custom section: http://movb.de/jekyll-details-support.html
+this could be used to create named sections which would be picked up by the local section popup rendering (hash link/anchor rendering)
