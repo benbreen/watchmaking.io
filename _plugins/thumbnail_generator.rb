@@ -62,8 +62,9 @@ module Jekyll
          end
         
          new_files.each do |nfile|
-            #site.static_files << Jekyll::StaticFile.new(site, site.source, nfile[0], nfile[1])
-            STDERR.puts "New File: " + nfile.inspect
+            #STDERR.puts "New File:#{nfile[0]}:#{nfile[1]}"
+            site.static_files << Jekyll::StaticFile.new(site, site.source, nfile[0].gsub(site.source, ""), nfile[1])
+            
          end
     end
 
