@@ -4,6 +4,14 @@ bundle exec jekyll build
 bundle exec jekyll serve -w --baseurl ''
 
 
+Installing RMagick
+brew uninstall imagemagick
+brew install imagemagick@6
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+brew link --force imagemagick@6
+sudo gem install rmagick
+bundle install
+
 
 x Make menu bar static
 H Make logo and FavIcon

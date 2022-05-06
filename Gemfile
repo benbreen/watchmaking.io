@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'jekyll'
 gem 'rouge'
+gem 'rmagick'
 
 group :jekyll_plugins do
     gem 'jekyll-optional-front-matter'

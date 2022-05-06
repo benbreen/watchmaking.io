@@ -5,8 +5,8 @@
     <description>Making Mechanical Watches from Scratch</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 02 May 2022 19:32:30 +0100</pubDate>
-    <lastBuildDate>Mon, 02 May 2022 19:32:30 +0100</lastBuildDate>
+    <pubDate>Fri, 06 May 2022 14:00:58 +0100</pubDate>
+    <lastBuildDate>Fri, 06 May 2022 14:00:58 +0100</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -78,12 +78,12 @@ using the standard Kramdown parser. Some examples sent to me by Quxiaofeng are n
 &lt;p&gt;A matrix in text must be set smaller: \(\bigl(\begin{smallmatrix}a &amp;amp; b \\ c &amp;amp; d\end{smallmatrix} \bigr)\) to not increase leading in a portion of text. The way this inline matrix is written is: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$$ \bigl(\begin{smallmatrix}a &amp;amp; b \\ c &amp;amp; d\end{smallmatrix} \bigr) $$&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;gallery-test&quot;&gt;Gallery Test&lt;/h2&gt;
-&lt;div class=&quot;image-gallery&quot;&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/783px-Test-Logo.svg.png&quot; class=&quot;no-popin&quot; title=&quot;783px-Test-Logo.svg&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/783px-Test-Logo.svg.png
-&quot; alt=&quot;783px-Test-Logo.svg&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/french-test-1750x660-1.jpeg&quot; class=&quot;no-popin&quot; title=&quot;french-test-1750x660-1&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/french-test-1750x660-1.jpeg
-&quot; alt=&quot;french-test-1750x660-1&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/test-english-home-Level-test.jpeg&quot; class=&quot;no-popin&quot; title=&quot;test-english-home-Level-test&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/test-english-home-Level-test.jpeg
-&quot; alt=&quot;test-english-home-Level-test&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/test-overview-thumb.png&quot; class=&quot;no-popin&quot; title=&quot;test-overview-thumb&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/test-overview-thumb.png
-&quot; alt=&quot;test-overview-thumb&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/testimages_screenshot.jpeg&quot; class=&quot;no-popin&quot; title=&quot;testimages_screenshot&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/testimages_screenshot.jpeg
-&quot; alt=&quot;testimages_screenshot&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;image-gallery&quot;&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/zzz1fr.png&quot; class=&quot;no-popin&quot; title=&quot;zzz1fr&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/zzz1fr.png
+&quot; alt=&quot;zzz1fr&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/2sdf.jpeg&quot; class=&quot;no-popin&quot; title=&quot;2sdf&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/2sdf.jpeg
+&quot; alt=&quot;2sdf&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/bbb19.png&quot; class=&quot;no-popin&quot; title=&quot;bbb19&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/bbb19.png
+&quot; alt=&quot;bbb19&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/a20sdf.jpeg&quot; class=&quot;no-popin&quot; title=&quot;a20sdf&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/a20sdf.jpeg
+&quot; alt=&quot;a20sdf&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;gallery-box&quot;&gt;&lt;a href=&quot;/assets/galleries/test/a.jpeg&quot; class=&quot;no-popin&quot; title=&quot;a&quot;&gt;&lt;img src=&quot;/assets/galleries/test/thumbs/a.jpeg
+&quot; alt=&quot;a&quot; class=&quot;img-gallery&quot; /&gt; &lt;/a&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
 
 &lt;/blockquote&gt;

@@ -43,6 +43,17 @@ module Jekyll
 
       outhtml = ""
       if !images.empty?
+        #STDERR.puts images
+        #STDERR.puts "------------"
+        # Sort files naturally by number if the filename contains a number, then by strings
+        images.sort_by! do |i|
+          if i.name =~ /\d+/
+            [1, i.name[/\d+/].to_i]
+          else
+            [2, i.name]
+          end
+        end
+        #STDERR.puts images
         outhtml << %Q[<div class ="#{css}">]
           images.each do |image|
             outhtml << %Q[<div class="gallery-box"><a href="#{image.url}" class="no-popin" title="#{image.name}"><img src="#{image.thumb_url}" alt="#{image.name}"  class="img-gallery" /> </a></div>]
