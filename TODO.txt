@@ -16,9 +16,9 @@ bundle install
 x Make menu bar static
 H Make logo and FavIcon
 H Analytics
-1 Gallery Module
--- TODO - Generate thumbnails
--- Adapt this plugin: https://github.com/oturpe/jekyll-thumbnail-generator
+X Gallery Module
+X TODO - Generate thumbnails
+
 
 1 Separate Digital Garden from Posts
 1 Garden Variables and Display - Maturity
