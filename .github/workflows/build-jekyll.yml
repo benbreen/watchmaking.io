@@ -17,8 +17,8 @@ jobs:
       - name: install rmagick gem
         run: sudo gem install rmagick
       
-      - name: find rmagick
-        run: sudo find / -name MagickCore.pc
+      - name: point to rmagick
+        run: run: echo "/usr/lib/x86_64-linux-gnu/pkgconfig'" >> $GITHUB_ENV
 
       # Use GitHub Actions' cache to cache dependencies on servers
       - uses: actions/cache@v2
