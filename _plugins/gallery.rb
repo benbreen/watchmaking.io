@@ -32,9 +32,9 @@ module Jekyll
          if sfile.path.include? @text[0] and !sfile.path.include? "/thumbs/"
           if sfile.extname == '.png' || sfile.extname == '.jpg' || sfile.extname == '.jpeg'
             img = GalleryImage.new
-            folder = sfile.relative_path.gsub(sfile.name, "")
+            folder = site.baseurl + sfile.relative_path.gsub(sfile.name, "")
             img.thumb_url = folder + "thumbs/" + sfile.name + "\n"
-            img.url = sfile.relative_path
+            img.url = site.baseurl + sfile.relative_path
             img.name = sfile.basename
             images.push img
           end
