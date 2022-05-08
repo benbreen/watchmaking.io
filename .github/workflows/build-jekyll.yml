@@ -11,17 +11,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: install rmagick
-        run:  sudo apt-get --reinstall install libmagick++-dev imagemagick libmagickcore-dev libmagickwand-dev
+      # - name: install rmagick
+      #   run:  sudo apt-get --reinstall install libmagick++-dev imagemagick libmagickcore-dev libmagickwand-dev
 
-      - name: install rmagick gem
-        run: sudo gem install rmagick
+      # - name: install rmagick gem
+      #   run: sudo gem install rmagick
       
-      - name: point to rmagick
-        run:  echo "PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig" >> $GITHUB_ENV
+      # - name: point to rmagick
+      #   run:  echo "PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig" >> $GITHUB_ENV
 
-      - name: check rmagick
-        run:  echo $PKG_CONFIG_PATH
+      # - name: check rmagick
+      #   run:  echo $PKG_CONFIG_PATH
 
       # Use GitHub Actions' cache to cache dependencies on servers
      # - uses: actions/cache@v2
@@ -44,4 +44,4 @@ jobs:
           bundler_ver: '>=0'         # Default is latest bundler version
           cname: ''                  # Default is to not use a cname
           actor: ''                  # Default is the GITHUB_ACTOR
-          pre_build_commands: 'sudo pacman -S libmagick'     # Installing additional dependencies (Arch Linux)
+          pre_build_commands: 'sudo pacman --noconfirm -S libmagick'     # Installing additional dependencies (Arch Linux)
