@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: install rmagick
-        run:  sudo apt-get install libmagick++-dev imagemagick libmagickcore-dev libmagickwand-dev
+        run:  sudo apt-get --reinstall install libmagick++-dev imagemagick libmagickcore-dev libmagickwand-dev
 
       # Use GitHub Actions' cache to cache dependencies on servers
       - uses: actions/cache@v2
