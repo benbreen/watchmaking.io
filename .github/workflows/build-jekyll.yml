@@ -14,6 +14,9 @@ jobs:
       - name: install rmagick
         run:  sudo apt-get --reinstall install libmagick++-dev imagemagick libmagickcore-dev libmagickwand-dev
 
+      - name: install rmagick gem
+        run: gem install rmagick
+
       # Use GitHub Actions' cache to cache dependencies on servers
       - uses: actions/cache@v2
         with:
