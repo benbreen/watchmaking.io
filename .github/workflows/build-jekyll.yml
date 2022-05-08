@@ -24,12 +24,12 @@ jobs:
         run:  echo $PKG_CONFIG_PATH
 
       # Use GitHub Actions' cache to cache dependencies on servers
-      - uses: actions/cache@v2
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
+     # - uses: actions/cache@v2
+      #  with:
+       #   path: vendor/bundle
+        #  key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+         # restore-keys: |
+          #  ${{ runner.os }}-gems-
 
       # Use GitHub Deploy Action to build and deploy to Github
       - uses: jeffreytse/jekyll-deploy-action@v0.3.1
