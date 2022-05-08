@@ -18,7 +18,7 @@ jobs:
         run: sudo gem install rmagick
       
       - name: point to rmagick
-        run: run: echo "PKG_CONFIG_PATH='/usr/lib/x86_64-linux-gnu/pkgconfig'" >> $GITHUB_ENV
+        run:  echo "PKG_CONFIG_PATH='/usr/lib/x86_64-linux-gnu/pkgconfig'" >> $GITHUB_ENV
 
       # Use GitHub Actions' cache to cache dependencies on servers
       - uses: actions/cache@v2
