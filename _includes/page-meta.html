@@ -1,0 +1,41 @@
+
+
+<!--The metadata line which appears at the top of pages-->
+<div class="markdownBody" id="page-metadata">
+    <div id="page-metadata-block" >
+        <span id="page-type" title="Page type, either 'Article' or 'Bubble'">
+            <em>
+            {% if page.pagetype == post %}
+            Article
+            {% else if page.pagetype == bubble %}
+            Bubble
+            {% else %}
+            Unknown
+            {% endif %}
+            </em>
+        </span>
+        <span id="page-date-range"><span id="page-publication" title="Date of first publication"><em>{{ page.date |
+                    date: "%B %-d, %Y" }}</em></span>
+            {% if page.last_modified %}
+            - <span id="page-modified" title="Date of last major modification"><em>⁠⁠{{ page.last_modified | date: "%B
+                    %-d, %Y" }}</em></span>
+        </span>
+        {% endif %}
+        </span>
+
+        <span id="page-status"
+            title="Writing status of current page: Abandoned, Notes, In Progress, Draft, Published">Status: <em>{{
+                page.status | default: "Notes" }}</em></span>
+        {% if page.showbacklinks == true %}
+        {% if page.backlinks.size > 0 %}
+        <span class="backlinks" id="page-backlinks"><a id="backlinks" class="backlinks" href="#Backlinks"
+                data-attribute-title="Reverse citations/backlinks for this page (the list of other pages which link to this page)."><span
+                    class="indicator-hook"></span><em>Backlinks ({{ page.backlinks.size }})</em></a></span>
+        {% else %}
+        <span class="backlinks"><a id="backlinks" class="backlinks"
+                data-attribute-title="Reverse citations/backlinks for this page (the list of other pages which link to this page)."><span
+                    class="indicator-hook"></span><em>no backlinks</em></a></span>
+        {% endif %}
+        {% endif %}
+    </div>
+</div>

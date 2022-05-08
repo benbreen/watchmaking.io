@@ -1,0 +1,18 @@
+
+<!--Backlinks list, typically shown at the bottom of the page.-->
+{% assign home = site.html_pages | where: 'url', '/' | first %}
+{% if page.url != home.url %}
+{% if page.showbacklinks == true %}
+{% if page.backlinks.size > 0 %}
+<h2 id="Backlinks"><a href="#Backlinks" class="no-popup">Backlinks</a></h2>
+<p>This page is referenced by the following pages on this site:</p>
+<div class="backlink-box">
+    <ul >
+        {% for backlink in page.backlinks %}
+        <li style="margin:0; padding:0.2em;"><a href="{{ site.url }}{{ backlink.url }}">{{ backlink.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endif %}
+{% endif %}

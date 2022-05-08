@@ -36,6 +36,8 @@ X Check same-page Anchors <- Currently using a hack which renders whole page and
 2 Add Icon for Certain link types (pdf, wikipedia, reddit), with option to disable per link
 2 Fix PDFs not rendering
 
+3 Auto remove meta-data from all images
+
 4 Find how to use backlinks as a substitute for Tags
 
 4 Investigate reddit etc instead of Discourse
