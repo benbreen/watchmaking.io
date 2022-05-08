@@ -18,7 +18,7 @@ jobs:
         run: sudo gem install rmagick
       
       - name: point to rmagick
-        run:  echo "PKG_CONFIG_PATH='/usr/lib/x86_64-linux-gnu/pkgconfig'" >> $GITHUB_ENV
+        run:  echo "PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig" >> $GITHUB_ENV
 
       - name: check rmagick
         run:  echo $PKG_CONFIG_PATH
