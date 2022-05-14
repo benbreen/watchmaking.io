@@ -28,7 +28,7 @@
                 page.status | default: "Notes" }}</em></span>
         {% if page.showbacklinks == true %}
         {% if page.backlinks.size > 0 %}
-        <span class="backlinks" id="page-backlinks"><a id="backlinks" class="backlinks" href="#Backlinks"
+        <span class="backlinks" id="page-backlinks"><a id="backlinks" class="backlinks link-live" href="#Backlinks"
                 data-attribute-title="Reverse citations/backlinks for this page (the list of other pages which link to this page)."><span
                     class="indicator-hook"></span><em>Backlinks ({{ page.backlinks.size }})</em></a></span>
         {% else %}

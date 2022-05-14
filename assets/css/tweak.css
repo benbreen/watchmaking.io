@@ -12,7 +12,7 @@
 
 #page-metadata-block > span:not(:last-child)::after {
     content: "\00B7"; /* interpunct MIDDLE DOT (U+00B7) '·' */
-    margin: 0 0.35em 0 0.65em;
+    margin: 0 0.15em 0 0.35em;
 }
 
 #page-metadata-block a, a:visited, a:active {
@@ -32,7 +32,7 @@
 @media only screen and (min-width: 650px) {
 	#page-metadata {
 		/* overflow: auto; */
-		font-size: calc((19/20) * var(--GW-base-font-size));
+		font-size: calc((22/20) * var(--GW-base-font-size));
 	}
 	#page-description {
 		margin: 0 auto 0.75em auto;
@@ -48,7 +48,7 @@
 @media only screen and (max-width: 649px) {
 	#page-metadata {
 		overflow: visible;
-		font-size: calc((17/18) * var(--GW-base-font-size));
+		font-size: calc((16/18) * var(--GW-base-font-size));
 	}
 	#page-description {
 		margin: 0 auto 1em auto;
@@ -58,13 +58,13 @@
 	}
     #page-metadata > .link-tags,
     #page-metadata-block {
-    	text-align: center;
+    	/*text-align: center;*/
     }
     #page-metadata > .link-tags {
     	margin: 0 auto 0.75em auto;
     }
 	#page-metadata-block {
-		font-size: calc((16/18) * var(--GW-base-font-size));
+		font-size: calc((/18) * var(--GW-base-font-size));
     	line-height: calc(25/16);
     }
 	#page-metadata-block > #page-status::after,

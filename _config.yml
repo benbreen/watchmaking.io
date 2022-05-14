@@ -33,7 +33,7 @@ optional_front_matter:
 #  enabled: false
 
 collections:
-  top_level_pages:
+  home:
     sort_by: page_order
     output: true
 

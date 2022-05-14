@@ -2141,14 +2141,14 @@ section.highlight-fading::before {
     top: 0.5em;
 }
 #reader-mode-selector button.select-mode-auto::before {
-    content: url('/assets/WM Logo.svg');
+    content: url('/assets/MKR Logo.svg');
     top: 0.4em;
 }
 #reader-mode-selector button.select-mode-on::before {
     content: url('/assets/WM Logo.svg');
 }
 #reader-mode-selector button.select-mode-off::before {
-    content: url('/assets/WM Logo.svg');
+    content: url('/assets/MKR Logo.svg');
 }
 #reader-mode-selector button:not(.selected):hover::before {
     opacity: 1.0;

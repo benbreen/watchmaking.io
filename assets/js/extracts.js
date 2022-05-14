@@ -594,9 +594,14 @@
                     like a file of some sort, or a locally archived document (accounted
                     for in the other test functions, if need be).
                  */
+
+                /* comment out - causing problems with url like /watchmaking.io/*/
+                /*    
                 if (target.pathname.match(/\./))
                     return false;
-        
+                */
+
+
                 return (   target.pathname != location.pathname
                         || target.hash > "");
             },
@@ -1316,7 +1321,7 @@
         GW.notificationCenter.fireEvent("Extracts.didLoad");
         
         //  Set pop-frame type (mode) - popups or popins.
-        let mobileMode = (localStorage.getItem("extracts-force-popins") == "true") || GW.isMobile() || matchMedia("(max-height: 949px)").matches;
+        let mobileMode = (localStorage.getItem("extracts-force-popins") == "true") || GW.isMobile() || matchMedia("(max-height: 800px)").matches;
         Extracts.popFrameProviderName = mobileMode ? "Popins" : "Popups";
         GWLog(`${(mobileMode ? "Mobile" : "Non-mobile")} client detected. Activating ${(mobileMode ? "popins" : "popups")}.`, "extracts.js", 1);
         

@@ -1,13 +1,13 @@
 <!--- Header and nav template site-wide -->
 <header>
     <nav class="group">
-	<a href="{{site.baseurl}}/"><img class="badge" src="{{site.baseurl}}/assets/WM Logo.svg" alt="WM"></a>
-	{% for node in site.top_level_pages %}
+	<a href="{{site.baseurl}}/"><img class="badge" src="{{site.baseurl}}/assets/MKR Logo.svg" alt="MKR"></a>
+	{% for node in site.home %}
 		{% unless node.nav_exclude %}
 		    {% if page.url == node.url %}
-		      <a class="active" href="{{node.url | prepend: site.baseurl}}" class="active">{{node.title}}</a>
+			<a href="{{node.url | prepend: site.baseurl}}"><div style="display: inline-block;">&lt;</div><div style="display: inline-block;">{{node.title}}</div><div style="display: inline-block;">&gt;</div></a>
 		    {% else %}
-		      <a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
+			<a href="{{node.url | prepend: site.baseurl}}"><div style="display: inline-block;opacity: 0.0;">&lt;</div><div style="display: inline-block;">{{node.title}}</div><div style="display: inline-block;opacity: 0.0;">&gt;</div></a>
 		    {% endif %}
 	    {% endunless %}
   	{% endfor %}

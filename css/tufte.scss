@@ -379,13 +379,14 @@ header > nav.group, body footer {
   padding-top: 2rem;
 }
 
-nav.group a.active:before{ content:"\0003c\000a0";} // escaped unicode for the carats and then a space on active menu links
-nav.group a.active:after{ content:"\000a0\0003e" ;}
+//nav.group a.active:before{ content:"\0003c\000a0";} // escaped unicode for the carats and then a space on active menu links
+//nav.group a.active:after{ content:"\000a0\0003e" ;}
+
 
 header > nav  a{
   font-size: 1.2rem;
   font-family: $sans-font;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
   color: $contrast-color;
   padding-top: 1.5rem;
@@ -394,7 +395,7 @@ header > nav  a{
   float: left;
   margin-top: 0;
   margin-bottom: 0;
-  padding-right: 2rem;
+  padding-right: 0.8rem;
   //margin-left: 1rem;
   vertical-align: baseline;
 }
@@ -403,6 +404,7 @@ header > nav a img{
   position: relative;
   max-width: 100%;
   top:-1.5rem;
+  padding-right: 3rem;
 }
 ul.footer-links, .credits{
   list-style: none;
@@ -421,6 +423,7 @@ ul.footer-links li{
 
 .credits{
   font-family: $sans-font;
+  font-size: 1.4rem;
     & a{
       color: $contrast-color;
     }
