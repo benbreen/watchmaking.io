@@ -5,8 +5,8 @@
     <description>Making Mechanical Watches from Scratch</description>
     <link>http://localhost:4000/watchmaking.io/</link>
     <atom:link href="http://localhost:4000/watchmaking.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 13 May 2022 16:54:17 +0100</pubDate>
-    <lastBuildDate>Fri, 13 May 2022 16:54:17 +0100</lastBuildDate>
+    <pubDate>Tue, 17 May 2022 19:57:24 +0100</pubDate>
+    <lastBuildDate>Tue, 17 May 2022 19:57:24 +0100</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -189,9 +189,9 @@ using the standard Kramdown parser. Some examples sent to me by Quxiaofeng are n
         <title>Tufte-style Jekyll blog</title>
         <description>&lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;The Tufte Jekyll theme&lt;/span&gt;  is an attempt to create a website design with the look and feel of Edward Tufte’s books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.&lt;!--more--&gt; The idea for this project is essentially cribbed wholesale from Tufte and R Markdown’s Tufte Handout format&lt;label for=&quot;One&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;One&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;See &lt;a href=&quot;https://tufte-latex.github.io/tufte-latex/&quot;&gt;tufte-latex.github.io/tufte-latex/&lt;/a&gt; and &lt;a href=&quot;http://rmarkdown.rstudio.com/tufte_handout_format.html&quot;&gt;rmarkdown.rstudio.com/tufte_handout_format&lt;/a&gt; &lt;/span&gt; This page is an adaptation of the &lt;a href=&quot;http://rmarkdown.rstudio.com/examples/tufte-handout.pdf&quot;&gt;Tufte Handout PDF&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;/articles/20/Edge-Cases&quot; class=&quot;link-live has-content spawns-popup&quot; data-link-icon-type=&quot;text&quot; data-link-icon=&quot;𝔊&quot; data-attribute-title=&quot;Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.&quot; style=&quot;&quot;&gt;zzzzz&lt;/a&gt;
-&lt;a href=&quot;/articles/20/tufte-style-jekyll-blog#epigraphs&quot; class=&quot;link-live has-content spawns-popup&quot; data-link-icon-type=&quot;text&quot; data-link-icon=&quot;𝔊&quot; data-attribute-title=&quot;Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.&quot; style=&quot;&quot;&gt;this page&lt;/a&gt;
-&lt;a href=&quot;http://rmarkdown.rstudio.com/examples/tufte-handout.pdf&quot; class=&quot;link-live has-content spawns-popup&quot; data-link-icon-type=&quot;text&quot; data-link-icon=&quot;𝔊&quot; data-attribute-title=&quot;Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world.&quot; style=&quot;&quot;&gt;handout&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/articles/20/Edge-Cases&quot; class=&quot;link-live has-content spawns-popup&quot; data-link-icon-type=&quot;text&quot; data-link-icon=&quot;𝔊&quot; data-attribute-title=&quot;Explanation of &apos;importance&apos; metadata: rating 1–10 about how much a topic matters to the world.&quot; style=&quot;&quot;&gt;zzzzz&lt;/a&gt;
+&lt;a href=&quot;/articles/20/tufte-style-jekyll-blog#epigraphs&quot; class=&quot;link-live has-content spawns-popup&quot; data-link-icon-type=&quot;text&quot; data-link-icon=&quot;𝔊&quot; data-attribute-title=&quot;Explanation of &apos;importance&apos; metadata: rating 1–10 about how much a topic matters to the world.&quot; style=&quot;&quot;&gt;this page&lt;/a&gt;
+&lt;a href=&quot;http://rmarkdown.rstudio.com/examples/tufte-handout.pdf&quot; class=&quot;link-live has-content spawns-popup&quot; data-link-icon-type=&quot;text&quot; data-link-icon=&quot;𝔊&quot; data-attribute-title=&quot;Explanation of &apos;importance&apos; metadata: rating 1–10 about how much a topic matters to the world.&quot; style=&quot;&quot;&gt;handout&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;jekyll-customizations&quot;&gt;Jekyll customizations&lt;/h2&gt;
 
@@ -208,9 +208,9 @@ using the standard Kramdown parser. Some examples sent to me by Quxiaofeng are n
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/* This file contains all the constants for colors and font styles */
 
 $body-font:   ETBembo, Palatino, &quot;Palatino Linotype&quot;, &quot;Palatino LT STD&quot;, &quot;Book Antiqua&quot;, Georgia, serif;
-// Note that Gill Sans is the top of the stack and corresponds to what is used in Tufte's books
+// Note that Gill Sans is the top of the stack and corresponds to what is used in Tufte&apos;s books
 // However, it is not a free font, so if it is not present on the computer that is viewing the webpage
-// The free Google 'Lato' font is used instead. It is similar.
+// The free Google &apos;Lato&apos; font is used instead. It is similar.
 $sans-font:  &quot;Gill Sans&quot;, &quot;Gill Sans MT&quot;, &quot;Lato&quot;, Calibri, sans-serif;
 $code-font: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace;
 $url-font: &quot;Lucida Console&quot;, &quot;Lucida Sans Typewriter&quot;, Monaco, &quot;Bitstream Vera Sans Mono&quot;, monospace;
@@ -218,7 +218,7 @@ $text-color: #111;
 $bg-color: #fffff8;
 $contrast-color: #a00000;
 $border-color: #333333;
-$link-style: color; // choices are 'color' or 'underline'. Default is color using $contrast-color set above
+$link-style: color; // choices are &apos;color&apos; or &apos;underline&apos;. Default is color using $contrast-color set above
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Any of these values can be changed in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_sass/_settings.scss&lt;/code&gt; file before the site is built. The default values are the ones from &lt;em&gt;tufte-css&lt;/em&gt;.&lt;/p&gt;
 
@@ -246,7 +246,7 @@ $link-style: color; // choices are 'color' or 'underline'. Default is color usin
 
 &lt;p&gt;&lt;span class=&quot;newthought&quot;&gt;In his later books&lt;/span&gt; &lt;label for=&quot;two&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;two&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;&lt;a href=&quot;http://www.edwardtufte.com/tufte/books_be&quot;&gt;http://www.edwardtufte.com/tufte/books_be&lt;/a&gt; &lt;/span&gt;, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, enclose the sentence fragment you want styled with small caps in a custom Liquid tag called ‘newthought’ like so:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-Liquid&quot;&gt;{% newthought 'In his later books' %}
+&lt;pre&gt;&lt;code class=&quot;language-Liquid&quot;&gt;{% newthought &apos;In his later books&apos; %}
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;text&quot;&gt;Text&lt;/h3&gt;
@@ -265,7 +265,7 @@ $link-style: color; // choices are 'color' or 'underline'. Default is color usin
 
 &lt;p&gt;In order to use an epigraph in a page or section, type this:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% epigraph 'text of citation' 'author of citation' 'citation source'  %}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% epigraph &apos;text of citation&apos; &apos;author of citation&apos; &apos;citation source&apos;  %}&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;to produce this:&lt;/p&gt;
 
@@ -295,7 +295,7 @@ $link-style: color; // choices are 'color' or 'underline'. Default is color usin
 
 &lt;p&gt;Images and graphics play an integral role in Tufte’s work. To place figures in the margin, use the custom margin figure liquid tag included in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_plugins&lt;/code&gt; directory like so:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% marginfigure 'mf-id-whatever' 'assets/img/rhino.png' 'F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zoological Literature,” *Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice* (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s *Visual Explanations*.'  %}&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% marginfigure &apos;mf-id-whatever&apos; &apos;assets/img/rhino.png&apos; &apos;F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zoological Literature,” *Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice* (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s *Visual Explanations*.&apos;  %}&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Note that this tag has &lt;em&gt;three&lt;/em&gt; parameters. The first is an arbitrary id. This parameter can be named anything as long as it is unique to this post. The second parameter is the path to the image. And the final parameter is whatever caption you want to be displayed with the figure.  All parameters &lt;em&gt;must&lt;/em&gt; be enclosed in quotes for this simple liquid tag to work!&lt;/p&gt;
 
@@ -305,7 +305,7 @@ $link-style: color; // choices are 'color' or 'underline'. Default is color usin
 
 &lt;p&gt;If you need a full-width image or figure, another custom liquid tag is available to use. Oddly enough, it is named ‘fullwidth’, and this markup:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% fullwidth 'assets/img/napoleons-march.png' 'Napoleon's March *(Edward Tufte’s English translation)*'  %}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% fullwidth &apos;assets/img/napoleons-march.png&apos; &apos;Napoleon&apos;s March *(Edward Tufte’s English translation)*&apos;  %}&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Yields this:&lt;/p&gt;
 
@@ -315,7 +315,7 @@ $link-style: color; // choices are 'color' or 'underline'. Default is color usin
 
 &lt;p&gt;Besides margin and full width figures, you can of course also include figures constrained to the main column. Yes, you guessed it, a custom liquid tag rides to the rescue once again:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% maincolumn 'assets/img/export-imports.png' 'From Edward Tufte, *Visual Display of Quantitative Information*, page 92'  %}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% maincolumn &apos;assets/img/export-imports.png&apos; &apos;From Edward Tufte, *Visual Display of Quantitative Information*, page 92&apos;  %}&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;yields this:&lt;/p&gt;
 
@@ -331,13 +331,13 @@ $link-style: color; // choices are 'color' or 'underline'. Default is color usin
 
 &lt;p&gt;Sidenotes&lt;label for=&quot;sn-id-whatever&quot; class=&quot;margin-toggle sidenote-number&quot;&gt;&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;sn-id-whatever&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;sidenote&quot;&gt;This is a sidenote and &lt;em&gt;displays a superscript&lt;/em&gt; &lt;/span&gt; display a superscript. The &lt;em&gt;sidenote&lt;/em&gt; Liquid tag contains two components. The first is an identifier allowing the sidenote to be targeted by the twitchy index fingers of mobile device users so that all the yummy sidenote goodness is revealed when the superscript is tapped. The second components is the actual content of the sidenote. Both of these components should be enclosed in single quotes. Note that we are using the CSS ‘counter’ trick to automagically keep track of the number sequence on each page or post. On small screens, the sidenotes disappear and when the superscript is clicked, a side note will open below the content, which can then be closed with a similar click. Here is the markup for the sidenote at the beginning of this paragraph:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% sidenote 'sn-id-whatever' 'This is a sidenote and *displays a superscript*'%}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% sidenote &apos;sn-id-whatever&apos; &apos;This is a sidenote and *displays a superscript*&apos;%}&lt;/code&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;margin-notes&quot;&gt;Margin notes&lt;/h3&gt;
 
 &lt;p&gt;Margin notes&lt;label for=&quot;mn-id-whatever&quot; class=&quot;margin-toggle&quot;&gt; ⊕&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;mn-id-whatever&quot; class=&quot;margin-toggle&quot; /&gt;&lt;span class=&quot;marginnote&quot;&gt;This is a margin note &lt;em&gt;without&lt;/em&gt; a superscript &lt;/span&gt; are similar to sidenotes, but do not display a superscript. The &lt;em&gt;marginnnote&lt;/em&gt; Liquid tags has the same two components as the &lt;em&gt;sidenote&lt;/em&gt; tag. Anything can be placed in a margin note. Well, anything that is an inline element. Block level elements can make the Kramdown parser do strange things. On small screens, the margin notes disappear and this symbol: &lt;span class=&quot;contrast &quot;&gt;⊕&lt;/span&gt; pops up. When clicked, it will open the margin note below the content, which can then be closed with a similar click. The Markdown content has a similar sort of markup as a sidenote, but without a number involved:&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% marginnote 'mn-id-whatever' 'This is a margin note *without* a superscript' %}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{% marginnote &apos;mn-id-whatever&apos; &apos;This is a margin note *without* a superscript&apos; %}&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;equations&quot;&gt;Equations&lt;/h2&gt;
 
@@ -562,7 +562,7 @@ etc...
 
 &lt;p&gt;The following is a more simple table, showing the Markdown-style table markup. Remember to label the table with a &lt;em&gt;marginnote&lt;/em&gt; Liquid tag, and you &lt;em&gt;must&lt;/em&gt; separate the label from the table with a single blank line. This markup:&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% marginnote 'Table-ID4' 'Table 4: a simple table showing left, center, and right alignment of table headings and data'  %}
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% marginnote &apos;Table-ID4&apos; &apos;Table 4: a simple table showing left, center, and right alignment of table headings and data&apos;  %}
 
 |**Left** |**Center**|**Right**|
 |:--------|:--------:|--------:|
@@ -623,13 +623,13 @@ etc...
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
     &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;div&amp;gt;&amp;lt;img class='fullwidth' src='&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;'/&amp;gt;&amp;lt;/div&amp;gt; &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
-      &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;p&amp;gt;&amp;lt;span class='marginnote'&amp;gt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&quot;&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;div&amp;gt;&amp;lt;img class=&apos;fullwidth&apos; src=&apos;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&apos;/&amp;gt;&amp;lt;/div&amp;gt; &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;p&amp;gt;&amp;lt;span class=&apos;marginnote&apos;&amp;gt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&quot;&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
-&lt;span class=&quot;no&quot;&gt;Liquid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;register_tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fullwidth'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;RenderFullWidthTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Liquid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;register_tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;fullwidth&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Jekyll&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;RenderFullWidthTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Enclose the code block in three backticks, followed by a space and then the language name, like this:&lt;/p&gt;
