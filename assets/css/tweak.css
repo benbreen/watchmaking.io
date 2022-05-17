@@ -1,0 +1,89 @@
+:root {
+    --GW-body-text-font-size: 1rem;
+
+	--GW-base-font-size: 16px;
+}
+@media only screen and (max-width: 649px) {
+	:root {
+		--GW-base-font-size: 14px;
+	}
+}
+
+
+#page-metadata-block > span:not(:last-child)::after {
+    content: "\00B7"; /* interpunct MIDDLE DOT (U+00B7) '·' */
+    margin: 0 0.15em 0 0.35em;
+}
+
+#page-metadata-block a, a:visited, a:active {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    background: none transparent;
+ 
+}
+
+#page-metadata-block a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid;
+    background: none transparent;
+}
+
+
+@media only screen and (min-width: 650px) {
+	#page-metadata {
+		/* overflow: auto; */
+		font-size: calc((22/20) * var(--GW-base-font-size));
+	}
+	#page-description {
+		margin: 0 auto 0.75em auto;
+	}
+	#page-metadata-block,
+	#page-metadata > .link-tags {
+		/* font-size: calc((18/20) * var(--GW-base-font-size)); */
+	}
+	#page-metadata-block br {
+		display: none;
+	}
+}
+@media only screen and (max-width: 649px) {
+	#page-metadata {
+		overflow: visible;
+		font-size: calc((16/18) * var(--GW-base-font-size));
+	}
+	#page-description {
+		margin: 0 auto 1em auto;
+		line-height: calc(25/17);
+		-webkit-hyphens: auto;
+		hyphens: auto;
+	}
+    #page-metadata > .link-tags,
+    #page-metadata-block {
+    	/*text-align: center;*/
+    }
+    #page-metadata > .link-tags {
+    	margin: 0 auto 0.75em auto;
+    }
+	#page-metadata-block {
+		font-size: calc((/18) * var(--GW-base-font-size));
+    	line-height: calc(25/16);
+    }
+	#page-metadata-block > #page-status::after,
+	#page-metadata-block > #page-importance::after {
+		content: none;
+	}
+}
+
+
+.backlink-box a, a:visited, a:active {
+    text-decoration: none;
+    border-bottom: 1px dotted;
+    background: none transparent;
+ 
+}
+
+.backlink-box a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid;
+    background: none transparent;
+}
+

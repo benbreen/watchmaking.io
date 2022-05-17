@@ -1,0 +1,2175 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/watchmaking.io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/watchmaking.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/watchmaking.io/favicon-16x16.png">
+<link rel="manifest" href="/watchmaking.io/site.webmanifest">
+
+  <style id="inlined-styles-colors">
+    :root {
+      /*  General.
+       */
+      --GW-body-background-color: #fffff8;
+      --GW-body-text-color: #000;
+      --GW-body-link-color: #272727;
+      --GW-body-link-hover-color: #888;
+  
+
+  
+      /*  Sequential nav UI.
+       */
+      --GW-sequential-nav-link-background-color: var(--GW-body-background-color);
+  
+      /*  Page-specific styles.
+       */
+      --GW-index-page-bottom-ornament-line-color: #808080;
+  
+          /*      Pop-frames (popups or popins).
+           */
+      --GW-raw-code-popframe-line-highlight-background-color: #ffd;
+      --GW-raw-code-popframe-line-hightlight-border-color: #ddd;
+      --GW-raw-code-popframe-line-number-color: #aaa;
+      --GW-raw-code-popframe-line-number-divider-color: #ccc;
+  
+      /*  Popups.
+       */
+      --GW-popups-body-background-color: var(--GW-body-background-color);
+      --GW-popups-popup-background-color: var(--GW-body-background-color);
+  
+      --GW-popups-popup-border-color: #ccc;
+      --GW-popups-box-shadow-color: #ccc;
+      --GW-popups-popup-border-focused-color: #aaa;
+      --GW-popups-box-shadow-focused-color: #aaa;
+  
+      --GW-popups-popup-title-bar-background-color: #f6f6f6;
+      --GW-popups-popup-title-bar-button-color: #bbb;
+      --GW-popups-popup-title-bar-button-color-hover: #000;
+          --GW-popups-popup-title-color: #aaa;
+      --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+      --GW-popups-popup-title-bar-background-focused-color: #e6e6e6;
+      --GW-popups-popup-title-bar-button-focused-color: #777;
+      --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+      --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+          --GW-popups-popup-title-focused-color: #000;
+      --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+  
+      --GW-popups-popup-scrollbar-track-color: var(--GW-body-background-color);
+  
+      --GW-popups-popup-scrollbar-thumb-color: #ddd;
+      --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+      --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+      --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+  
+      --GW-popups-popup-options-dialog-backdrop-background-color: rgba(255,255,255,0.95);
+      --GW-popups-popup-options-dialog-background-color: var(--GW-body-background-color);
+      --GW-popups-popup-options-dialog-border-color: #aaa;
+      --GW-popups-popup-options-dialog-box-shadow-color: #444;
+      --GW-popups-popup-options-dialog-horizontal-rule-color: #ccc;
+      --GW-popups-popup-options-dialog-button-background-color: var(--GW-body-background-color);
+      --GW-popups-popup-options-dialog-button-text-color: #000;
+      --GW-popups-popup-options-dialog-button-border-color: #000;
+      --GW-popups-popup-options-dialog-button-hover-box-shadow-color: #000;
+      --GW-popups-popup-options-dialog-option-button-explanation-text-color: #777;
+      --GW-popups-popup-options-dialog-option-button-hover-text-color: #777;
+      --GW-popups-popup-options-dialog-radio-button-border-color: #000;
+      --GW-popups-show-popup-options-dialog-button-color: #999;
+  
+      /*  Popins.
+       */
+      --GW-popins-body-background-color: var(--GW-body-background-color);
+      --GW-popins-popin-background-color: var(--GW-body-background-color);
+      --GW-popins-popin-border-color: #aaa;
+      --GW-popins-box-shadow-color: #aaa;
+      --GW-popins-popin-title-bar-background-color: #fff;
+      --GW-popins-popin-title-bar-button-color: #666;
+      --GW-popins-popin-scrollbar-thumb-color: #ccc;
+      --GW-popins-popin-scrollbar-track-color: var(--GW-body-background-color);
+      --GW-popins-popin-scrollbar-thumb-hover-color: #999;
+      --GW-popins-popin-stack-counter-text-color: #fff;
+  
+      /*  Image focus.
+       */
+      --GW-image-focus-image-hover-drop-shadow-color: #777;
+  
+      /*  Mode selector (light/dark mode).
+       */
+      --GW-mode-selector-background-color: var(--GW-body-background-color);
+      --GW-mode-selector-mobile-background-color: rgba(255,255,255,0.3);
+      --GW-mode-selector-border-hover-color: #aaa;
+      --GW-mode-selector-button-text-color: #777;
+      --GW-mode-selector-button-hover-text-color: #000;
+  
+          /*      Reader mode.
+           */
+          --GW-reader-mode-masked-link-bracket-background-color: rgba(255,255,255,0.5);
+          /*      The following is a temporary hack until we can generate the above value
+                  dynamically from the local value of --GW-link-underline-background-color
+                  (by reducing the opacity of whatever that value is).
+           */
+          --GW-reader-mode-masked-link-bracket-background-color: var(--GW-link-underline-background-color);
+          --GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0,0,0,0.6);
+          --GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+          --GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+          --GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+          --GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+  
+          /*      “Back to top” link.
+           */
+          --GW-back-to-top-link-color: #ccc;
+          --GW-back-to-top-link-hover-color: #999;
+  
+          /*      “Skip to content” accessibility link.
+           */
+          --GW-skip-to-content-text-color: #fff;
+          --GW-skip-to-content-border-color: #fff;
+          --GW-skip-to-content-background-color: #bf1722;
+    }
+    </style>
+
+  <title>Tufte-style Jekyll blog</title>
+  <meta name="description" content="The Tufte Jekyll theme  is an attempt to create a website design with the look and feel of Edward Tufte’s books and handouts. Tufte’s style is known for its ...">
+  
+  
+  <meta name="page-body-classes" content="fake-journal-club drop-caps-kanzlei">
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+<!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script>
+  /*  Create global 'GW' object, if need be.
+  */
+  if (typeof window.GW == "undefined")
+    window.GW = { };
+
+  /********************************/
+  /*      Events fired by gw-inline.js:
+
+        GW.contentDidLoad {
+                        source: "DOMContentLoaded"
+                        document:
+                                The global document object (window.document).
+                        location:
+                                URL of the main page, as loaded.
+                        flags: (  GW.contentDidLoadEventFlags.isMainDocument
+                                        | GW.contentDidLoadEventFlags.needsRewrite
+                                        | GW.contentDidLoadEventFlags.clickable
+                                        | GW.contentDidLoadEventFlags.collapseAllowed
+                                        | GW.contentDidLoadEventFlags.isFullPage
+                                        | GW.contentDidLoadEventFlags.fullWidthPossible)
+                }
+                Fired when the browser DOMContentLoaded event fires. Loaded content is
+                the full page itself.
+  */
+
+  /*****************/
+  /* MEDIA QUERIES */
+  /*****************/
+
+  GW.mediaQueries = {
+    mobileWidth:           matchMedia("(max-width: 649px)"),
+    systemDarkModeActive:  matchMedia("(prefers-color-scheme: dark)"),
+    hoverAvailable:        matchMedia("only screen and (hover: hover) and (pointer: fine)"),
+    portraitOrientation:   matchMedia("(orientation: portrait)")
+  };
+
+  GW.isMobile = () => {
+    /*  We consider a client to be mobile if one of two conditions obtain:
+        1. JavaScript detects touch capability, AND viewport is narrow; or,
+        2. CSS does NOT detect hover capability.
+     */
+    return (   (   ('ontouchstart' in document.documentElement)
+                && GW.mediaQueries.mobileWidth.matches)
+            || !GW.mediaQueries.hoverAvailable.matches);
+  };
+
+  GW.isFirefox = () => {
+    return (navigator.userAgent.indexOf("Firefox") > 0);
+  };
+
+  GW.isX11 = () => {
+        return (navigator.userAgent.indexOf("X11") > 0);
+  };
+
+  /********************/
+  /* DEBUGGING OUTPUT */
+  /********************/
+
+  GW.dateTimeFormat = new Intl.DateTimeFormat([], { hour12: false, hour: "numeric", minute: "numeric", second: "numeric" });
+
+  function GWTimestamp() {
+    let time = Date.now();
+    let ms = `${(time % 1000)}`.padStart(3,'0');
+    let timestamp = `${GW.dateTimeFormat.format(time)}.${ms}`;
+
+        return timestamp;
+  }
+
+  GW.logLevel = localStorage.getItem("gw-log-level") || 0;
+  GW.logSourcePadLength = 28;
+
+  function GWLog (string, source = "", level = 1) {
+    if (GW.logLevel < level)
+        return;
+
+    let sourcestamp = (source > "" ? `[${source}]` : `[ ]`).padEnd(GW.logSourcePadLength, ' ');
+
+    console.log(`[${GWTimestamp()}]  ` + sourcestamp + string);
+  }
+  GW.setLogLevel = (level, permanently = false) => {
+    if (permanently)
+        localStorage.setItem("gw-log-level", level);
+
+    GW.logLevel = level;
+  };
+
+  function GWStopWatch(f, ...args) {
+        let fname = (f.name || f.toString().slice(0, f.toString().indexOf('{')));
+    console.log(`[${GWTimestamp()}]  ${fname} [BEGIN]`);
+        let rval = f(...args);
+    console.log(`[${GWTimestamp()}]  ${fname} [END]`);
+    return rval;
+  }
+
+  /*******************/
+  /* ERROR REPORTING */
+  /*******************/
+
+  /*      Reports an error by sending an XMLHTTPRequest to the 404 page, suffixed
+        with some error string (which gets automatically URL-encoded).
+  */
+  function GWServerLogError(errorString, errorType) {
+        doAjax({ location: `${location.origin}/static/404-error-` + fixedEncodeURIComponent(errorString) });
+        GWLog(`Reporting ${(errorType || "error")}:  ${errorString}`, "error reporting", 1);
+  }
+
+  /***********/
+  /* HELPERS */
+  /***********/
+
+  /*  Because encodeURIComponent does not conform to RFC 3986; see MDN docs.
+  */
+  function fixedEncodeURIComponent(str) {
+    return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+        return '%' + c.charCodeAt(0).toString(16);
+    });
+  }
+
+  /*      Transforming a URL hash into a CSS selector in a form that’s safe to pass to
+        querySelector and similar functions. (All characters that need to be escaped
+        according to the CSS spec are escaped.)
+  */
+  function selectorFromHash(hash) {
+        if (hash.length < 2)
+                return null;
+
+        //  Chrome’s fancy new “scroll to text fragment”.
+        if (hash.startsWith("#:~:"))
+                return null;
+
+        return "#" + CSS.escape(decodeURIComponent(hash.slice(1)));
+  }
+
+  /*  Helper function for AJAX, by kronusaturn
+    https://github.com/kronusaturn/lw2-viewer/blob/master/www/script.js
+  */
+  function urlEncodeQuery(params) {
+    return (Object.keys(params)).map(x => (`${x}=${ fixedEncodeURIComponent(params[x]) }`)).join("&");
+  }
+
+  /*  Helper function for AJAX, by kronusaturn
+    https://github.com/kronusaturn/lw2-viewer/blob/master/www/script.js
+  */
+  function doAjax(options) {
+    let req = new XMLHttpRequest();
+    req.addEventListener("load", (event) => {
+        if (event.target.status < 400) {
+            if (options["onSuccess"])
+                options.onSuccess(event);
+        } else {
+            if (options["onFailure"])
+                options.onFailure(event);
+        }
+    });
+    req.addEventListener("error", (event) => {
+                if (options["onFailure"])
+                        options.onFailure(event);
+    });
+    let method = (options["method"] || "GET");
+    let location = (options.location || document.location)
+                           + ((options.params && method == "GET") ? ("?" + urlEncodeQuery(options.params)) : "");
+    req.open(method, location);
+    if (options["method"] == "POST") {
+        req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        req.send(urlEncodeQuery(options.params));
+    } else {
+        req.send();
+    }
+  }
+
+  /*  Adds an event listener to a button (or other clickable element), attaching
+    it to both ‘click’ and ‘keyup’ events (for use with keyboard navigation).
+    Optionally also attaches the listener to the ‘mousedown’ event, making the
+    element activate on mouse down instead of mouse up.
+  */
+  Element.prototype.addActivateEvent = function(fn, includeMouseDown) {
+    let ael = this.activateEventListener = (event) => {
+        if (   event.button === 0
+                || event.key    === ' ')
+            fn(event);
+    };
+    this.addEventListener("click", ael);
+    this.addEventListener("keyup", ael);
+    if (includeMouseDown)
+        this.addEventListener("mousedown", ael);
+  }
+
+  /*  Swap classes on the given element.
+    First argument is an array with two string elements (the classes).
+    Second argument is 0 or 1 (index of class to add; the other is removed).
+  */
+  Element.prototype.swapClasses = function (classes, whichToAdd) {
+    this.classList.add(classes[whichToAdd]);
+    this.classList.remove(classes[1 - whichToAdd]);
+  };
+
+  /*      The first text node of a node or element (or null if an element contains no
+        text nodes).
+  */
+  Object.defineProperty(Node.prototype, "firstTextNode", {
+    get() {
+                if (this.nodeType == Node.TEXT_NODE)
+                        return this;
+
+                if (this.childNodes.length == 0)
+                        return null;
+
+                for (let i = 0; i < this.childNodes.length; i++) {
+                        let firstTextNodeWithinChildNode = this.childNodes[i].firstTextNode;
+                        if (firstTextNodeWithinChildNode)
+                                return firstTextNodeWithinChildNode;
+                }
+
+                return null;
+    }
+  });
+
+  /*      The last text node of a node or element (or null if an element contains no
+        text nodes).
+  */
+  Object.defineProperty(Node.prototype, "lastTextNode", {
+    get() {
+                if (this.nodeType == Node.TEXT_NODE)
+                        return this;
+
+                if (this.childNodes.length == 0)
+                        return null;
+
+                for (let i = this.childNodes.length - 1; i >= 0; i--) {
+                        let lastTextNodeWithinChildNode = this.childNodes[i].lastTextNode;
+                        if (lastTextNodeWithinChildNode)
+                                return lastTextNodeWithinChildNode;
+                }
+
+                return null;
+    }
+  });
+
+  /*      Returns true if the point is within the given rect, false otherwise.
+  */
+  function pointWithinRect(point, rect) {
+        return (   point.x >= rect.left
+                        && point.x <= rect.right
+                        && point.y >= rect.top
+                        && point.y <= rect.bottom);
+  }
+
+  /*  Returns true if the given rects intersect, false otherwise.
+  */
+  function doRectsIntersect(rectA, rectB) {
+    return (   rectA.top < rectB.bottom
+                && rectA.bottom > rectB.top
+                && rectA.left < rectB.right
+                && rectA.right > rectB.left);
+  }
+
+  /*  Returns true if the given element intersects the given rect,
+    false otherwise.
+  */
+  function isWithinRect(element, rect) {
+    return doRectsIntersect(element.getBoundingClientRect(), rect);
+  }
+
+  /*  Returns true if the given element intersects the viewport, false otherwise.
+  */
+  function isOnScreen (element) {
+    return isWithinRect(element, new DOMRect(0, 0, window.innerWidth, window.innerHeight));
+  }
+
+  /*  Returns the string trimmed of opening/closing quotes.
+  */
+  String.prototype.trimQuotes = function () {
+    return this.replace(/^["'“‘]?(.+?)["'”’]?$/, '$1');
+  };
+
+  /*  Returns true if the string begins with any of the given prefixes.
+  */
+  String.prototype.startsWithAnyOf = function (prefixes) {
+    for (prefix of prefixes)
+        if (this.startsWith(prefix))
+            return true;
+    return false;
+  }
+
+  /*  Returns true if the string ends with any of the given suffixes.
+  */
+  String.prototype.endsWithAnyOf = function (suffixes) {
+    for (suffix of suffixes)
+        if (this.endsWith(suffix))
+            return true;
+    return false;
+  }
+
+  /*  Returns true if the string includes any of the given substrings.
+  */
+  String.prototype.includesAnyOf = function (substrings) {
+    for (substring of substrings)
+        if (this.includes(substring))
+            return true
+    return false;
+  }
+
+  /*  Remove given item from array.
+  */
+  Array.prototype.remove = function (item) {
+    let index = this.indexOf(item);
+    if (index !== -1)
+        this.splice(index, 1);
+  };
+
+  /*  Remove from array the first item that passes the provided test function.
+    The test function should take an array item and return true/false.
+    */
+  Array.prototype.removeIf = function (test) {
+    let index = this.findIndex(test);
+    if (index !== -1)
+        this.splice(index, 1);
+  };
+
+  /*  Insert the given item into the array just before the first item that passes
+    the provided test function. If no item passes the test function, append the
+    item to the end of the array.
+  */
+  Array.prototype.insertBefore = function (item, test) {
+    let index = this.findIndex(test);
+    if (index === -1) {
+        this.push(item);
+    } else {
+        this.splice(index, 0, item);
+    }
+  };
+
+  /*      Product of two string arrays. (Argument can be a string, which is equivalent
+        to passing an array with a single string member.)
+        Returns array whose members are all results of concatenating each left hand
+        array string with each right hand array string, e.g.:
+
+                [ "a", "b" ].π([ "x", "y" ])
+
+        will return:
+
+                [ "ax", "ay", "bx", "by" ]
+
+        Any non-string argument must be iterable, else null is returned. Any
+        members of a passed array (or other iterable object), whatever their types,
+        are stringified and interpolated into the resulting product strings.
+  */
+  Array.prototype.π = function (strings) {
+        if (typeof strings == "string")
+                strings = [ strings ];
+
+        if (!!strings[Symbol.iterator] == "false")
+                return null;
+
+        let product = [ ];
+        for (lhs of this) {
+                for (rhs of strings) {
+                        product.push(`${lhs}${rhs}`);
+                }
+        }
+        return product;
+  };
+
+  /*      As Array.π, but applies sequentially to each argument. (First argument may
+        be a string, which is impossible with the Array member version.)
+  */
+  function _π(...args) {
+        if (args.length == 0)
+                return [ ];
+
+        let product = [ "" ];
+        for (arg of args)
+                product = product.π(arg);
+
+        return product;
+  }
+
+  /*  Run the given function immediately if the page is already loaded, or add
+    a listener to run it as soon as the page loads.
+  */
+  function doWhenPageLoaded(f) {
+    if (document.readyState == "complete")
+        f();
+    else
+        window.addEventListener("load", () => { f(); });
+  }
+
+  /*  Run the given function immediately if the page content has already loaded
+    (DOMContentLoaded event has fired), or add a listener to run it as soon as
+    the event fires.
+  */
+  function doWhenDOMContentLoaded(f) {
+    if (GW.DOMContentLoaded == true)
+        f();
+    else
+        window.addEventListener("DOMContentLoaded", () => { f(); });
+  }
+
+  /*      Run the given function immediately if the <body> element has already been
+        created, or add a mutation observer to run it as soon as the <body> element
+        is created.
+  */
+  function doWhenBodyExists(f) {
+        if (document.body) {
+                f();
+        } else {
+                let observer = new MutationObserver((mutationsList, observer) => {
+                        if (document.body) {
+                                observer.disconnect();
+                                f();
+                        }
+                });
+
+                observer.observe(document.documentElement, { childList: true });
+        }
+  }
+
+  /*  Given an HTML string, creates an element from that HTML, adds it to
+    #ui-elements-container (creating the latter if it does not exist), and
+    returns the created element.
+  */
+  function addUIElement(element_html) {
+    let ui_elements_container = document.querySelector("#ui-elements-container");
+    if (!ui_elements_container) {
+        ui_elements_container = document.createElement("div");
+        ui_elements_container.id = "ui-elements-container";
+        document.querySelector("body").appendChild(ui_elements_container);
+    }
+
+    ui_elements_container.insertAdjacentHTML("beforeend", element_html);
+    return ui_elements_container.lastElementChild;
+  }
+
+  GW.scrollListeners = { };
+  /*  Adds a scroll event listener to the page.
+  */
+  function addScrollListener(fn, name) {
+    let wrapper = (event) => {
+        requestAnimationFrame(() => {
+            fn(event);
+            document.addEventListener("scroll", wrapper, { once: true, passive: true });
+        });
+    }
+    document.addEventListener("scroll", wrapper, { once: true, passive: true });
+
+    /*  Retain a reference to the scroll listener, if a name is provided.
+     */
+    if (typeof name != "undefined") {
+        GW.scrollListeners[name] = wrapper;
+    }
+  }
+  /*  Removes a named scroll event listener from the page.
+  */
+  function removeScrollListener(name) {
+    let wrapper = GW.scrollListeners[name];
+    if (wrapper) {
+        document.removeEventListener("scroll", wrapper);
+        GW.scrollListeners[name] = null;
+    }
+  }
+
+  /*      When the given event is triggered on the given target, after the given delay
+        call the given handler function. (Optionally, if the given cancel event
+        occurs in the interim - i.e. after the trigger event happens but before the
+        delay elapses - cancel calling the handler.)
+
+        Return value of this function is an anonymous function which removes the
+        listeners that this function adds.
+
+        NOTE: If `delay` is 0 or less, then `cancelEventName` is ignored, and `func`
+        is added as an event handler for `triggerEventName` directly.
+
+        If `delay` is positive, then `func` will be called by a timer after `delay`
+        ms, prior to which time it might be cancelled if `cancelEventName` (if any)
+        occurs. (If `cancelEventName` is null, then `func` will be called after
+        `delay` unconditionally.)
+  */
+  function onEventAfterDelayDo(target, triggerEventName, delay, func, cancelEventName = null) {
+        if (delay <= 0) {
+                target.addEventListener(triggerEventName, func);
+                return (() => {
+                        target.removeEventListener(triggerEventName, func);
+                });
+        } else {
+                let timer = null;
+                let events = { };
+                target.addEventListener(triggerEventName, events.triggerEvent = (event) => {
+                        timer = setTimeout(func, delay, event);
+                });
+                if (cancelEventName != null) {
+                        target.addEventListener(cancelEventName, events.cancelEvent = (event) => {
+                                clearTimeout(timer);
+                        });
+                }
+                return (() => {
+                        target.removeEventListener(triggerEventName, events.triggerEvent);
+                        if (cancelEventName != null)
+                                target.removeEventListener(cancelEventName, events.cancelEvent);
+                });
+        }
+  }
+
+  /*      Causes an element’s contents to become selected.
+  */
+  function selectElementContents(element) {
+        var range = document.createRange();
+        range.selectNodeContents(element);
+        var selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+  }
+
+  /*  Returns val, or def if val == defval. (By default, defval is -1.)
+    (In other words, `defval(X,Y,Z)` is “return X if Y is Z [else, just Y]”.)
+  */
+  function defval(def, val, defval = -1) {
+    return (val == defval) ? def : val;
+  }
+
+  /*  Returns val, or min if val < min, or max if val > max.
+    (In other words, clamps val to [min,max].)
+  */
+  function valMinMax(val, min, max) {
+    return Math.max(Math.min(val, max), min);
+  }
+
+  /************************/
+  /* ACTIVE MEDIA QUERIES */
+  /************************/
+
+  /*  This function provides two slightly different versions of its functionality,
+    depending on how many arguments it gets.
+
+    If one function is given (in addition to the media query and its name), it
+    is called whenever the media query changes (in either direction).
+
+    If two functions are given (in addition to the media query and its name),
+    then the first function is called whenever the media query starts matching,
+    and the second function is called whenever the media query stops matching.
+
+    If you want to call a function for a change in one direction only, pass an
+    empty closure (NOT null!) as one of the function arguments.
+
+    There is also an optional fifth argument. This should be a function to be
+    called when the active media query is canceled.
+  */
+  function doWhenMatchMedia(mediaQuery, name, ifMatchesOrAlwaysDo, otherwiseDo = null, whenCanceledDo = null) {
+    if (typeof GW.mediaQueryResponders == "undefined")
+        GW.mediaQueryResponders = { };
+
+    let mediaQueryResponder = (event, canceling = false) => {
+        if (canceling) {
+            GWLog(`Canceling media query “${name}”`, "media queries", 1);
+
+            if (whenCanceledDo != null)
+                whenCanceledDo(mediaQuery);
+        } else {
+            let matches = (typeof event == "undefined") ? mediaQuery.matches : event.matches;
+
+            GWLog(`Media query “${name}” triggered (matches: ${matches ? "YES" : "NO"})`, "media queries", 1);
+
+            if ((otherwiseDo == null) || matches)
+                ifMatchesOrAlwaysDo(mediaQuery);
+            else
+                otherwiseDo(mediaQuery);
+        }
+    };
+    mediaQueryResponder();
+    mediaQuery.addListener(mediaQueryResponder);
+
+    GW.mediaQueryResponders[name] = mediaQueryResponder;
+  }
+
+  /*  Deactivates and discards an active media query, after calling the function
+    that was passed as the whenCanceledDo parameter when the media query was
+    added.
+  */
+  function cancelDoWhenMatchMedia(name) {
+    GW.mediaQueryResponders[name](null, true);
+
+    for ([ key, mediaQuery ] of Object.entries(GW.mediaQueries))
+        mediaQuery.removeListener(GW.mediaQueryResponders[name]);
+
+    GW.mediaQueryResponders[name] = null;
+  }
+
+  /*****************/
+  /* NOTIFICATIONS */
+  /*****************/
+  /*      The GW.notificationCenter object allows us to register handler functions for
+        named events. Any number of handlers may be registered for any given named
+        event, and when that event is fired, all of its registered handlers will be
+        called. Because event handlers are registered for events by event name
+        (which may be any string we like), a handler may be registered for an event
+        at any time and at any location in the code. (In other words, an event does
+        not need to first be “defined”, nor needs to “exist” in any way, in order
+        for a handler to be registered for it.)
+
+        We can also make the calling of any given event handler conditional (with a
+        user-defined, handler-specific condition function [closure] that dynamically
+        determines whether its associated handler should be called or not, when the
+        event the handler was registered for is fired), specify that an event
+        handler should be called only once or many times, and group handlers for a
+        particular event into named “phases” (to ensure that certain handlers for an
+        event are always called before/after others).
+
+        Events themselves are also user-defined. Causing an event to fire is as
+        simple as calling GW.notificationCenter.fireEvent() and providing an event
+        name (which may be any string), plus an event info dictionary (which may
+        contain any keys and values we deem necessary, and which will be passed to
+        the handler functions); this will trigger the calling of all the handlers
+        that have been registered for that event name.
+
+        See the comments on specific elements of GW.notificationCenter, below, for
+        more information.
+  */
+  GW.notificationCenter = {
+        /*      Dictionary of registered event handlers for named events.
+
+                KEYS are event names (e.g. ‘GW.contentDidLoad’).
+
+                VALUES are arrays of handler definitions for each event. Each handler
+                definition is a dictionary with the following keys/values:
+
+                - ‘f’ (key)
+                        Handler function to call when the named event fires (passing the
+                        event info dictionary of the fired event). (See comment on the
+                        ‘addHandlerForEvent’ function, below, for details.)
+
+                - ‘options’ (key) [optional]
+                        Event options dictionary, with the following keys/values:
+
+                        - ‘condition’ (key) [optional]
+                                Test function, to which the event info dictionary of the fired
+                                event is passed; the handler function is called if (and only if)
+                                the condition returns true
+
+                        - ‘once’ (key) [optional]
+                                Boolean value; if true, the handler will be removed after the
+                                handler function is called once (note that if there is a
+                                condition function provided [see the ‘condition’ key], the
+                                handler function will not be called - and therefore will not be
+                                removed - if the named event is fired by the condition evaluates
+                                to false).
+
+                                If not set, defaults to false (i.e., by default a handler is
+                                not removed after an event is fired once, but will continue to
+                                be invoked each time the named event fires and the condition,
+                                if any, evaluates as true).
+
+                        - ‘phase’ (key) [optional]
+                                String which specifies when the given handler function should be
+                                called, relative to other handlers registered for the named
+                                event.
+
+                                The format for this string is as follows:
+
+                                - If the first character is anything other than ‘<’ or ‘>’, the
+                                  entire string is treated as the name of a handler phase. The
+                                  given handler function will be called in the same handler
+                                  phase as all other handlers assigned to that phase. (Within a
+                                  phase, handlers are called in the order in which they were
+                                  added.)
+
+                                - If the first character is ‘<’, then the rest of the string
+                                  is treated as the name of a handler phase. The given handler
+                                  function will be called prior to any handlers assigned to the
+                                  specified phase, but after any handlers assigned to an earlier
+                                  named phase (if any). (Within such a “before phase X”
+                                  ‘pseudo-phase’, handlers are called in the order in which they
+                                  were added.)
+
+                                - If the first character is ‘>’, then the rest of the string
+                                  is treated as the name of a handler phase. The given handler
+                                  function will be called after any handlers assigned to the
+                                  specified phase, but before any handlers assigned to a later
+                                  named phase (if any). (Within such an “after phase X”
+                                  ‘pseudo-phase’, handlers are called in the order in which they
+                                  were added.)
+
+                When an event is fired, any handlers registered for that event (i.e.,
+                members of the array which is the value for that event’s name in the
+                eventHandlers dictionary) are called in array order. (If a condition is
+                specified for any given handler, the handler function is only called if
+                the condition function - called with the event info dictionary as its
+                argument - evaluates true.)
+
+                The order of an event handlers array for a given event is, by default,
+                determined by the order in which handlers are registered for that event.
+                The value of the ‘phase’ key of an event’s options dictionary can
+                override and modify this default order. (See definition of the ‘phase’
+                key of an event handler options dictionary, above.)
+         */
+    eventHandlers: { },
+
+    /*  Defined event handler phases for certain named events.
+        (See definition of the ‘phase’ key of an event handler options
+         dictionary, above, for more info.)
+
+        Phases are defined in execution order. For example, when the
+        GW.contentDidLoad event (whose handler phases are defined as follows:
+        `[ "rewrite", "eventListeners" ]`) fires, event handlers are called in
+        the following order:
+
+        1. Handlers assigned to be called before the ‘rewrite’ phase (i.e.,
+           those with ‘<rewrite’ as the value of their ‘phase’ key in their
+           event handler options dictionary)
+        2. Handlers assigned to be called during the ‘rewrite’ phase (i.e.,
+           those with ‘rewrite’ as the value of their ‘phase’ key in their
+           event handler options dictionary)
+        3. Handlers assigned to be called after the ‘rewrite’ phase (i.e.,
+           those with ‘>rewrite’ as the value of their ‘phase’ key in their
+           event handler options dictionary)
+        4. Handlers assigned to be called before the ‘eventListeners’ phase
+           (i.e., those with ‘<eventListeners’ as the value of their ‘phase’ key
+           in their event handler options dictionary)
+        5. Handlers assigned to be called during the ‘eventListeners’ phase
+           (i.e., those with ‘eventListeners’ as the value of their ‘phase’ key
+           in their event handler options dictionary)
+        6. Handlers assigned to be called after the ‘eventListeners’ phase
+           (i.e., those with ‘>eventListeners’ as the value of their ‘phase’ key
+           in their event handler options dictionary)
+
+        (Handlers with no specified phase might be called at any point in this
+         sequence, depending on when they were registered.)
+     */
+    handlerPhaseOrders: {
+        "GW.contentDidLoad": [ "rewrite", "eventListeners" ]
+    },
+
+    /*  Register a new event handler for the named event. Arguments are:
+
+                - ‘eventName’
+                        The name of an event (e.g. ‘GW.contentDidLoad’).
+
+                - ‘f’
+                        Event handler function. When the event fires, this function will be
+                        called. Not that if a condition is specified in the event handler
+                        options (i.e., if a condition function is provided as the value of
+                        the ‘condition’ key in the event handler options dictionary), then
+                        the handler function will be called only if the condition function
+                        evaluates true).
+
+                        The event handler function should take one argument: an event info
+                        dictionary. The keys and values of this dictionary are mostly
+                        event-specific (but see the ‘fireEvent’ function, below, for more
+                        info).
+
+                - ‘options’ [optional]
+                        Event handler options dictionary. See comment on the ‘eventHandlers’
+                        property (above) for info on possible keys/values.
+
+                Note that if there already exists a registered event handler for the
+                given event with the same event handler function as the new handler that
+                you are trying to register, then the new handler will not be registered
+                (even if it has different handler options than the existing handler).
+         */
+    addHandlerForEvent: (eventName, f, options = { }) => {
+        /*      If there’s not already a handlers array for the given event (which
+                may be, e.g., because no event handlers have yet been registered
+                for this event), create the array.
+         */
+        if (GW.notificationCenter.eventHandlers[eventName] == null)
+            GW.notificationCenter.eventHandlers[eventName] = [ ];
+
+                /*      Array of registered handlers for the named event. Might be empty
+                        (if no handlers have been registered for this event yet).
+                 */
+        let handlers = GW.notificationCenter.eventHandlers[eventName];
+
+        /*      If there is already a registered handler with the same handler
+                function as the one we’re trying to register, do not register this
+                new one (even if it has different handler options).
+         */
+        if (handlers.findIndex(handler => handler.f == f) !== -1)
+            return;
+
+                /*      By default, add the new handler to the end of the handlers array
+                        for this event (so that, when the event is fired, this new handler
+                        gets called after all the previously registered handlers).
+
+                        However, if a defined handler phase order exists for the event
+                        that we’re registering this handler for (see ‘phaseOrder’, below),
+                        and a phase has been specified in this handler’s options dictionary,
+                        then that might result in this handler being inserted into the named
+                        event’s handler array at a different point.
+                 */
+        let insertAt = handlers.length;
+
+                /*      Get the handler phase order for the named event, if any.
+
+                        (If no handler phases have been defined for the given event, then
+                         we will ignore the value of the ‘phase’ key in the new handler’s
+                         options dictionary, and simply stick with the default behavior of
+                         adding the new handler at the end of the event’s handler array.)
+                 */
+        let phaseOrder = GW.notificationCenter.handlerPhaseOrders[eventName];
+
+                /*      If the handler we’re registering isn’t assigned to any particular
+                        handler phase, we will simply add it to the end of the handler array
+                        for the given event (and the next large block of code, within the
+                        conditional below, will not be executed). However, we still want to
+                        set an empty-string value for the ‘phase’ key of the handler’s
+                        options dictionary, in order for the ‘phaseAt’ function (below) to
+                        work properly.
+                 */
+        if (phaseOrder)
+            options.phase = (options.phase || "");
+
+                /*      Only if (a) there’s a defined handler phase order for the given
+                        event, AND (b) the handler we’re registering is being assigned to a
+                        specific phase, do we have anything to do here...
+                 */
+        if (   options.phase
+                && phaseOrder) {
+                /*      Get the target phase name, which may be the full value of the
+                        ‘phase’ key of the options dictionary, OR it may be that value
+                        minus the first character (if the value of the ‘phase’ key
+                        begins with a ‘<’ or a ‘>’ character).
+                        */
+            let targetPhase = options.phase.match(/^([<>]?)(.+)/)[2];
+
+            /*  Get the index of the target phase in the defined handler phase
+                order for the named event. If the specified phase is not found
+                in the defined handler phase order, set targetPhaseIndex to
+                the length of the phase order array, thus ensuring that, by
+                default, the new handler will be appended to the end of the
+                event’s handlers array.
+             */
+            let targetPhaseIndex = defval(phaseOrder.length, phaseOrder.indexOf(targetPhase), -1);
+
+                        /*      Takes an index into the given event’s handler array. Returns a
+                                dictionary with these keys/values:
+
+                                - ‘phase’ [key]
+                                        The name of the phase to which the handler at the given
+                                        index is assigned (could be an empty string).
+
+                                - ‘before’ [key]
+                                        Boolean value; true if the handler at the given index is
+                                        assigned to run before the specified phase, false otherwise
+                                        (i.e., if it’s instead assigned to run either during or
+                                        after the specified phase).
+
+                                - ‘after’ [key]
+                                        Boolean value; true if the handler at the given index is
+                                        assigned to run after the specified phase, false otherwise
+                                        (i.e., if it’s instead assigned to run either before or
+                                        during the specified phase).
+
+                                (Note that for an event handler which has not been assigned to
+                                 any specific phase, ‘phase’ will be the empty string, and both
+                                 ‘before’ and ‘after’ will be false.)
+
+                                Returns null if the given index is out of bounds of the event’s
+                                handler definitions array.
+                         */
+            let phaseAt = (index) => {
+                if (index >= handlers.length)
+                        return null;
+                let parts = handlers[index].options.phase.match(/^([<>]?)(.+)/);
+                return {
+                    phase: parts[2],
+                    before: (parts[1] == "<"),
+                    after: (parts[1] == ">")
+                };
+            };
+
+            if (options.phase.startsWith("<")) {
+                /*      The handler is assigned to be called before the specified
+                        phase.
+                 */
+                for (var i = 0; i < handlers.length; i++) {
+                        /*      We have found the index before which to insert, if the
+                                handler at this index is assigned to be called during
+                                or after our target phase, OR if it is assigned to be
+                                called before, during, or after any later phase.
+
+                                (In other words, we have passed all the handlers which
+                                 are assigned either to any earlier phase or to before
+                                 the specified phase.)
+                         */
+                    if (    phaseAt(i).phase == targetPhase
+                        && !phaseAt(i).before)
+                        break;
+                    if (phaseOrder.slice(targetPhaseIndex + 1).includes(phaseAt(i).phase))
+                        break;
+                }
+
+                /*      If neither of the break conditions in the loop were
+                        encountered, i is now equal to the handler array length,
+                        and the new handler will be added to the end of the array.
+                        Otherwise, it’ll be inserted in the appropriate place.
+                 */
+                insertAt = i;
+            } else if (options.phase.startsWith(">")) {
+                /*      The handler is assigned to be called after the specified
+                        phase.
+                 */
+                for (var j = handlers.length - 1; j > -1; j--) {
+                        /*      We have found the index _after_ which to insert (hence
+                                the `j++`), if the handler at this index is assigned to
+                                be called before, during, or after the target phase, OR
+                                if it is assigned to be called before, during, or after
+                                any earlier phase.
+
+                                (In other words, we have passed - moving backwards
+                                 through the handlers array - all the handlers which
+                                 are assigned either to any later phase or to after
+                                 or during the specified phase.)
+                         */
+                    if (phaseAt(j).phase == targetPhase) {
+                        j++;
+                        break;
+                    }
+
+                    /*  There are no “earlier phases” if the target phase index
+                        is either 0 or out of array bounds of the phase order.
+                        (The latter will happen if the target phase is not in
+                         the defined phase order for the given event.)
+                    */
+                    if (   targetPhaseIndex > 0
+                        && targetPhaseIndex < phaseOrder.length
+                        && phaseOrder.slice(0, targetPhaseIndex - 1).includes(phaseAt(j).phase)) {
+                        j++;
+                        break;
+                    }
+                }
+
+                /*      If neither of the break conditions in the loop were
+                        encountered, j is now equal to -1; in this case, set j to
+                        the handlers array length, such that the new handler will be
+                        added to the end of the array.
+                        Otherwise, it’ll be inserted in the appropriate place.
+                 */
+                insertAt = defval(handlers.length, j, -1);
+            } else {
+                /*      The handler is assigned to be called during the specified
+                        phase.
+                 */
+                for (var k = 0; k < handlers.length; k++) {
+                        /*      We have found the index before which to insert, if the
+                                handler at this index is assigned to be called after the
+                                target phase, OR if it is assigned to be called before,
+                                during, or after any later phase.
+
+                                (In other words, we have passed all the handlers which
+                                 are assigned either to any earlier phase or to before
+                                 or during the specified phase.)
+                         */
+                    if (   phaseAt(k).phase == targetPhase
+                        && phaseAt(k).after)
+                        break;
+                    if (phaseOrder.slice(targetPhaseIndex + 1).includes(phaseAt(k).phase))
+                        break;
+                }
+
+                /*      If neither of the break conditions in the loop were
+                        encountered, k is now equal to the handler array length,
+                        and the new handler will be added to the end of the array.
+                        Otherwise, it’ll be inserted in the appropriate place.
+                 */
+                insertAt = k;
+            }
+        }
+
+                /*      Add the new event handler to the named event’s handler definitions
+                        array, at whatever index we have now determined it should go to.
+                 */
+        GW.notificationCenter.eventHandlers[eventName].splice(insertAt, 0, { f: f, options: options });
+    },
+
+    /*  Unregister the event handler with the given handler function from the
+        specified named event (if such a handler exists).
+     */
+    removeHandlerForEvent: (eventName, f) => {
+        if (GW.notificationCenter.eventHandlers[eventName] == null)
+            return;
+
+        GW.notificationCenter.eventHandlers[eventName].removeIf(handler => handler.f == f);
+    },
+
+    /*  Unregister all registered event handlers from the specified named event.
+     */
+    removeAllHandlersForEvent: (eventName) => {
+        GW.notificationCenter.eventHandlers[eventName] = null;
+    },
+
+        /*      Event-specific pre-fire processing functions. Keys are event names.
+                Values are functions that take the event info as an argument, and return
+                modified event info.
+        */
+        prefireProcessors: {
+
+        },
+
+    /*  Fire an event with the given name and event info dictionary.
+
+        In addition to printing a console log message (if the log level is set
+        to 1 or higher), this will also cause each event handler that has been
+        registered for the named event to be called. (Handlers with a condition
+        function specified in their event handler options will first have that
+        condition function called, and the handler function will only be called
+        if the condition evaluates true.)
+
+        The event info dictionary provided to the ‘fireEvent’ function will be
+        passed as the argument to each handler function (as well as to any
+        condition function that is called to determine whether a handler should
+        be called).
+
+        The event info dictionary may contain various, mostly event-specific,
+        keys and values. The one common key/value that any event’s info
+        dictionary may contain is the ‘source’ key, whose value should be a
+        string identifying the function, browser event, or other context which
+        caused the given event to be fired (such as ‘DOMContentLoaded’ or
+        ‘Annotations.loadAnnotation’). In addition to any ways in which it may
+        be used by an event handler, this string (i.e., the value of the
+        ‘source’ key) is (if present) included in the console message that is
+        printed when the event is fired.
+     */
+    fireEvent: (eventName, eventInfo) => {
+        /*  The ‘16’ here is the width of the date field plus spacing.
+            The “Source:” text is manually padded to be as wide
+            as “[notification]”.
+         */
+        GWLog(`Event “${eventName}” fired.`
+                + `${((eventInfo && eventInfo.source)
+                          ? ("\n"
+                           + "".padStart(16, ' ')
+                           + "       Source:".padEnd(GW.logSourcePadLength, ' ')
+                           + eventInfo.source)
+                          : ""
+                                 )}`, "notification");
+
+                /*      If no handlers have been registered for this event, we do nothing.
+                 */
+        if (GW.notificationCenter.eventHandlers[eventName] == null)
+            return;
+
+                /*      If event-specific pre-fire processing is needed, do it.
+                 */
+                if (GW.notificationCenter.prefireProcessors[eventName])
+                        eventInfo = GW.notificationCenter.prefireProcessors[eventName](eventInfo);
+
+                /*      Call all registered handlers, in order.
+                 */
+        for (let i = 0; i < GW.notificationCenter.eventHandlers[eventName].length; i++) {
+            let handler = GW.notificationCenter.eventHandlers[eventName][i];
+            /*  If a condition function is provided, call it to determine
+                whether the handler function should be called.
+             */
+            if (   handler.options.condition
+                && handler.options.condition(eventInfo) == false)
+                continue;
+
+            /*  If the condition function evaluated true, or if no condition
+                function was provided, we call the handler.
+             */
+            handler.f(eventInfo);
+
+                /*      If the handler options specified a true value for the ‘once’
+                        key, we unregister this handler after having called it once.
+
+                        (Note that in the case of an once-only handler that’s called
+                         conditionally, i.e. one with a specified condition function,
+                         regardless of how many times the named event fires, the handler
+                         is never automatically removed until its condition evaluates
+                         true and the handler actually gets called once.)
+                 */
+            if (handler.options.once) {
+                GW.notificationCenter.eventHandlers[eventName].splice(i, 1);
+                i--;
+            }
+        }
+    }
+  };
+
+  /*      Event-specific boolean flags for the ‘GW.contentDidLoad’ event.
+
+        See rewrite.js for details on the meaning of these flags.
+  */
+  GW.contentDidLoadEventFlags = {
+        isMainDocument:         1 << 0,
+        needsRewrite:           1 << 1,
+        clickable:                      1 << 2,
+        collapseAllowed:        1 << 3,
+        isCollapseBlock:        1 << 4,
+        isFullPage:                     1 << 5,
+        fullWidthPossible:      1 << 6
+  };
+
+  /*      Event-specific pre-fire processing for the ‘GW.contentDidLoad’ event.
+  */
+  GW.notificationCenter.prefireProcessors["GW.contentDidLoad"] = (eventInfo) => {
+        for ([flagName, flagValue] of Object.entries(GW.contentDidLoadEventFlags))
+                eventInfo[flagName] = (0 != (eventInfo.flags & flagValue));
+
+        return eventInfo;
+  };
+
+  /****************/
+  /* SCROLL STATE */
+  /****************/
+
+  GW.scrollState = {
+    lastScrollTop:              (window.pageYOffset || document.documentElement.scrollTop),
+    unbrokenDownScrollDistance: 0,
+    unbrokenUpScrollDistance:   0
+  };
+
+  function updateScrollState(event) {
+    GWLog("updateScrollState", "gw.js", 3);
+
+    let newScrollTop = (window.pageYOffset || document.documentElement.scrollTop);
+    GW.scrollState.unbrokenDownScrollDistance = (newScrollTop > GW.scrollState.lastScrollTop)
+        ? (GW.scrollState.unbrokenDownScrollDistance + newScrollTop - GW.scrollState.lastScrollTop)
+        : 0;
+    GW.scrollState.unbrokenUpScrollDistance = (newScrollTop < GW.scrollState.lastScrollTop)
+        ? (GW.scrollState.unbrokenUpScrollDistance + GW.scrollState.lastScrollTop - newScrollTop)
+        : 0;
+    GW.scrollState.lastScrollTop = newScrollTop;
+  }
+  addScrollListener(updateScrollState, "updateScrollStateScrollListener");
+
+  /*  Toggles whether the page is scrollable.
+  */
+  function isPageScrollingEnabled() {
+    return !(document.documentElement.classList.contains("no-scroll"));
+  }
+  /*      Pass true or false to enable or disable (respectively) page scrolling.
+        Calling this function with no arguments toggles the state (enables if
+        currently disabled, or vice versa).
+  */
+  function togglePageScrolling(enable) {
+    if (typeof enable == "undefined")
+        enable = document.documentElement.classList.contains("no-scroll");
+
+    let preventScroll = (event) => { document.documentElement.scrollTop = GW.scrollState.lastScrollTop; };
+
+        /*      The `no-scroll` CSS class, which is added to the `html` element when
+                scrolling is disabled by this function (in order to permit the “toggle”
+                behavior, i.e. calling ‘togglePageScrolling’ with no arguments), allows
+                the assignment of arbitrary CSS properties to the page on the basis of
+                scroll state. This is purely a convenience (which may be useful if, for
+                example, some styling needs to change on the basis of change in page
+                scroll state, e.g. modifying the appearance of scroll bars). No specific
+                CSS properties are needed in order for this function to work properly.
+         */
+    if (   enable
+        && isPageScrollingEnabled() == false) {
+        document.documentElement.classList.toggle("no-scroll", false);
+        removeScrollListener("preventScroll");
+        addScrollListener(updateScrollState, "updateScrollStateScrollListener");
+    } else if (  !enable
+                   && isPageScrollingEnabled() == true) {
+        document.documentElement.classList.toggle("no-scroll", true);
+        addScrollListener(preventScroll, "preventScroll");
+        removeScrollListener("updateScrollStateScrollListener");
+    }
+  }
+
+  /******************/
+  /* BROWSER EVENTS */
+  /******************/
+
+  /*      We know this is false here, because this script is inlined in the <head>
+        of the page; so the page body has not yet loaded when this code runs.
+  */
+  GW.DOMContentLoaded = false;
+
+  GWLog("document.readyState." + document.readyState, "browser event");
+  window.addEventListener("DOMContentLoaded", () => {
+    GWLog("window.DOMContentLoaded", "browser event");
+    GW.DOMContentLoaded = true;
+    GW.notificationCenter.fireEvent("GW.contentDidLoad", {
+        source: "DOMContentLoaded",
+        document: document,
+        location: new URL(location.href),
+        flags: (  GW.contentDidLoadEventFlags.isMainDocument
+                        | GW.contentDidLoadEventFlags.needsRewrite
+                        | GW.contentDidLoadEventFlags.clickable
+                        | GW.contentDidLoadEventFlags.collapseAllowed
+                        | GW.contentDidLoadEventFlags.isFullPage
+                        | GW.contentDidLoadEventFlags.fullWidthPossible)
+    });
+  });
+  window.addEventListener("load", () => {
+    GWLog("window.load", "browser event");
+  });
+  document.addEventListener("readystatechange", () => {
+    GWLog("document.readyState." + document.readyState, "browser event");
+  });
+  </script>
+<script>
+  /*      This code is part of darkmode.js by Said Achmiz.
+        See the file `darkmode.js` for license and more information.
+  */
+
+  /*      Dark mode: before anything else loads, check browser localStorage for dark 
+        mode preference and immediately toggle sets of CSS color variables/classes 
+        to avoid any ‘flash of white’ or delayed loading. Note: CSS falls back to 
+        the media-query browser/OS variable preference, so still works if JS is 
+        blocked! (The JS is only necessary for the theme switcher widget allowing 
+        ‘force light’/‘force dark’ options. If users block JS, set the dark mode 
+        preference, and are unhappy when they get dark mode, well, they made their 
+        bed and must lie in it.)
+  */
+
+  /*  Set specified color mode (auto, light, dark).
+
+        Called by: this file (immediately upon load)
+        Called by: GW.darkMode.modeSelectButtonClicked (darkmode.js)
+  */
+  function setMode(modeOption) {
+    GWLog("setMode", "darkmode.js", 1);
+
+    //  The style block should be inlined (and already loaded).
+    let darkModeStyles = document.querySelector("#inlined-dark-mode-styles");
+    if (darkModeStyles == null)
+        return;
+
+        //      Set `media` attribute of style block to match requested mode.
+    if (modeOption == 'auto') {
+        darkModeStyles.media = "all and (prefers-color-scheme: dark)";
+    } else if (modeOption == 'dark') {
+        darkModeStyles.media = "all";
+    } else {
+        darkModeStyles.media = "not all";
+    }
+
+    /*  Update selector state (if darkmode.js has been loaded; if it has not, 
+        then the selector also doesn’t exist yet, and thus needn’t be updated).
+     */
+    if (window.updateModeSelectorState)
+            updateModeSelectorState();
+  }
+
+  //      Get saved mode setting (or default).
+  let currentMode = localStorage.getItem("selected-mode") || 'auto';
+
+  //      Activate saved mode.
+  setMode(currentMode);
+  </script>
+<script>
+  ReaderMode = {
+        active: false,
+
+        styles:
+                _π("body.reader-mode-active ", [
+                   "#sidebar-links",
+                   "#page-metadata",
+                   "#TOC ul li::before",
+                   "#footer",
+                   "#navigation",
+                   "#sidenote-column-left",
+                   "#sidenote-column-right",
+                    ".inflationAdjusted .supsub",
+            ".footnote-ref"
+                ]).join(",\n") + ` {
+                        display: none;
+                }` + `
+                body.reader-mode-active #logo {
+                        border-color: transparent;
+                }
+                @media only screen and (max-width: 649px) {
+                        body.reader-mode-active #TOC {
+                                margin-top: 1em;
+                        }
+                }
+                body.reader-mode-active #TOC ul li {
+                        padding-left: 0.125em;
+                }
+                ` + _π("body.reader-mode-active .spawns-", [ "popup", "popin" ]).join(",\n") + ` {
+                        margin: 0;
+                }
+                ` + _π("body.reader-mode-active .spawns-", [ "popup", "popin" ], " .indicator-hook").join(",\n") + ` {
+                        padding-left: 0;
+                }
+                ` + _π("body.reader-mode-active .spawns-", [ "popup", "popin" ], " .indicator-hook::before").join(",\n") + ` {
+                        left: -0.3em;
+                        box-shadow:
+                                -0.17em 0.05em 0 0 var(--GW-reader-mode-masked-link-bracket-background-color),
+                                -0.17em -0.05em 0 0 var(--GW-reader-mode-masked-link-bracket-background-color),
+                                -0.17em 0 0 0 var(--GW-reader-mode-masked-link-bracket-background-color);
+                }
+                ` + _π("body.reader-mode-active.masked-links-hidden .spawns-", [ "popup", "popin" ], " .indicator-hook").join(",\n") + ",\n" +
+                        _π("body.reader-mode-active #markdownBody ", [ "p", "li", "figcaption" ], " a::after").join(",\n") + ` {
+                        display: none;
+                }
+                ` + _π("body.reader-mode-active.masked-links-hidden #markdownBody ", [ "p", "li", "figcaption" ], " a:not(.popup-open)", [ "", ":visited", ":hover" ]).join(",\n") + ` {
+                        color: inherit;
+                        background: none;
+                        cursor: text;
+                }
+                body.reader-mode-active.masked-links-hidden a:link,
+                body.reader-mode-active.masked-links-hidden a:link * {
+                        text-shadow: none;
+                }
+                @media only screen and (max-width: 649px) {
+                        body.reader-mode-active #sidebar {
+                                position: relative;
+                                margin: 1em 0 0 0;
+                        }
+                        body.reader-mode-active #sidebar #logo {
+                                width: 100%;
+                                justify-content: center;
+                                margin: 0;
+                                padding: 0;
+                        }
+                        body.reader-mode-active #sidebar #logo svg {
+                                width: 1.5rem;
+                                background-color: var(--GW-body-background-color);
+                                padding: 0 10px 0 11px;
+                        }
+                        body.reader-mode-active #sidebar #logo::before {
+                                content: "";
+                                position: absolute;
+                                width: 100%;
+                                height: 0;
+                                border-bottom: 1px dotted var(--GW-index-page-bottom-ornament-line-color);
+                                left: 0;
+                                top: 50%;
+                                z-index: -1;
+                        }
+                        body.reader-mode-active header h1 {
+                                margin: 0.625em 0 0.375em 0;
+                        }
+                }
+        `,
+
+        /*      Inject a style block with the given content and element ID.
+         */
+        //      Called by: this file (immediately on load)
+        injectStyleBlock: (styleBlockContent, styleBlockID) => {
+                document.querySelector("head").insertAdjacentHTML("beforeend", `<style id='${styleBlockID}'>${styleBlockContent}</style>`);
+        },
+
+        /*      Activate or deactivate reader mode, as determined by the current setting
+                and the selected mode.
+         */
+        //      Called by: this file (doWhenBodyExists)
+        //      Called by: ReaderMode.modeSelectButtonClicked
+        setMode: (selectedMode = ReaderMode.currentMode()) => {
+                GWLog("ReaderMode.setMode", "reader-mode.js", 1);
+
+                //      Activate (if needed).
+                if (ReaderMode.enabled() == true)
+                        ReaderMode.activate();
+        },
+
+        /*      Returns true if reader mode is set to be enabled for the current page,
+                false otherwise.
+         */
+    enabled: () => {
+                let currentMode = ReaderMode.currentMode();
+        return (   currentMode == "on"
+                        || (   currentMode == "auto"
+                                && document.body.classList.contains("reader-mode")))
+    },
+
+        /*      Returns current (saved) mode (on, off, or auto).
+         */
+        currentMode: () => {
+                return (localStorage.getItem("reader-mode-setting") || "auto");
+        },
+
+        /*      Masks links and hide other elements, as appropriate. This will hide
+                linkicons and pop-frame indicators, and will thus cause reflow.
+         */
+        //      Called by: ReaderMode.setMode
+        activate: () => {
+                GWLog("ReaderMode.activate", "reader-mode.js", 1);
+
+                ReaderMode.active = true;
+
+                //      Add body classes.
+                document.body.classList.add("reader-mode-active", "masked-links-hidden");
+        },
+  };
+
+  //      Inject initial style block.
+  ReaderMode.injectStyleBlock(ReaderMode.styles, "reader-mode-styles");
+
+  //      Activate saved mode, once the <body> element is loaded (and classes known).
+  doWhenBodyExists(ReaderMode.setMode);
+
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>  
+
+
+<link rel="stylesheet" type="text/css" href="/watchmaking.io/assets/css/fonts.css?v=1649292882">
+<link rel="stylesheet" type="text/css" href="/watchmaking.io/assets/css/default.css?v=1651155103">
+<link rel="stylesheet" type="text/css" href="/watchmaking.io/assets/css/links.css?v=1651113434">
+  <link rel="stylesheet" type="text/css" href="/watchmaking.io/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/watchmaking.io/assets/css/gallery.css">
+  <link rel="stylesheet" type="text/css" href="/watchmaking.io/assets/css/tweak.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/watchmaking.io/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="/watchmaking.io/articles/20/tufte-style-jekyll-blog">
+
+  <link rel="alternate" type="application/rss+xml" title="Watchmaking.io" href="/watchmaking.io/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/watchmaking.io/"><img class="badge" src="/watchmaking.io/assets/MKR_Logo.svg" alt="MKR"></a>
+	
+		
+		    
+			<a href="/watchmaking.io/home/top2"><div style="display: inline-block;opacity: 0.0;">&lt;</div><div style="display: inline-block;">Top Two</div><div style="display: inline-block;opacity: 0.0;">&gt;</div></a>
+		    
+	    
+  	
+		
+		    
+			<a href="/watchmaking.io/home/blog"><div style="display: inline-block;opacity: 0.0;">&lt;</div><div style="display: inline-block;">blog</div><div style="display: inline-block;opacity: 0.0;">&gt;</div></a>
+		    
+	    
+  	
+		
+		    
+			<a href="/watchmaking.io/home/about"><div style="display: inline-block;opacity: 0.0;">&lt;</div><div style="display: inline-block;">About</div><div style="display: inline-block;opacity: 0.0;">&gt;</div></a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+
+      
+
+<!--The metadata line which appears at the top of pages-->
+<div class="markdownBody" id="page-metadata">
+    <div id="page-metadata-block" >
+        <span id="page-type" title="Page type, either 'Article' or 'Bubble'">
+            <em>
+            
+            Article
+            
+            </em>
+        </span>
+        <span id="page-date-range"><span id="page-publication" title="Date of first publication"><em>April 13, 2020</em></span>
+            
+        </span>
+
+        <span id="page-status"
+            title="Writing status of current page: Abandoned, Notes, In Progress, Draft, Published">Status: <em>Notes</em></span>
+        
+        
+        <span class="backlinks" id="page-backlinks"><a id="backlinks" class="backlinks link-live" href="#Backlinks"
+                data-attribute-title="Reverse citations/backlinks for this page (the list of other pages which link to this page)."><span
+                    class="indicator-hook"></span><em>Backlinks (2)</em></a></span>
+        
+        
+    </div>
+</div>
+ 
+<div id="markdownBody" class="markdownBody">
+    <article>
+        <h1>Tufte-style Jekyll blog</h1>
+        <p><span class="newthought">The Tufte Jekyll theme</span>  is an attempt to create a website design with the look and feel of Edward Tufte’s books and handouts. Tufte’s style is known for its extensive use of sidenotes, tight integration of graphics with text, and well-set typography.<!--more--> The idea for this project is essentially cribbed wholesale from Tufte and R Markdown’s Tufte Handout format<label for="One" class="margin-toggle sidenote-number"></label><input type="checkbox" id="One" class="margin-toggle" /><span class="sidenote">See <a href="https://tufte-latex.github.io/tufte-latex/">tufte-latex.github.io/tufte-latex/</a> and <a href="http://rmarkdown.rstudio.com/tufte_handout_format.html">rmarkdown.rstudio.com/tufte_handout_format</a> </span> This page is an adaptation of the <a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf">Tufte Handout PDF</a>.</p>
+
+<p><a href="/articles/20/Edge-Cases" class="link-live has-content spawns-popup" data-link-icon-type="text" data-link-icon="𝔊" data-attribute-title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world." style="">zzzzz</a>
+<a href="/articles/20/tufte-style-jekyll-blog#epigraphs" class="link-live has-content spawns-popup" data-link-icon-type="text" data-link-icon="𝔊" data-attribute-title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world." style="">this page</a>
+<a href="http://rmarkdown.rstudio.com/examples/tufte-handout.pdf" class="link-live has-content spawns-popup" data-link-icon-type="text" data-link-icon="𝔊" data-attribute-title="Explanation of 'importance' metadata: rating 1–10 about how much a topic matters to the world." style="">handout</a></p>
+
+<h2 id="jekyll-customizations">Jekyll customizations</h2>
+
+<p>This Jekyll blog theme is based on the github repository by Edward Tufte <a href="https://github.com/edwardtufte/tufte-css">here</a>, which was orginally created by Dave Leipmann, but is now labeled under Edward Tufte’s moniker. I borrowed freely from the Tufte-CSS repo and have transformed many of the typographic and page-structural features into a set of custom Liquid tags that make creating content using this style much easier than writing straight HTML. Essentially, if you know markdown, and mix in a few custom Liquid tags, you can be creating a website with this document style in short order.</p>
+
+<p>The remainder of this sample post is a self-documenting survey of the features of the Tufte-Jekyll theme. I have taken almost all of the sample content from the <a href="https://github.com/edwardtufte/tufte-css">Tufte-css</a> repo and embedded it here to illustrate the parity in appearence between the two. The additional verbiage and commentary I have added is to document the custom <em>Liquid</em> markup tags and other features that are bundled with this theme.</p>
+
+<h3 id="the-sass-settings-file">The SASS settings file</h3>
+
+<p>I have taken much of the actual <em>Tufte-css</em> files and modified them as necessary to accomodate the needs inherent in creating a Jekyll theme that has additional writing aids such as the Liquid tags. I have also turned the CSS file into a <a href="http://sass-lang.com">SASS</a> file (the .scss type).  This means that you can alter things like font choices, text color, background color, and underlining style by changing values in this file. When the Jekyll site is built using <code class="language-plaintext highlighter-rouge">jekyll build</code> the settings in this file will be compiled into the customized CSS file that the site uses. If you don’t use SCSS or SASS, you are missing out on a huge productivity tool.</p>
+
+<p>This file looks like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/* This file contains all the constants for colors and font styles */
+
+$body-font:   ETBembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+// Note that Gill Sans is the top of the stack and corresponds to what is used in Tufte's books
+// However, it is not a free font, so if it is not present on the computer that is viewing the webpage
+// The free Google 'Lato' font is used instead. It is similar.
+$sans-font:  "Gill Sans", "Gill Sans MT", "Lato", Calibri, sans-serif;
+$code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+$url-font: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
+$text-color: #111;
+$bg-color: #fffff8;
+$contrast-color: #a00000;
+$border-color: #333333;
+$link-style: color; // choices are 'color' or 'underline'. Default is color using $contrast-color set above
+</code></pre></div></div>
+<p>Any of these values can be changed in the <code class="language-plaintext highlighter-rouge">_sass/_settings.scss</code> file before the site is built. The default values are the ones from <em>tufte-css</em>.</p>
+
+<h2 id="fundamentals">Fundamentals</h2>
+
+<h3 id="color">Color</h3>
+
+<p>Although paper handouts obviously have a pure white background, the web is better served by the use of slightly off-white and off-black colors. I picked <code class="language-plaintext highlighter-rouge">#fffff8</code> and <code class="language-plaintext highlighter-rouge">#111111</code> because they are nearly indistinguishable from their ‘pure’ cousins, but dial down the harsh contrast. Tufte’s books are a study in spare, minimalist design. In his book <a href="http://www.edwardtufte.com/tufte/books_vdqi">The Visual Display of Quantitative Information</a>, he uses a red ink to add some visual punctuation to the buff colored paper and dark ink. In that spirit, links are styled using a similar red color.</p>
+
+<h3 id="headings">Headings</h3>
+
+<p>Tufte CSS uses <code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code> for the document title, <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code> with class <code class="language-plaintext highlighter-rouge">code</code> for the document subtitle, <code class="language-plaintext highlighter-rouge">&lt;h2&gt;</code> for section headings, and <code class="language-plaintext highlighter-rouge">&lt;h3&gt;</code> for low-level headings. More specific headings are not encouraged. If you feel the urge to reach for a heading of level 4 or greater, consider redesigning your document:</p>
+
+<blockquote>
+  <p>[It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of <em>sentences</em> which then cumulate sequentially into <em>paragraphs</em>, rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn’t require an elaborate hierarchy to organize.</p>
+</blockquote>
+
+<p><cite><a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB">http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB</a></cite></p>
+
+<p>As a bonus, this excerpt regarding the use of headings provides an example of using block quotes. Markdown does not have a native <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code> shorthand, but real html can be sprinkled in with the Markdown text. In the previous example, the <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code> was preceded with a single return after the quotation itself. The previous blockquote was written in Markdown thusly:</p>
+
+<pre><code class="language-Liquid">[It is] notable that the Feynman lectures (3 volumes) write about all of physics in 1800 pages, using only 2 levels of hierarchical headings: chapters and A-level heads in the text. It also uses the methodology of *sentences* which then cumulate sequentially into *paragraphs*, rather than the grunts of bullet points. Undergraduate Caltech physics is very complicated material, but it didn’t require an elaborate hierarchy to organize.
+&lt;cite&gt;[http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB](http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000hB)&lt;/cite&gt;
+</code></pre>
+
+<p><span class="newthought">In his later books</span> <label for="two" class="margin-toggle sidenote-number"></label><input type="checkbox" id="two" class="margin-toggle" /><span class="sidenote"><a href="http://www.edwardtufte.com/tufte/books_be">http://www.edwardtufte.com/tufte/books_be</a> </span>, Tufte starts each section with a bit of vertical space, a non-indented paragraph, and sets the first few words of the sentence in small caps. To accomplish this using this style, enclose the sentence fragment you want styled with small caps in a custom Liquid tag called ‘newthought’ like so:</p>
+
+<pre><code class="language-Liquid">{% newthought 'In his later books' %}
+</code></pre>
+
+<h3 id="text">Text</h3>
+
+<p>In print, Tufte uses the proprietary Monotype Bembo<label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle" /><span class="sidenote">See Tufte’s comment in the <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0000Vt">Tufte book fonts</a> thread. </span> font. A similar effect is achieved in digital formats with the now open-source ETBembo, which Tufte-Jekyll supplies with a <code class="language-plaintext highlighter-rouge">@font-face</code> reference to a .ttf file. Thanks to <a href="https://github.com/daveliepmann/tufte-css/commit/0a810a7d5f4707941c6f9fe99a53ec41f50a5c00">Linjie Ding</a>, italicized text uses the ETBembo Italic font instead of mechanically skewing the characters. In case ETBembo somehow doesn’t work, Tufte CSS degrades gracefully to other serif fonts like Palatino and Georgia. Notice that Tufte CSS includes separate font files for <strong>bold</strong> (strong) and <em>italic</em> (emphasis), instead of relying on the browser to mechanically transform the text. This is typographic best practice. It’s also really important. Thus concludes my unnecessary use of em and strong for the purpose of example.</p>
+
+<p>Code snippets ape GitHub’s font selection using Microsoft’s <a href="http://www.microsoft.com/typography/ClearTypeFonts.mspx"><em>Consolas</em></a> and the sans-serif font uses Tufte’s choice of Gill Sans. Since this is not a free font, and some systems will not have it installed, the free google font <a href="https://www.google.com/fonts/specimen/Lato"><em>Lato</em></a> is designated as a fallback.</p>
+
+<h2 id="epigraphs">Epigraphs</h2>
+
+<div class="epigraph"><blockquote><p>The English language . . . becomes ugly and inaccurate because our thoughts are foolish, but the slovenliness of our language makes it easier for us to have foolish thoughts.</p><footer>George Orwell, <cite> "Politics and the English Language" </cite></footer></blockquote></div>
+
+<div class="epigraph"><blockquote><p>For a successful technology, reality must take precedence over public relations, for Nature cannot be fooled.</p><footer>Richard P. Feynman, <cite> “What Do You Care What Other People Think?” </cite></footer></blockquote></div>
+
+<p>If you’d like to introduce your page or a section of your page with some quotes, use epigraphs. The two examples above show how they are styled. Epigraph elements are modeled after chapter epigraphs in Tufte’s books (particularly <em>Beautiful Evidence</em>). The <a href="https://github.com/edwardtufte/tufte-css">Tufte-css</a> gitub repository has detailed instructions on how to achieve this using HTML elements. As an easier alternative, the <em>Tufte-jekyll</em> theme uses custom <em>Liquid tag</em> pairs that allow the writer to embed elements such as epigraphs in the middle of the regular Markdown text being edited.</p>
+
+<p>In order to use an epigraph in a page or section, type this:</p>
+
+<p><code class="language-plaintext highlighter-rouge">{% epigraph 'text of citation' 'author of citation' 'citation source'  %}</code></p>
+
+<p>to produce this:</p>
+
+<div class="epigraph"><blockquote><p>I do not paint things, I paint only the differences between things.</p><footer>Henri Matisse, <cite>Henri Matisse Dessins: thèmes et variations, 1943</cite></footer></blockquote></div>
+
+<div class="epigraph"><blockquote><p> "How did you go bankrupt?" Two ways. Gradually, then suddenly.</p><footer>Ernest Hemingway, <cite> "The Sun Also Rises" </cite></footer></blockquote></div>
+
+<h3 id="lists">Lists</h3>
+
+<p>Tufte points out that while lists have valid uses, they tend to promote ineffective writing habits due to their “lack of syntactic and intellectual discipline”. He is particularly critical of hierarchical and bullet-pointed lists. So before reaching for an HTML list element, ask yourself:</p>
+
+<ul>
+  <li>Does this list actually have to be represented using an HTML ul or ol element?</li>
+  <li>Would my idea be better expressed as sentences in paragraphs?</li>
+  <li>Is my message causally complex enough to warrant a flow diagram instead?</li>
+</ul>
+
+<p>This is but a small subset of a proper overview of the topic of lists in communication. A better way to understand Tufte’s thoughts on lists would be to read “The Cognitive Style of PowerPoint: Pitching Out Corrupts Within,” a chapter in Tufte’s book <em>Beautiful Evidence</em>, excerpted at some length by Tufte himself <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0002QF">on his website</a>. The whole piece is information-dense and therefore difficult to summarize. He speaks to web design specifically, but in terms of examples and principles rather than as a set of simple do-this, don’t-do-that prescriptions. It is well worth reading in full for that reason alone.</p>
+
+<p>For these reasons, Tufte CSS encourages caution before reaching for a list element, and by default removes the bullet points from unordered lists.</p>
+
+<h2 id="figures">Figures</h2>
+
+<h3 id="margin-figures">Margin Figures</h3>
+
+<p><label for="mf-id-1" class="margin-toggle">⊕</label><input type="checkbox" id="mf-id-1" class="margin-toggle" /><span class="marginnote"><img class="fullwidth" src="/watchmaking.io/assets/img/rhino.png" /><br />F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zoological Literature,” <em>Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice</em> (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s <em>Visual Explanations</em>.</span></p>
+
+<p>Images and graphics play an integral role in Tufte’s work. To place figures in the margin, use the custom margin figure liquid tag included in the <code class="language-plaintext highlighter-rouge">_plugins</code> directory like so:</p>
+
+<p><code class="language-plaintext highlighter-rouge">{% marginfigure 'mf-id-whatever' 'assets/img/rhino.png' 'F.J. Cole, “The History of Albrecht Dürer’s Rhinoceros in Zoological Literature,” *Science, Medicine, and History: Essays on the Evolution of Scientific Thought and Medical Practice* (London, 1953), ed. E. Ashworth Underwood, 337-356. From page 71 of Edward Tufte’s *Visual Explanations*.'  %}</code>.</p>
+
+<p>Note that this tag has <em>three</em> parameters. The first is an arbitrary id. This parameter can be named anything as long as it is unique to this post. The second parameter is the path to the image. And the final parameter is whatever caption you want to be displayed with the figure.  All parameters <em>must</em> be enclosed in quotes for this simple liquid tag to work!</p>
+
+<p>In this example, the <em>Liquid</em> marginfigure tag was inserted <em>before</em> the paragraph so that it aligns with the beginning of the paragraph. On small screens, the image will collapse into a small symbol: <span class="contrast ">⊕</span> at the location it has been inserted in the manuscript. Clicking on it will open the image.</p>
+
+<h3 id="full-width-figures">Full Width Figures</h3>
+
+<p>If you need a full-width image or figure, another custom liquid tag is available to use. Oddly enough, it is named ‘fullwidth’, and this markup:</p>
+
+<p><code class="language-plaintext highlighter-rouge">{% fullwidth 'assets/img/napoleons-march.png' 'Napoleon's March *(Edward Tufte’s English translation)*'  %}</code></p>
+
+<p>Yields this:</p>
+
+<figure class="fullwidth"><img src="/watchmaking.io/assets/img/napoleons-march.png" /><figcaption>Napoleon’s March <em>(Edward Tufte’s English translation)</em></figcaption></figure>
+
+<h3 id="main-column-figures">Main Column Figures</h3>
+
+<p>Besides margin and full width figures, you can of course also include figures constrained to the main column. Yes, you guessed it, a custom liquid tag rides to the rescue once again:</p>
+
+<p><code class="language-plaintext highlighter-rouge">{% maincolumn 'assets/img/export-imports.png' 'From Edward Tufte, *Visual Display of Quantitative Information*, page 92'  %}</code></p>
+
+<p>yields this:</p>
+
+<figure><img src="/watchmaking.io/assets/img/exports-imports.png" /><figcaption class="maincolumn-figure">From Edward Tufte, <em>Visual Display of Quantitative Information</em>, page 92</figcaption></figure>
+
+<h2 id="sidenotes-and-margin-notes">Sidenotes and Margin notes</h2>
+
+<p>One of the most prominent and distinctive features of Tufte’s style is the extensive use of sidenotes and margin notes. Perhaps you have noticed their use in this document already. You are very astute.</p>
+
+<p>There is a wide margin to provide ample room for sidenotes and small figures. There exists a slight semantic distinction between <em>sidenotes</em> and <em>marginnotes</em>.</p>
+
+<h3 id="sidenotes">Sidenotes</h3>
+
+<p>Sidenotes<label for="sn-id-whatever" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-id-whatever" class="margin-toggle" /><span class="sidenote">This is a sidenote and <em>displays a superscript</em> </span> display a superscript. The <em>sidenote</em> Liquid tag contains two components. The first is an identifier allowing the sidenote to be targeted by the twitchy index fingers of mobile device users so that all the yummy sidenote goodness is revealed when the superscript is tapped. The second components is the actual content of the sidenote. Both of these components should be enclosed in single quotes. Note that we are using the CSS ‘counter’ trick to automagically keep track of the number sequence on each page or post. On small screens, the sidenotes disappear and when the superscript is clicked, a side note will open below the content, which can then be closed with a similar click. Here is the markup for the sidenote at the beginning of this paragraph:</p>
+
+<p><code class="language-plaintext highlighter-rouge">{% sidenote 'sn-id-whatever' 'This is a sidenote and *displays a superscript*'%}</code></p>
+
+<h3 id="margin-notes">Margin notes</h3>
+
+<p>Margin notes<label for="mn-id-whatever" class="margin-toggle"> ⊕</label><input type="checkbox" id="mn-id-whatever" class="margin-toggle" /><span class="marginnote">This is a margin note <em>without</em> a superscript </span> are similar to sidenotes, but do not display a superscript. The <em>marginnnote</em> Liquid tags has the same two components as the <em>sidenote</em> tag. Anything can be placed in a margin note. Well, anything that is an inline element. Block level elements can make the Kramdown parser do strange things. On small screens, the margin notes disappear and this symbol: <span class="contrast ">⊕</span> pops up. When clicked, it will open the margin note below the content, which can then be closed with a similar click. The Markdown content has a similar sort of markup as a sidenote, but without a number involved:</p>
+
+<p><code class="language-plaintext highlighter-rouge">{% marginnote 'mn-id-whatever' 'This is a margin note *without* a superscript' %}</code></p>
+
+<h2 id="equations">Equations</h2>
+
+<p>The Markdown parser being used by this Jekyll theme is Kramdown, which contains some built-in <a href="//www.mathjax.org">Mathjax</a> support. Both inline and block-level mathematical figures can be added to the content.</p>
+
+<p>For instance, the following inline sequence:</p>
+
+<p><em>When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\)</em></p>
+
+<p>is written by enclosing a Mathjax expression within <em>a matching pair of double dollar signs: <code class="language-plaintext highlighter-rouge">$$</code></em>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">When $$ a \ne 0 $$, there are two solutions to $$ ax^2 + bx + c = 0 $$</code></p>
+
+<p>Similarly, this block-level Mathjax expression:</p>
+
+\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\]
+
+<p>is written by enclosing the expression within a pair of <code class="language-plaintext highlighter-rouge">$$</code> with an empty line above and below:</p>
+
+<p><code class="language-plaintext highlighter-rouge">$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$</code></p>
+
+<p>You can get pretty fancy, for instance, the wave equation’s nabla is no big thing:</p>
+
+\[\frac{\partial^2 y}{\partial t^2}= c^2\nabla^2u\]
+
+<p>All of the standard <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> equation markup is available to use inside these block tags.</p>
+
+<p>Please note that the block-level Mathjax expressions <em>must</em> be on their own line, separated from content above and below the block by a blank line for the Kramdown parser and the Mathjax javascript to play nicely with one another.</p>
+
+<p>The Mathjax integration is tricky, and some things such as the inline matrix notation simply do not work well unless allowances are made for using the notation for a small matrix. Bottom line: If you are using this to document mathematics, be super careful to isolate your <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> blocks by blank lines!</p>
+
+<h2 id="tables">Tables</h2>
+
+<p>Tables are, frankly,  a pain in the ass to create. That said, they often are one of the best methods for presenting data. Tabular data are normally presented with right-aligned numbers, left-aligned text, and minimal grid lines.</p>
+
+<p>Note that when writing Jekyll Markdown content, there will often be a need to get some dirt under your fingernails and stoop to writing a little honest-to-god html. Yes, all that hideous <code class="language-plaintext highlighter-rouge">&lt;table&gt;..&lt;thead&gt;..&lt;th&gt;</code> nonsense. <em>And</em> you must wrap the unholy mess in a <code class="language-plaintext highlighter-rouge">&lt;div class="table-wrapper"&gt;</code> tag to ensure that the table stays centered in the main content column.</p>
+
+<p>Tables are designed with an <code class="language-plaintext highlighter-rouge">overflow:scroll</code> property to create slider bars when the viewport is narrow. This is so that you do not collapse all your beautiful data into a jumble of letters and numbers when you view it on your smartphone.</p>
+
+<p><label for="table-1-id" class="margin-toggle"> ⊕</label><input type="checkbox" id="table-1-id" class="margin-toggle" /><span class="marginnote"><em>Table 1</em>: A table with default style formatting </span></p>
+<div class="table-wrapper">
+  <table class="table-alpha" id="newspaper-tone">
+    <thead>
+      <tr>
+        <th class="left">Content and tone of front-page articles in 94 U.S. newspapers, October and November, 1974</th>
+        <th class="left">Number of articles</th>
+        <th>Percent of articles with negative criticism of specific person or policy</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="text">Watergate: defendants and prosecutors, Ford’s pardon of Nixon</td>
+        <td><div class="number">537</div></td>
+        <td class="c"><div class="number">49%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Inflation, high cost of living</td>
+        <td><div class="number">415</div></td>
+        <td class="c"><div class="number">28%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Government competence: costs, quality, salaries of public employees</td>
+        <td><div class="number">322</div></td>
+        <td class="c"><div class="number">30%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Confidence in government: power of special interests, trust in political leaders, dishonesty in politics</td>
+        <td><div class="number">266</div></td>
+        <td class="c"><div class="number">52%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Government power: regulation of business, secrecy, control of CIA and FBI</td>
+        <td><div class="number">154</div></td>
+        <td class="c"><div class="number">42%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Crime</td>
+        <td><div class="number">123</div></td>
+        <td class="c"><div class="number r">30%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Race</td>
+        <td><div class="number">103</div></td>
+        <td class="c"><div class="number">25%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Unemployment</td>
+        <td><div class="number">100</div></td>
+        <td class="c"><div class="number">13%</div></td>
+      </tr>
+      <tr>
+        <td class="text">Shortages: energy, food</td>
+        <td><div class="number">68</div></td>
+        <td class="c"><div class="number">16%</div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p>This is not the One True Table. Such a style does not exist. One must craft each data table with custom care to the narrative one is telling with that specific data. So take this not as “the table style to use”, but rather as “a table style to start from”. From here, use principles to guide you: avoid chartjunk, optimize the data-ink ratio (“within reason”, as Tufte says), and “mobilize every graphical element, perhaps several times over, to show the data.<label for="table-id" class="margin-toggle sidenote-number"></label><input type="checkbox" id="table-id" class="margin-toggle" /><span class="sidenote">Page 139, <em>The Visual Display of Quantitative Information</em>, Edward Tufte 2001. </span> Furthermore, one must know when to reach for more complex data presentation tools, like a custom graphic or a JavaScript charting library.</p>
+
+<p>As an example of alternative table styles, academic publications written in <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> often rely on the <code class="language-plaintext highlighter-rouge">booktabs</code> package to produce clean, clear tables. Similar results can be achieved in Tufte CSS with the <code class="language-plaintext highlighter-rouge">booktabs</code> class, as demonstrated in this table:</p>
+
+<p><label for="table-2-id" class="margin-toggle"> ⊕</label><input type="checkbox" id="table-2-id" class="margin-toggle" /><span class="marginnote"><em>Table 2</em>: A table with booktabs style formatting </span></p>
+<div class="table-wrapper">
+<table class="booktabs">
+          <thead>
+            <tr><th colspan="2" class="cmid">Items</th><th class="nocmid"></th></tr>
+            <tr><th class="l">Animal</th><th>Description</th><th class="r">Price ($)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Gnat</td>     <td>per gram</td><td class="r">13.65</td></tr>
+            <tr><td></td>         <td>each</td>    <td class="r">0.01</td></tr>
+            <tr><td>Gnu</td>      <td>stuffed</td> <td class="r">92.50</td></tr>
+            <tr><td>Emu</td>      <td>stuffed</td> <td class="r">33.33</td></tr>
+            <tr><td>Armadillo</td><td>frozen</td>  <td class="r">8.99</td></tr>
+          </tbody>
+</table>
+</div>
+
+<p>The table above was written in HTML as follows:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="table-wrapper"&gt;
+&lt;table class="booktabs"&gt;
+          &lt;thead&gt;
+            &lt;tr&gt;&lt;th colspan="2" class="cmid"&gt;Items&lt;/th&gt;&lt;th class="nocmid"&gt;&lt;/th&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;th class="l"&gt;Animal&lt;/th&gt;&lt;th&gt;Description&lt;/th class="r"&gt;&lt;th&gt;Price ($)&lt;/th&gt;&lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;&lt;td&gt;Gnat&lt;/td&gt;     &lt;td&gt;per gram&lt;/td&gt;&lt;td class="r"&gt;13.65&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;&lt;/td&gt;         &lt;td&gt;each&lt;/td&gt;    &lt;td class="r"&gt;0.01&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Gnu&lt;/td&gt;      &lt;td&gt;stuffed&lt;/td&gt; &lt;td class="r"&gt;92.50&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Emu&lt;/td&gt;      &lt;td&gt;stuffed&lt;/td&gt; &lt;td class="r"&gt;33.33&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr&gt;&lt;td&gt;Armadillo&lt;/td&gt;&lt;td&gt;frozen&lt;/td&gt;  &lt;td class="r"&gt;8.99&lt;/td&gt;&lt;/tr&gt;
+          &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<p><span class="newthought">I like this style of table,</span>   so I have made it the default for unstyled tables. This allows use of the <a href="https://michelf.ca/projects/php-markdown/extra/"><em>Markdown Extra</em></a> features built into the <a href="http://kramdown.gettalong.org/parser/kramdown.html"><em>Kramdown</em></a> parser. Here is a table created using the Markdown Extra table syntax to make a nice table which has the side benefit of being human readable in the raw Markdown file:</p>
+
+<p><label for="tableID-3" class="margin-toggle"> ⊕</label><input type="checkbox" id="tableID-3" class="margin-toggle" /><span class="marginnote">Table 3: a table created with <em>Markdown Extra</em> markup using only the default table styling </span></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: right">mpg</th>
+      <th style="text-align: right">cyl</th>
+      <th style="text-align: right">disp</th>
+      <th style="text-align: right">hp</th>
+      <th style="text-align: right">drat</th>
+      <th style="text-align: right">wt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Mazda RX4</td>
+      <td style="text-align: right">21</td>
+      <td style="text-align: right">6</td>
+      <td style="text-align: right">160</td>
+      <td style="text-align: right">110</td>
+      <td style="text-align: right">3.90</td>
+      <td style="text-align: right">2.62</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Mazda RX4 Wag</td>
+      <td style="text-align: right">21</td>
+      <td style="text-align: right">6</td>
+      <td style="text-align: right">160</td>
+      <td style="text-align: right">110</td>
+      <td style="text-align: right">3.90</td>
+      <td style="text-align: right">2.88</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Datsun 710</td>
+      <td style="text-align: right">22.8</td>
+      <td style="text-align: right">4</td>
+      <td style="text-align: right">108</td>
+      <td style="text-align: right">93</td>
+      <td style="text-align: right">3.85</td>
+      <td style="text-align: right">2.32</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Hornet 4 Drive</td>
+      <td style="text-align: right">21.4</td>
+      <td style="text-align: right">6</td>
+      <td style="text-align: right">258</td>
+      <td style="text-align: right">110</td>
+      <td style="text-align: right">3.08</td>
+      <td style="text-align: right">3.21</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Hornet Sportabout</td>
+      <td style="text-align: right">18.7</td>
+      <td style="text-align: right">8</td>
+      <td style="text-align: right">360</td>
+      <td style="text-align: right">175</td>
+      <td style="text-align: right">3.15</td>
+      <td style="text-align: right">3.44</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Valiant</td>
+      <td style="text-align: right">18.1</td>
+      <td style="text-align: right">6</td>
+      <td style="text-align: right">160</td>
+      <td style="text-align: right">105</td>
+      <td style="text-align: right">2.76</td>
+      <td style="text-align: right">3.46</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Using the following Markdown formatting:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>|                 |mpg  | cyl  |  disp  |   hp   |  drat  | wt  |
+|:----------------|----:|-----:|-------:|-------:|-------:|----:|
+|Mazda RX4        |21   |6     |160     |110     |3.90    |2.62 |
+|Mazda RX4 Wag    |21   |6     |160     |110     |3.90    |2.88 |
+|Datsun 710       |22.8 |4     |108     |93      |3.85    |2.32 |
+etc...
+</code></pre></div></div>
+
+<p>The following is a more simple table, showing the Markdown-style table markup. Remember to label the table with a <em>marginnote</em> Liquid tag, and you <em>must</em> separate the label from the table with a single blank line. This markup:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% marginnote 'Table-ID4' 'Table 4: a simple table showing left, center, and right alignment of table headings and data'  %}
+
+|**Left** |**Center**|**Right**|
+|:--------|:--------:|--------:|
+ Aardvarks|         1|$3.50
+       Cat|   5      |$4.23
+  Dogs    |3         |$5.29
+</code></pre></div></div>
+
+<p>Yields this table:</p>
+
+<p><label for="Table-ID4" class="margin-toggle"> ⊕</label><input type="checkbox" id="Table-ID4" class="margin-toggle" /><span class="marginnote">Table 4: a simple table showing left, center, and right alignment of table headings and data </span></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"><strong>Left</strong></th>
+      <th style="text-align: center"><strong>Center</strong></th>
+      <th style="text-align: right"><strong>Right</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Aardvarks</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: right">$3.50</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Cat</td>
+      <td style="text-align: center">5</td>
+      <td style="text-align: right">$4.23</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Dogs</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: right">$5.29</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="code">Code</h2>
+
+<p>Code samples use a monospace font using the ‘code’ class. The Kramdown parser has the ‘GFM’ option enabled, which stands for ‘Github Flavored Markdown’, and this means that both inline code such as <code class="language-plaintext highlighter-rouge">#include &lt;stdio.h&gt;</code> and blocks of code can be delimited by surrounding them with 3 backticks:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(map tufte-style all-the-things)
+</code></pre></div></div>
+<p>is created by the following markup:</p>
+<pre><code>```(map tufte-style all-the-things)```</code></pre>
+
+<p>To get the code highlighted in the language of your choice like so:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">Jekyll</span>
+  <span class="k">class</span> <span class="nc">RenderFullWidthTag</span> <span class="o">&lt;</span> <span class="no">Liquid</span><span class="o">::</span><span class="no">Tag</span>
+  <span class="nb">require</span> <span class="s2">"shellwords"</span>
+
+    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">tag_name</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">tokens</span><span class="p">)</span>
+      <span class="k">super</span>
+      <span class="vi">@text</span> <span class="o">=</span> <span class="n">text</span><span class="p">.</span><span class="nf">shellsplit</span>
+    <span class="k">end</span>
+
+    <span class="k">def</span> <span class="nf">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+      <span class="s2">"&lt;div&gt;&lt;img class='fullwidth' src='</span><span class="si">#{</span><span class="vi">@text</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">'/&gt;&lt;/div&gt; "</span> <span class="o">+</span>
+      <span class="s2">"&lt;p&gt;&lt;span class='marginnote'&gt;</span><span class="si">#{</span><span class="vi">@text</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&lt;/span&gt;&lt;/p&gt;"</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="no">Liquid</span><span class="o">::</span><span class="no">Template</span><span class="p">.</span><span class="nf">register_tag</span><span class="p">(</span><span class="s1">'fullwidth'</span><span class="p">,</span> <span class="no">Jekyll</span><span class="o">::</span><span class="no">RenderFullWidthTag</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Enclose the code block in three backticks, followed by a space and then the language name, like this:</p>
+
+<pre> <code>``` ruby
+    module Jekyll
+    blah, blah...
+   ```</code> </pre>
+
+
+    </article>
+
+    
+<!--Backlinks list, typically shown at the bottom of the page.-->
+
+
+
+
+<h2 id="Backlinks"><a href="#Backlinks" class="no-popup">Backlinks</a></h2>
+<p>This page is referenced by the following pages on this site:</p>
+<div class="backlink-box">
+    <ul >
+        
+        <li style="margin:0; padding:0.2em;"><a href="/articles/20/tufte-style-jekyll-blog">Tufte-style Jekyll blog</a></li>
+        
+        <li style="margin:0; padding:0.2em;"><a href="/articles/20/Edge-Cases">Edge Cases</a></li>
+        
+    </ul>
+</div>
+
+
+
+
+</div>
+
+    </article>
+    <span class="print-footer">Tufte-style Jekyll blog - April 13, 2020 - The Watchmaker</span>
+
+
+
+    <footer>
+  <script>
+    var headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
+
+    for (var i = 0; i < headings.length; i++) {
+        headings[i].innerHTML =
+            '<a href="#' + headings[i].id + '">' +
+                headings[i].innerText +
+            '</a>';
+    }
+</script>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:hate@spam.net"><span class="icon-mail3"></span></a></li>    
+    
+      <li>
+        <a href="//www.twitter.com/twitter_handle"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//plus.google.com/+googlePlusName"><span class="icon-google2"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/GithubHandle"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.flickr.com/photos/FlickrUserID"><span class="icon-flickr3"></span></a>
+      </li>
+    
+      <li>
+        <a href="/feed"><span class="icon-rss2"></span></a>
+      </li>
+    
+      <li>
+        <a href="//vimeo.com/vimeo-id"><span class="icon-vimeo2"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.linkedin.com/"><span class="icon-linkedin"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <a>mkr.net</a>
+</div>
+
+<script src="/watchmaking.io/assets/js/popups.js?v=1650985358" defer></script>
+<script src="/watchmaking.io/assets/js/popins.js?v=1650617058" defer></script> 
+<script src="/watchmaking.io/assets/js/annotations.js?v=1651100175" defer></script>
+<script src="/watchmaking.io/assets/js/extracts.js?v=1651162646" defer></script>
+<script src="/watchmaking.io/assets/js/extracts-annotations.js?v=1650997383" defer></script>
+<script src="/watchmaking.io/assets/js/extracts-content.js?v=1651020041" defer></script>
+<script src="/watchmaking.io/assets/js/extracts-options.js?v=1649625806" defer></script> 
+</footer>
+  </body>
+
+</html>

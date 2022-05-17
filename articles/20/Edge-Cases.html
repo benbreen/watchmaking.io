@@ -1,0 +1,1867 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/watchmaking.io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/watchmaking.io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/watchmaking.io/favicon-16x16.png">
+<link rel="manifest" href="/watchmaking.io/site.webmanifest">
+
+  <style id="inlined-styles-colors">
+    :root {
+      /*  General.
+       */
+      --GW-body-background-color: #fffff8;
+      --GW-body-text-color: #000;
+      --GW-body-link-color: #272727;
+      --GW-body-link-hover-color: #888;
+  
+
+  
+      /*  Sequential nav UI.
+       */
+      --GW-sequential-nav-link-background-color: var(--GW-body-background-color);
+  
+      /*  Page-specific styles.
+       */
+      --GW-index-page-bottom-ornament-line-color: #808080;
+  
+          /*      Pop-frames (popups or popins).
+           */
+      --GW-raw-code-popframe-line-highlight-background-color: #ffd;
+      --GW-raw-code-popframe-line-hightlight-border-color: #ddd;
+      --GW-raw-code-popframe-line-number-color: #aaa;
+      --GW-raw-code-popframe-line-number-divider-color: #ccc;
+  
+      /*  Popups.
+       */
+      --GW-popups-body-background-color: var(--GW-body-background-color);
+      --GW-popups-popup-background-color: var(--GW-body-background-color);
+  
+      --GW-popups-popup-border-color: #ccc;
+      --GW-popups-box-shadow-color: #ccc;
+      --GW-popups-popup-border-focused-color: #aaa;
+      --GW-popups-box-shadow-focused-color: #aaa;
+  
+      --GW-popups-popup-title-bar-background-color: #f6f6f6;
+      --GW-popups-popup-title-bar-button-color: #bbb;
+      --GW-popups-popup-title-bar-button-color-hover: #000;
+          --GW-popups-popup-title-color: #aaa;
+      --GW-popups-popup-title-link-hover-color: var(--GW-body-link-hover-color);
+      --GW-popups-popup-title-bar-background-focused-color: #e6e6e6;
+      --GW-popups-popup-title-bar-button-focused-color: #777;
+      --GW-popups-popup-title-bar-button-focused-color-hover: #000;
+      --GW-popups-popup-title-bar-submenu-box-shadow-color: #ddd;
+          --GW-popups-popup-title-focused-color: #000;
+      --GW-popups-popup-title-link-hover-focused-color: var(--GW-body-link-hover-color);
+  
+      --GW-popups-popup-scrollbar-track-color: var(--GW-body-background-color);
+  
+      --GW-popups-popup-scrollbar-thumb-color: #ddd;
+      --GW-popups-popup-scrollbar-thumb-hover-color: #bbb;
+      --GW-popups-popup-scrollbar-thumb-focused-color: #ccc;
+      --GW-popups-popup-scrollbar-thumb-hover-focused-color: #999;
+  
+      --GW-popups-popup-options-dialog-backdrop-background-color: rgba(255,255,255,0.95);
+      --GW-popups-popup-options-dialog-background-color: var(--GW-body-background-color);
+      --GW-popups-popup-options-dialog-border-color: #aaa;
+      --GW-popups-popup-options-dialog-box-shadow-color: #444;
+      --GW-popups-popup-options-dialog-horizontal-rule-color: #ccc;
+      --GW-popups-popup-options-dialog-button-background-color: var(--GW-body-background-color);
+      --GW-popups-popup-options-dialog-button-text-color: #000;
+      --GW-popups-popup-options-dialog-button-border-color: #000;
+      --GW-popups-popup-options-dialog-button-hover-box-shadow-color: #000;
+      --GW-popups-popup-options-dialog-option-button-explanation-text-color: #777;
+      --GW-popups-popup-options-dialog-option-button-hover-text-color: #777;
+      --GW-popups-popup-options-dialog-radio-button-border-color: #000;
+      --GW-popups-show-popup-options-dialog-button-color: #999;
+  
+      /*  Popins.
+       */
+      --GW-popins-body-background-color: var(--GW-body-background-color);
+      --GW-popins-popin-background-color: var(--GW-body-background-color);
+      --GW-popins-popin-border-color: #aaa;
+      --GW-popins-box-shadow-color: #aaa;
+      --GW-popins-popin-title-bar-background-color: #fff;
+      --GW-popins-popin-title-bar-button-color: #666;
+      --GW-popins-popin-scrollbar-thumb-color: #ccc;
+      --GW-popins-popin-scrollbar-track-color: var(--GW-body-background-color);
+      --GW-popins-popin-scrollbar-thumb-hover-color: #999;
+      --GW-popins-popin-stack-counter-text-color: #fff;
+  
+      /*  Image focus.
+       */
+      --GW-image-focus-image-hover-drop-shadow-color: #777;
+  
+      /*  Mode selector (light/dark mode).
+       */
+      --GW-mode-selector-background-color: var(--GW-body-background-color);
+      --GW-mode-selector-mobile-background-color: rgba(255,255,255,0.3);
+      --GW-mode-selector-border-hover-color: #aaa;
+      --GW-mode-selector-button-text-color: #777;
+      --GW-mode-selector-button-hover-text-color: #000;
+  
+          /*      Reader mode.
+           */
+          --GW-reader-mode-masked-link-bracket-background-color: rgba(255,255,255,0.5);
+          /*      The following is a temporary hack until we can generate the above value
+                  dynamically from the local value of --GW-link-underline-background-color
+                  (by reducing the opacity of whatever that value is).
+           */
+          --GW-reader-mode-masked-link-bracket-background-color: var(--GW-link-underline-background-color);
+          --GW-reader-mode-masked-links-key-toggle-info-alert-panel-background-color: rgba(0,0,0,0.6);
+          --GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-color: #fff;
+          --GW-reader-mode-masked-links-key-toggle-info-alert-panel-text-shadow-color: #000;
+          --GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-border-color: #bbb;
+          --GW-reader-mode-masked-links-key-toggle-info-alert-panel-key-icon-background-color: #444;
+  
+          /*      “Back to top” link.
+           */
+          --GW-back-to-top-link-color: #ccc;
+          --GW-back-to-top-link-hover-color: #999;
+  
+          /*      “Skip to content” accessibility link.
+           */
+          --GW-skip-to-content-text-color: #fff;
+          --GW-skip-to-content-border-color: #fff;
+          --GW-skip-to-content-background-color: #bf1722;
+    }
+    </style>
+
+  <title>Edge Cases</title>
+  <meta name="description" content="Some edge cases and cautionary examples on using Markdown for writing content using this theme. In particular, list syntax can really knot things up.">
+  
+  
+  <meta name="page-body-classes" content="fake-journal-club drop-caps-kanzlei">
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+<!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: [
+      "MathMenu.js",
+      "MathZoom.js",
+      "AssistiveMML.js",
+      "a11y/accessibility-menu.js"
+    ],
+    jax: ["input/TeX", "output/CommonHTML"],
+    TeX: {
+      extensions: [
+        "AMSmath.js",
+        "AMSsymbols.js",
+        "noErrors.js",
+        "noUndefined.js",
+      ]
+    }
+  });
+</script>
+
+<script>
+  /*  Create global 'GW' object, if need be.
+  */
+  if (typeof window.GW == "undefined")
+    window.GW = { };
+
+  /********************************/
+  /*      Events fired by gw-inline.js:
+
+        GW.contentDidLoad {
+                        source: "DOMContentLoaded"
+                        document:
+                                The global document object (window.document).
+                        location:
+                                URL of the main page, as loaded.
+                        flags: (  GW.contentDidLoadEventFlags.isMainDocument
+                                        | GW.contentDidLoadEventFlags.needsRewrite
+                                        | GW.contentDidLoadEventFlags.clickable
+                                        | GW.contentDidLoadEventFlags.collapseAllowed
+                                        | GW.contentDidLoadEventFlags.isFullPage
+                                        | GW.contentDidLoadEventFlags.fullWidthPossible)
+                }
+                Fired when the browser DOMContentLoaded event fires. Loaded content is
+                the full page itself.
+  */
+
+  /*****************/
+  /* MEDIA QUERIES */
+  /*****************/
+
+  GW.mediaQueries = {
+    mobileWidth:           matchMedia("(max-width: 649px)"),
+    systemDarkModeActive:  matchMedia("(prefers-color-scheme: dark)"),
+    hoverAvailable:        matchMedia("only screen and (hover: hover) and (pointer: fine)"),
+    portraitOrientation:   matchMedia("(orientation: portrait)")
+  };
+
+  GW.isMobile = () => {
+    /*  We consider a client to be mobile if one of two conditions obtain:
+        1. JavaScript detects touch capability, AND viewport is narrow; or,
+        2. CSS does NOT detect hover capability.
+     */
+    return (   (   ('ontouchstart' in document.documentElement)
+                && GW.mediaQueries.mobileWidth.matches)
+            || !GW.mediaQueries.hoverAvailable.matches);
+  };
+
+  GW.isFirefox = () => {
+    return (navigator.userAgent.indexOf("Firefox") > 0);
+  };
+
+  GW.isX11 = () => {
+        return (navigator.userAgent.indexOf("X11") > 0);
+  };
+
+  /********************/
+  /* DEBUGGING OUTPUT */
+  /********************/
+
+  GW.dateTimeFormat = new Intl.DateTimeFormat([], { hour12: false, hour: "numeric", minute: "numeric", second: "numeric" });
+
+  function GWTimestamp() {
+    let time = Date.now();
+    let ms = `${(time % 1000)}`.padStart(3,'0');
+    let timestamp = `${GW.dateTimeFormat.format(time)}.${ms}`;
+
+        return timestamp;
+  }
+
+  GW.logLevel = localStorage.getItem("gw-log-level") || 0;
+  GW.logSourcePadLength = 28;
+
+  function GWLog (string, source = "", level = 1) {
+    if (GW.logLevel < level)
+        return;
+
+    let sourcestamp = (source > "" ? `[${source}]` : `[ ]`).padEnd(GW.logSourcePadLength, ' ');
+
+    console.log(`[${GWTimestamp()}]  ` + sourcestamp + string);
+  }
+  GW.setLogLevel = (level, permanently = false) => {
+    if (permanently)
+        localStorage.setItem("gw-log-level", level);
+
+    GW.logLevel = level;
+  };
+
+  function GWStopWatch(f, ...args) {
+        let fname = (f.name || f.toString().slice(0, f.toString().indexOf('{')));
+    console.log(`[${GWTimestamp()}]  ${fname} [BEGIN]`);
+        let rval = f(...args);
+    console.log(`[${GWTimestamp()}]  ${fname} [END]`);
+    return rval;
+  }
+
+  /*******************/
+  /* ERROR REPORTING */
+  /*******************/
+
+  /*      Reports an error by sending an XMLHTTPRequest to the 404 page, suffixed
+        with some error string (which gets automatically URL-encoded).
+  */
+  function GWServerLogError(errorString, errorType) {
+        doAjax({ location: `${location.origin}/static/404-error-` + fixedEncodeURIComponent(errorString) });
+        GWLog(`Reporting ${(errorType || "error")}:  ${errorString}`, "error reporting", 1);
+  }
+
+  /***********/
+  /* HELPERS */
+  /***********/
+
+  /*  Because encodeURIComponent does not conform to RFC 3986; see MDN docs.
+  */
+  function fixedEncodeURIComponent(str) {
+    return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+        return '%' + c.charCodeAt(0).toString(16);
+    });
+  }
+
+  /*      Transforming a URL hash into a CSS selector in a form that’s safe to pass to
+        querySelector and similar functions. (All characters that need to be escaped
+        according to the CSS spec are escaped.)
+  */
+  function selectorFromHash(hash) {
+        if (hash.length < 2)
+                return null;
+
+        //  Chrome’s fancy new “scroll to text fragment”.
+        if (hash.startsWith("#:~:"))
+                return null;
+
+        return "#" + CSS.escape(decodeURIComponent(hash.slice(1)));
+  }
+
+  /*  Helper function for AJAX, by kronusaturn
+    https://github.com/kronusaturn/lw2-viewer/blob/master/www/script.js
+  */
+  function urlEncodeQuery(params) {
+    return (Object.keys(params)).map(x => (`${x}=${ fixedEncodeURIComponent(params[x]) }`)).join("&");
+  }
+
+  /*  Helper function for AJAX, by kronusaturn
+    https://github.com/kronusaturn/lw2-viewer/blob/master/www/script.js
+  */
+  function doAjax(options) {
+    let req = new XMLHttpRequest();
+    req.addEventListener("load", (event) => {
+        if (event.target.status < 400) {
+            if (options["onSuccess"])
+                options.onSuccess(event);
+        } else {
+            if (options["onFailure"])
+                options.onFailure(event);
+        }
+    });
+    req.addEventListener("error", (event) => {
+                if (options["onFailure"])
+                        options.onFailure(event);
+    });
+    let method = (options["method"] || "GET");
+    let location = (options.location || document.location)
+                           + ((options.params && method == "GET") ? ("?" + urlEncodeQuery(options.params)) : "");
+    req.open(method, location);
+    if (options["method"] == "POST") {
+        req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        req.send(urlEncodeQuery(options.params));
+    } else {
+        req.send();
+    }
+  }
+
+  /*  Adds an event listener to a button (or other clickable element), attaching
+    it to both ‘click’ and ‘keyup’ events (for use with keyboard navigation).
+    Optionally also attaches the listener to the ‘mousedown’ event, making the
+    element activate on mouse down instead of mouse up.
+  */
+  Element.prototype.addActivateEvent = function(fn, includeMouseDown) {
+    let ael = this.activateEventListener = (event) => {
+        if (   event.button === 0
+                || event.key    === ' ')
+            fn(event);
+    };
+    this.addEventListener("click", ael);
+    this.addEventListener("keyup", ael);
+    if (includeMouseDown)
+        this.addEventListener("mousedown", ael);
+  }
+
+  /*  Swap classes on the given element.
+    First argument is an array with two string elements (the classes).
+    Second argument is 0 or 1 (index of class to add; the other is removed).
+  */
+  Element.prototype.swapClasses = function (classes, whichToAdd) {
+    this.classList.add(classes[whichToAdd]);
+    this.classList.remove(classes[1 - whichToAdd]);
+  };
+
+  /*      The first text node of a node or element (or null if an element contains no
+        text nodes).
+  */
+  Object.defineProperty(Node.prototype, "firstTextNode", {
+    get() {
+                if (this.nodeType == Node.TEXT_NODE)
+                        return this;
+
+                if (this.childNodes.length == 0)
+                        return null;
+
+                for (let i = 0; i < this.childNodes.length; i++) {
+                        let firstTextNodeWithinChildNode = this.childNodes[i].firstTextNode;
+                        if (firstTextNodeWithinChildNode)
+                                return firstTextNodeWithinChildNode;
+                }
+
+                return null;
+    }
+  });
+
+  /*      The last text node of a node or element (or null if an element contains no
+        text nodes).
+  */
+  Object.defineProperty(Node.prototype, "lastTextNode", {
+    get() {
+                if (this.nodeType == Node.TEXT_NODE)
+                        return this;
+
+                if (this.childNodes.length == 0)
+                        return null;
+
+                for (let i = this.childNodes.length - 1; i >= 0; i--) {
+                        let lastTextNodeWithinChildNode = this.childNodes[i].lastTextNode;
+                        if (lastTextNodeWithinChildNode)
+                                return lastTextNodeWithinChildNode;
+                }
+
+                return null;
+    }
+  });
+
+  /*      Returns true if the point is within the given rect, false otherwise.
+  */
+  function pointWithinRect(point, rect) {
+        return (   point.x >= rect.left
+                        && point.x <= rect.right
+                        && point.y >= rect.top
+                        && point.y <= rect.bottom);
+  }
+
+  /*  Returns true if the given rects intersect, false otherwise.
+  */
+  function doRectsIntersect(rectA, rectB) {
+    return (   rectA.top < rectB.bottom
+                && rectA.bottom > rectB.top
+                && rectA.left < rectB.right
+                && rectA.right > rectB.left);
+  }
+
+  /*  Returns true if the given element intersects the given rect,
+    false otherwise.
+  */
+  function isWithinRect(element, rect) {
+    return doRectsIntersect(element.getBoundingClientRect(), rect);
+  }
+
+  /*  Returns true if the given element intersects the viewport, false otherwise.
+  */
+  function isOnScreen (element) {
+    return isWithinRect(element, new DOMRect(0, 0, window.innerWidth, window.innerHeight));
+  }
+
+  /*  Returns the string trimmed of opening/closing quotes.
+  */
+  String.prototype.trimQuotes = function () {
+    return this.replace(/^["'“‘]?(.+?)["'”’]?$/, '$1');
+  };
+
+  /*  Returns true if the string begins with any of the given prefixes.
+  */
+  String.prototype.startsWithAnyOf = function (prefixes) {
+    for (prefix of prefixes)
+        if (this.startsWith(prefix))
+            return true;
+    return false;
+  }
+
+  /*  Returns true if the string ends with any of the given suffixes.
+  */
+  String.prototype.endsWithAnyOf = function (suffixes) {
+    for (suffix of suffixes)
+        if (this.endsWith(suffix))
+            return true;
+    return false;
+  }
+
+  /*  Returns true if the string includes any of the given substrings.
+  */
+  String.prototype.includesAnyOf = function (substrings) {
+    for (substring of substrings)
+        if (this.includes(substring))
+            return true
+    return false;
+  }
+
+  /*  Remove given item from array.
+  */
+  Array.prototype.remove = function (item) {
+    let index = this.indexOf(item);
+    if (index !== -1)
+        this.splice(index, 1);
+  };
+
+  /*  Remove from array the first item that passes the provided test function.
+    The test function should take an array item and return true/false.
+    */
+  Array.prototype.removeIf = function (test) {
+    let index = this.findIndex(test);
+    if (index !== -1)
+        this.splice(index, 1);
+  };
+
+  /*  Insert the given item into the array just before the first item that passes
+    the provided test function. If no item passes the test function, append the
+    item to the end of the array.
+  */
+  Array.prototype.insertBefore = function (item, test) {
+    let index = this.findIndex(test);
+    if (index === -1) {
+        this.push(item);
+    } else {
+        this.splice(index, 0, item);
+    }
+  };
+
+  /*      Product of two string arrays. (Argument can be a string, which is equivalent
+        to passing an array with a single string member.)
+        Returns array whose members are all results of concatenating each left hand
+        array string with each right hand array string, e.g.:
+
+                [ "a", "b" ].π([ "x", "y" ])
+
+        will return:
+
+                [ "ax", "ay", "bx", "by" ]
+
+        Any non-string argument must be iterable, else null is returned. Any
+        members of a passed array (or other iterable object), whatever their types,
+        are stringified and interpolated into the resulting product strings.
+  */
+  Array.prototype.π = function (strings) {
+        if (typeof strings == "string")
+                strings = [ strings ];
+
+        if (!!strings[Symbol.iterator] == "false")
+                return null;
+
+        let product = [ ];
+        for (lhs of this) {
+                for (rhs of strings) {
+                        product.push(`${lhs}${rhs}`);
+                }
+        }
+        return product;
+  };
+
+  /*      As Array.π, but applies sequentially to each argument. (First argument may
+        be a string, which is impossible with the Array member version.)
+  */
+  function _π(...args) {
+        if (args.length == 0)
+                return [ ];
+
+        let product = [ "" ];
+        for (arg of args)
+                product = product.π(arg);
+
+        return product;
+  }
+
+  /*  Run the given function immediately if the page is already loaded, or add
+    a listener to run it as soon as the page loads.
+  */
+  function doWhenPageLoaded(f) {
+    if (document.readyState == "complete")
+        f();
+    else
+        window.addEventListener("load", () => { f(); });
+  }
+
+  /*  Run the given function immediately if the page content has already loaded
+    (DOMContentLoaded event has fired), or add a listener to run it as soon as
+    the event fires.
+  */
+  function doWhenDOMContentLoaded(f) {
+    if (GW.DOMContentLoaded == true)
+        f();
+    else
+        window.addEventListener("DOMContentLoaded", () => { f(); });
+  }
+
+  /*      Run the given function immediately if the <body> element has already been
+        created, or add a mutation observer to run it as soon as the <body> element
+        is created.
+  */
+  function doWhenBodyExists(f) {
+        if (document.body) {
+                f();
+        } else {
+                let observer = new MutationObserver((mutationsList, observer) => {
+                        if (document.body) {
+                                observer.disconnect();
+                                f();
+                        }
+                });
+
+                observer.observe(document.documentElement, { childList: true });
+        }
+  }
+
+  /*  Given an HTML string, creates an element from that HTML, adds it to
+    #ui-elements-container (creating the latter if it does not exist), and
+    returns the created element.
+  */
+  function addUIElement(element_html) {
+    let ui_elements_container = document.querySelector("#ui-elements-container");
+    if (!ui_elements_container) {
+        ui_elements_container = document.createElement("div");
+        ui_elements_container.id = "ui-elements-container";
+        document.querySelector("body").appendChild(ui_elements_container);
+    }
+
+    ui_elements_container.insertAdjacentHTML("beforeend", element_html);
+    return ui_elements_container.lastElementChild;
+  }
+
+  GW.scrollListeners = { };
+  /*  Adds a scroll event listener to the page.
+  */
+  function addScrollListener(fn, name) {
+    let wrapper = (event) => {
+        requestAnimationFrame(() => {
+            fn(event);
+            document.addEventListener("scroll", wrapper, { once: true, passive: true });
+        });
+    }
+    document.addEventListener("scroll", wrapper, { once: true, passive: true });
+
+    /*  Retain a reference to the scroll listener, if a name is provided.
+     */
+    if (typeof name != "undefined") {
+        GW.scrollListeners[name] = wrapper;
+    }
+  }
+  /*  Removes a named scroll event listener from the page.
+  */
+  function removeScrollListener(name) {
+    let wrapper = GW.scrollListeners[name];
+    if (wrapper) {
+        document.removeEventListener("scroll", wrapper);
+        GW.scrollListeners[name] = null;
+    }
+  }
+
+  /*      When the given event is triggered on the given target, after the given delay
+        call the given handler function. (Optionally, if the given cancel event
+        occurs in the interim - i.e. after the trigger event happens but before the
+        delay elapses - cancel calling the handler.)
+
+        Return value of this function is an anonymous function which removes the
+        listeners that this function adds.
+
+        NOTE: If `delay` is 0 or less, then `cancelEventName` is ignored, and `func`
+        is added as an event handler for `triggerEventName` directly.
+
+        If `delay` is positive, then `func` will be called by a timer after `delay`
+        ms, prior to which time it might be cancelled if `cancelEventName` (if any)
+        occurs. (If `cancelEventName` is null, then `func` will be called after
+        `delay` unconditionally.)
+  */
+  function onEventAfterDelayDo(target, triggerEventName, delay, func, cancelEventName = null) {
+        if (delay <= 0) {
+                target.addEventListener(triggerEventName, func);
+                return (() => {
+                        target.removeEventListener(triggerEventName, func);
+                });
+        } else {
+                let timer = null;
+                let events = { };
+                target.addEventListener(triggerEventName, events.triggerEvent = (event) => {
+                        timer = setTimeout(func, delay, event);
+                });
+                if (cancelEventName != null) {
+                        target.addEventListener(cancelEventName, events.cancelEvent = (event) => {
+                                clearTimeout(timer);
+                        });
+                }
+                return (() => {
+                        target.removeEventListener(triggerEventName, events.triggerEvent);
+                        if (cancelEventName != null)
+                                target.removeEventListener(cancelEventName, events.cancelEvent);
+                });
+        }
+  }
+
+  /*      Causes an element’s contents to become selected.
+  */
+  function selectElementContents(element) {
+        var range = document.createRange();
+        range.selectNodeContents(element);
+        var selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+  }
+
+  /*  Returns val, or def if val == defval. (By default, defval is -1.)
+    (In other words, `defval(X,Y,Z)` is “return X if Y is Z [else, just Y]”.)
+  */
+  function defval(def, val, defval = -1) {
+    return (val == defval) ? def : val;
+  }
+
+  /*  Returns val, or min if val < min, or max if val > max.
+    (In other words, clamps val to [min,max].)
+  */
+  function valMinMax(val, min, max) {
+    return Math.max(Math.min(val, max), min);
+  }
+
+  /************************/
+  /* ACTIVE MEDIA QUERIES */
+  /************************/
+
+  /*  This function provides two slightly different versions of its functionality,
+    depending on how many arguments it gets.
+
+    If one function is given (in addition to the media query and its name), it
+    is called whenever the media query changes (in either direction).
+
+    If two functions are given (in addition to the media query and its name),
+    then the first function is called whenever the media query starts matching,
+    and the second function is called whenever the media query stops matching.
+
+    If you want to call a function for a change in one direction only, pass an
+    empty closure (NOT null!) as one of the function arguments.
+
+    There is also an optional fifth argument. This should be a function to be
+    called when the active media query is canceled.
+  */
+  function doWhenMatchMedia(mediaQuery, name, ifMatchesOrAlwaysDo, otherwiseDo = null, whenCanceledDo = null) {
+    if (typeof GW.mediaQueryResponders == "undefined")
+        GW.mediaQueryResponders = { };
+
+    let mediaQueryResponder = (event, canceling = false) => {
+        if (canceling) {
+            GWLog(`Canceling media query “${name}”`, "media queries", 1);
+
+            if (whenCanceledDo != null)
+                whenCanceledDo(mediaQuery);
+        } else {
+            let matches = (typeof event == "undefined") ? mediaQuery.matches : event.matches;
+
+            GWLog(`Media query “${name}” triggered (matches: ${matches ? "YES" : "NO"})`, "media queries", 1);
+
+            if ((otherwiseDo == null) || matches)
+                ifMatchesOrAlwaysDo(mediaQuery);
+            else
+                otherwiseDo(mediaQuery);
+        }
+    };
+    mediaQueryResponder();
+    mediaQuery.addListener(mediaQueryResponder);
+
+    GW.mediaQueryResponders[name] = mediaQueryResponder;
+  }
+
+  /*  Deactivates and discards an active media query, after calling the function
+    that was passed as the whenCanceledDo parameter when the media query was
+    added.
+  */
+  function cancelDoWhenMatchMedia(name) {
+    GW.mediaQueryResponders[name](null, true);
+
+    for ([ key, mediaQuery ] of Object.entries(GW.mediaQueries))
+        mediaQuery.removeListener(GW.mediaQueryResponders[name]);
+
+    GW.mediaQueryResponders[name] = null;
+  }
+
+  /*****************/
+  /* NOTIFICATIONS */
+  /*****************/
+  /*      The GW.notificationCenter object allows us to register handler functions for
+        named events. Any number of handlers may be registered for any given named
+        event, and when that event is fired, all of its registered handlers will be
+        called. Because event handlers are registered for events by event name
+        (which may be any string we like), a handler may be registered for an event
+        at any time and at any location in the code. (In other words, an event does
+        not need to first be “defined”, nor needs to “exist” in any way, in order
+        for a handler to be registered for it.)
+
+        We can also make the calling of any given event handler conditional (with a
+        user-defined, handler-specific condition function [closure] that dynamically
+        determines whether its associated handler should be called or not, when the
+        event the handler was registered for is fired), specify that an event
+        handler should be called only once or many times, and group handlers for a
+        particular event into named “phases” (to ensure that certain handlers for an
+        event are always called before/after others).
+
+        Events themselves are also user-defined. Causing an event to fire is as
+        simple as calling GW.notificationCenter.fireEvent() and providing an event
+        name (which may be any string), plus an event info dictionary (which may
+        contain any keys and values we deem necessary, and which will be passed to
+        the handler functions); this will trigger the calling of all the handlers
+        that have been registered for that event name.
+
+        See the comments on specific elements of GW.notificationCenter, below, for
+        more information.
+  */
+  GW.notificationCenter = {
+        /*      Dictionary of registered event handlers for named events.
+
+                KEYS are event names (e.g. ‘GW.contentDidLoad’).
+
+                VALUES are arrays of handler definitions for each event. Each handler
+                definition is a dictionary with the following keys/values:
+
+                - ‘f’ (key)
+                        Handler function to call when the named event fires (passing the
+                        event info dictionary of the fired event). (See comment on the
+                        ‘addHandlerForEvent’ function, below, for details.)
+
+                - ‘options’ (key) [optional]
+                        Event options dictionary, with the following keys/values:
+
+                        - ‘condition’ (key) [optional]
+                                Test function, to which the event info dictionary of the fired
+                                event is passed; the handler function is called if (and only if)
+                                the condition returns true
+
+                        - ‘once’ (key) [optional]
+                                Boolean value; if true, the handler will be removed after the
+                                handler function is called once (note that if there is a
+                                condition function provided [see the ‘condition’ key], the
+                                handler function will not be called - and therefore will not be
+                                removed - if the named event is fired by the condition evaluates
+                                to false).
+
+                                If not set, defaults to false (i.e., by default a handler is
+                                not removed after an event is fired once, but will continue to
+                                be invoked each time the named event fires and the condition,
+                                if any, evaluates as true).
+
+                        - ‘phase’ (key) [optional]
+                                String which specifies when the given handler function should be
+                                called, relative to other handlers registered for the named
+                                event.
+
+                                The format for this string is as follows:
+
+                                - If the first character is anything other than ‘<’ or ‘>’, the
+                                  entire string is treated as the name of a handler phase. The
+                                  given handler function will be called in the same handler
+                                  phase as all other handlers assigned to that phase. (Within a
+                                  phase, handlers are called in the order in which they were
+                                  added.)
+
+                                - If the first character is ‘<’, then the rest of the string
+                                  is treated as the name of a handler phase. The given handler
+                                  function will be called prior to any handlers assigned to the
+                                  specified phase, but after any handlers assigned to an earlier
+                                  named phase (if any). (Within such a “before phase X”
+                                  ‘pseudo-phase’, handlers are called in the order in which they
+                                  were added.)
+
+                                - If the first character is ‘>’, then the rest of the string
+                                  is treated as the name of a handler phase. The given handler
+                                  function will be called after any handlers assigned to the
+                                  specified phase, but before any handlers assigned to a later
+                                  named phase (if any). (Within such an “after phase X”
+                                  ‘pseudo-phase’, handlers are called in the order in which they
+                                  were added.)
+
+                When an event is fired, any handlers registered for that event (i.e.,
+                members of the array which is the value for that event’s name in the
+                eventHandlers dictionary) are called in array order. (If a condition is
+                specified for any given handler, the handler function is only called if
+                the condition function - called with the event info dictionary as its
+                argument - evaluates true.)
+
+                The order of an event handlers array for a given event is, by default,
+                determined by the order in which handlers are registered for that event.
+                The value of the ‘phase’ key of an event’s options dictionary can
+                override and modify this default order. (See definition of the ‘phase’
+                key of an event handler options dictionary, above.)
+         */
+    eventHandlers: { },
+
+    /*  Defined event handler phases for certain named events.
+        (See definition of the ‘phase’ key of an event handler options
+         dictionary, above, for more info.)
+
+        Phases are defined in execution order. For example, when the
+        GW.contentDidLoad event (whose handler phases are defined as follows:
+        `[ "rewrite", "eventListeners" ]`) fires, event handlers are called in
+        the following order:
+
+        1. Handlers assigned to be called before the ‘rewrite’ phase (i.e.,
+           those with ‘<rewrite’ as the value of their ‘phase’ key in their
+           event handler options dictionary)
+        2. Handlers assigned to be called during the ‘rewrite’ phase (i.e.,
+           those with ‘rewrite’ as the value of their ‘phase’ key in their
+           event handler options dictionary)
+        3. Handlers assigned to be called after the ‘rewrite’ phase (i.e.,
+           those with ‘>rewrite’ as the value of their ‘phase’ key in their
+           event handler options dictionary)
+        4. Handlers assigned to be called before the ‘eventListeners’ phase
+           (i.e., those with ‘<eventListeners’ as the value of their ‘phase’ key
+           in their event handler options dictionary)
+        5. Handlers assigned to be called during the ‘eventListeners’ phase
+           (i.e., those with ‘eventListeners’ as the value of their ‘phase’ key
+           in their event handler options dictionary)
+        6. Handlers assigned to be called after the ‘eventListeners’ phase
+           (i.e., those with ‘>eventListeners’ as the value of their ‘phase’ key
+           in their event handler options dictionary)
+
+        (Handlers with no specified phase might be called at any point in this
+         sequence, depending on when they were registered.)
+     */
+    handlerPhaseOrders: {
+        "GW.contentDidLoad": [ "rewrite", "eventListeners" ]
+    },
+
+    /*  Register a new event handler for the named event. Arguments are:
+
+                - ‘eventName’
+                        The name of an event (e.g. ‘GW.contentDidLoad’).
+
+                - ‘f’
+                        Event handler function. When the event fires, this function will be
+                        called. Not that if a condition is specified in the event handler
+                        options (i.e., if a condition function is provided as the value of
+                        the ‘condition’ key in the event handler options dictionary), then
+                        the handler function will be called only if the condition function
+                        evaluates true).
+
+                        The event handler function should take one argument: an event info
+                        dictionary. The keys and values of this dictionary are mostly
+                        event-specific (but see the ‘fireEvent’ function, below, for more
+                        info).
+
+                - ‘options’ [optional]
+                        Event handler options dictionary. See comment on the ‘eventHandlers’
+                        property (above) for info on possible keys/values.
+
+                Note that if there already exists a registered event handler for the
+                given event with the same event handler function as the new handler that
+                you are trying to register, then the new handler will not be registered
+                (even if it has different handler options than the existing handler).
+         */
+    addHandlerForEvent: (eventName, f, options = { }) => {
+        /*      If there’s not already a handlers array for the given event (which
+                may be, e.g., because no event handlers have yet been registered
+                for this event), create the array.
+         */
+        if (GW.notificationCenter.eventHandlers[eventName] == null)
+            GW.notificationCenter.eventHandlers[eventName] = [ ];
+
+                /*      Array of registered handlers for the named event. Might be empty
+                        (if no handlers have been registered for this event yet).
+                 */
+        let handlers = GW.notificationCenter.eventHandlers[eventName];
+
+        /*      If there is already a registered handler with the same handler
+                function as the one we’re trying to register, do not register this
+                new one (even if it has different handler options).
+         */
+        if (handlers.findIndex(handler => handler.f == f) !== -1)
+            return;
+
+                /*      By default, add the new handler to the end of the handlers array
+                        for this event (so that, when the event is fired, this new handler
+                        gets called after all the previously registered handlers).
+
+                        However, if a defined handler phase order exists for the event
+                        that we’re registering this handler for (see ‘phaseOrder’, below),
+                        and a phase has been specified in this handler’s options dictionary,
+                        then that might result in this handler being inserted into the named
+                        event’s handler array at a different point.
+                 */
+        let insertAt = handlers.length;
+
+                /*      Get the handler phase order for the named event, if any.
+
+                        (If no handler phases have been defined for the given event, then
+                         we will ignore the value of the ‘phase’ key in the new handler’s
+                         options dictionary, and simply stick with the default behavior of
+                         adding the new handler at the end of the event’s handler array.)
+                 */
+        let phaseOrder = GW.notificationCenter.handlerPhaseOrders[eventName];
+
+                /*      If the handler we’re registering isn’t assigned to any particular
+                        handler phase, we will simply add it to the end of the handler array
+                        for the given event (and the next large block of code, within the
+                        conditional below, will not be executed). However, we still want to
+                        set an empty-string value for the ‘phase’ key of the handler’s
+                        options dictionary, in order for the ‘phaseAt’ function (below) to
+                        work properly.
+                 */
+        if (phaseOrder)
+            options.phase = (options.phase || "");
+
+                /*      Only if (a) there’s a defined handler phase order for the given
+                        event, AND (b) the handler we’re registering is being assigned to a
+                        specific phase, do we have anything to do here...
+                 */
+        if (   options.phase
+                && phaseOrder) {
+                /*      Get the target phase name, which may be the full value of the
+                        ‘phase’ key of the options dictionary, OR it may be that value
+                        minus the first character (if the value of the ‘phase’ key
+                        begins with a ‘<’ or a ‘>’ character).
+                        */
+            let targetPhase = options.phase.match(/^([<>]?)(.+)/)[2];
+
+            /*  Get the index of the target phase in the defined handler phase
+                order for the named event. If the specified phase is not found
+                in the defined handler phase order, set targetPhaseIndex to
+                the length of the phase order array, thus ensuring that, by
+                default, the new handler will be appended to the end of the
+                event’s handlers array.
+             */
+            let targetPhaseIndex = defval(phaseOrder.length, phaseOrder.indexOf(targetPhase), -1);
+
+                        /*      Takes an index into the given event’s handler array. Returns a
+                                dictionary with these keys/values:
+
+                                - ‘phase’ [key]
+                                        The name of the phase to which the handler at the given
+                                        index is assigned (could be an empty string).
+
+                                - ‘before’ [key]
+                                        Boolean value; true if the handler at the given index is
+                                        assigned to run before the specified phase, false otherwise
+                                        (i.e., if it’s instead assigned to run either during or
+                                        after the specified phase).
+
+                                - ‘after’ [key]
+                                        Boolean value; true if the handler at the given index is
+                                        assigned to run after the specified phase, false otherwise
+                                        (i.e., if it’s instead assigned to run either before or
+                                        during the specified phase).
+
+                                (Note that for an event handler which has not been assigned to
+                                 any specific phase, ‘phase’ will be the empty string, and both
+                                 ‘before’ and ‘after’ will be false.)
+
+                                Returns null if the given index is out of bounds of the event’s
+                                handler definitions array.
+                         */
+            let phaseAt = (index) => {
+                if (index >= handlers.length)
+                        return null;
+                let parts = handlers[index].options.phase.match(/^([<>]?)(.+)/);
+                return {
+                    phase: parts[2],
+                    before: (parts[1] == "<"),
+                    after: (parts[1] == ">")
+                };
+            };
+
+            if (options.phase.startsWith("<")) {
+                /*      The handler is assigned to be called before the specified
+                        phase.
+                 */
+                for (var i = 0; i < handlers.length; i++) {
+                        /*      We have found the index before which to insert, if the
+                                handler at this index is assigned to be called during
+                                or after our target phase, OR if it is assigned to be
+                                called before, during, or after any later phase.
+
+                                (In other words, we have passed all the handlers which
+                                 are assigned either to any earlier phase or to before
+                                 the specified phase.)
+                         */
+                    if (    phaseAt(i).phase == targetPhase
+                        && !phaseAt(i).before)
+                        break;
+                    if (phaseOrder.slice(targetPhaseIndex + 1).includes(phaseAt(i).phase))
+                        break;
+                }
+
+                /*      If neither of the break conditions in the loop were
+                        encountered, i is now equal to the handler array length,
+                        and the new handler will be added to the end of the array.
+                        Otherwise, it’ll be inserted in the appropriate place.
+                 */
+                insertAt = i;
+            } else if (options.phase.startsWith(">")) {
+                /*      The handler is assigned to be called after the specified
+                        phase.
+                 */
+                for (var j = handlers.length - 1; j > -1; j--) {
+                        /*      We have found the index _after_ which to insert (hence
+                                the `j++`), if the handler at this index is assigned to
+                                be called before, during, or after the target phase, OR
+                                if it is assigned to be called before, during, or after
+                                any earlier phase.
+
+                                (In other words, we have passed - moving backwards
+                                 through the handlers array - all the handlers which
+                                 are assigned either to any later phase or to after
+                                 or during the specified phase.)
+                         */
+                    if (phaseAt(j).phase == targetPhase) {
+                        j++;
+                        break;
+                    }
+
+                    /*  There are no “earlier phases” if the target phase index
+                        is either 0 or out of array bounds of the phase order.
+                        (The latter will happen if the target phase is not in
+                         the defined phase order for the given event.)
+                    */
+                    if (   targetPhaseIndex > 0
+                        && targetPhaseIndex < phaseOrder.length
+                        && phaseOrder.slice(0, targetPhaseIndex - 1).includes(phaseAt(j).phase)) {
+                        j++;
+                        break;
+                    }
+                }
+
+                /*      If neither of the break conditions in the loop were
+                        encountered, j is now equal to -1; in this case, set j to
+                        the handlers array length, such that the new handler will be
+                        added to the end of the array.
+                        Otherwise, it’ll be inserted in the appropriate place.
+                 */
+                insertAt = defval(handlers.length, j, -1);
+            } else {
+                /*      The handler is assigned to be called during the specified
+                        phase.
+                 */
+                for (var k = 0; k < handlers.length; k++) {
+                        /*      We have found the index before which to insert, if the
+                                handler at this index is assigned to be called after the
+                                target phase, OR if it is assigned to be called before,
+                                during, or after any later phase.
+
+                                (In other words, we have passed all the handlers which
+                                 are assigned either to any earlier phase or to before
+                                 or during the specified phase.)
+                         */
+                    if (   phaseAt(k).phase == targetPhase
+                        && phaseAt(k).after)
+                        break;
+                    if (phaseOrder.slice(targetPhaseIndex + 1).includes(phaseAt(k).phase))
+                        break;
+                }
+
+                /*      If neither of the break conditions in the loop were
+                        encountered, k is now equal to the handler array length,
+                        and the new handler will be added to the end of the array.
+                        Otherwise, it’ll be inserted in the appropriate place.
+                 */
+                insertAt = k;
+            }
+        }
+
+                /*      Add the new event handler to the named event’s handler definitions
+                        array, at whatever index we have now determined it should go to.
+                 */
+        GW.notificationCenter.eventHandlers[eventName].splice(insertAt, 0, { f: f, options: options });
+    },
+
+    /*  Unregister the event handler with the given handler function from the
+        specified named event (if such a handler exists).
+     */
+    removeHandlerForEvent: (eventName, f) => {
+        if (GW.notificationCenter.eventHandlers[eventName] == null)
+            return;
+
+        GW.notificationCenter.eventHandlers[eventName].removeIf(handler => handler.f == f);
+    },
+
+    /*  Unregister all registered event handlers from the specified named event.
+     */
+    removeAllHandlersForEvent: (eventName) => {
+        GW.notificationCenter.eventHandlers[eventName] = null;
+    },
+
+        /*      Event-specific pre-fire processing functions. Keys are event names.
+                Values are functions that take the event info as an argument, and return
+                modified event info.
+        */
+        prefireProcessors: {
+
+        },
+
+    /*  Fire an event with the given name and event info dictionary.
+
+        In addition to printing a console log message (if the log level is set
+        to 1 or higher), this will also cause each event handler that has been
+        registered for the named event to be called. (Handlers with a condition
+        function specified in their event handler options will first have that
+        condition function called, and the handler function will only be called
+        if the condition evaluates true.)
+
+        The event info dictionary provided to the ‘fireEvent’ function will be
+        passed as the argument to each handler function (as well as to any
+        condition function that is called to determine whether a handler should
+        be called).
+
+        The event info dictionary may contain various, mostly event-specific,
+        keys and values. The one common key/value that any event’s info
+        dictionary may contain is the ‘source’ key, whose value should be a
+        string identifying the function, browser event, or other context which
+        caused the given event to be fired (such as ‘DOMContentLoaded’ or
+        ‘Annotations.loadAnnotation’). In addition to any ways in which it may
+        be used by an event handler, this string (i.e., the value of the
+        ‘source’ key) is (if present) included in the console message that is
+        printed when the event is fired.
+     */
+    fireEvent: (eventName, eventInfo) => {
+        /*  The ‘16’ here is the width of the date field plus spacing.
+            The “Source:” text is manually padded to be as wide
+            as “[notification]”.
+         */
+        GWLog(`Event “${eventName}” fired.`
+                + `${((eventInfo && eventInfo.source)
+                          ? ("\n"
+                           + "".padStart(16, ' ')
+                           + "       Source:".padEnd(GW.logSourcePadLength, ' ')
+                           + eventInfo.source)
+                          : ""
+                                 )}`, "notification");
+
+                /*      If no handlers have been registered for this event, we do nothing.
+                 */
+        if (GW.notificationCenter.eventHandlers[eventName] == null)
+            return;
+
+                /*      If event-specific pre-fire processing is needed, do it.
+                 */
+                if (GW.notificationCenter.prefireProcessors[eventName])
+                        eventInfo = GW.notificationCenter.prefireProcessors[eventName](eventInfo);
+
+                /*      Call all registered handlers, in order.
+                 */
+        for (let i = 0; i < GW.notificationCenter.eventHandlers[eventName].length; i++) {
+            let handler = GW.notificationCenter.eventHandlers[eventName][i];
+            /*  If a condition function is provided, call it to determine
+                whether the handler function should be called.
+             */
+            if (   handler.options.condition
+                && handler.options.condition(eventInfo) == false)
+                continue;
+
+            /*  If the condition function evaluated true, or if no condition
+                function was provided, we call the handler.
+             */
+            handler.f(eventInfo);
+
+                /*      If the handler options specified a true value for the ‘once’
+                        key, we unregister this handler after having called it once.
+
+                        (Note that in the case of an once-only handler that’s called
+                         conditionally, i.e. one with a specified condition function,
+                         regardless of how many times the named event fires, the handler
+                         is never automatically removed until its condition evaluates
+                         true and the handler actually gets called once.)
+                 */
+            if (handler.options.once) {
+                GW.notificationCenter.eventHandlers[eventName].splice(i, 1);
+                i--;
+            }
+        }
+    }
+  };
+
+  /*      Event-specific boolean flags for the ‘GW.contentDidLoad’ event.
+
+        See rewrite.js for details on the meaning of these flags.
+  */
+  GW.contentDidLoadEventFlags = {
+        isMainDocument:         1 << 0,
+        needsRewrite:           1 << 1,
+        clickable:                      1 << 2,
+        collapseAllowed:        1 << 3,
+        isCollapseBlock:        1 << 4,
+        isFullPage:                     1 << 5,
+        fullWidthPossible:      1 << 6
+  };
+
+  /*      Event-specific pre-fire processing for the ‘GW.contentDidLoad’ event.
+  */
+  GW.notificationCenter.prefireProcessors["GW.contentDidLoad"] = (eventInfo) => {
+        for ([flagName, flagValue] of Object.entries(GW.contentDidLoadEventFlags))
+                eventInfo[flagName] = (0 != (eventInfo.flags & flagValue));
+
+        return eventInfo;
+  };
+
+  /****************/
+  /* SCROLL STATE */
+  /****************/
+
+  GW.scrollState = {
+    lastScrollTop:              (window.pageYOffset || document.documentElement.scrollTop),
+    unbrokenDownScrollDistance: 0,
+    unbrokenUpScrollDistance:   0
+  };
+
+  function updateScrollState(event) {
+    GWLog("updateScrollState", "gw.js", 3);
+
+    let newScrollTop = (window.pageYOffset || document.documentElement.scrollTop);
+    GW.scrollState.unbrokenDownScrollDistance = (newScrollTop > GW.scrollState.lastScrollTop)
+        ? (GW.scrollState.unbrokenDownScrollDistance + newScrollTop - GW.scrollState.lastScrollTop)
+        : 0;
+    GW.scrollState.unbrokenUpScrollDistance = (newScrollTop < GW.scrollState.lastScrollTop)
+        ? (GW.scrollState.unbrokenUpScrollDistance + GW.scrollState.lastScrollTop - newScrollTop)
+        : 0;
+    GW.scrollState.lastScrollTop = newScrollTop;
+  }
+  addScrollListener(updateScrollState, "updateScrollStateScrollListener");
+
+  /*  Toggles whether the page is scrollable.
+  */
+  function isPageScrollingEnabled() {
+    return !(document.documentElement.classList.contains("no-scroll"));
+  }
+  /*      Pass true or false to enable or disable (respectively) page scrolling.
+        Calling this function with no arguments toggles the state (enables if
+        currently disabled, or vice versa).
+  */
+  function togglePageScrolling(enable) {
+    if (typeof enable == "undefined")
+        enable = document.documentElement.classList.contains("no-scroll");
+
+    let preventScroll = (event) => { document.documentElement.scrollTop = GW.scrollState.lastScrollTop; };
+
+        /*      The `no-scroll` CSS class, which is added to the `html` element when
+                scrolling is disabled by this function (in order to permit the “toggle”
+                behavior, i.e. calling ‘togglePageScrolling’ with no arguments), allows
+                the assignment of arbitrary CSS properties to the page on the basis of
+                scroll state. This is purely a convenience (which may be useful if, for
+                example, some styling needs to change on the basis of change in page
+                scroll state, e.g. modifying the appearance of scroll bars). No specific
+                CSS properties are needed in order for this function to work properly.
+         */
+    if (   enable
+        && isPageScrollingEnabled() == false) {
+        document.documentElement.classList.toggle("no-scroll", false);
+        removeScrollListener("preventScroll");
+        addScrollListener(updateScrollState, "updateScrollStateScrollListener");
+    } else if (  !enable
+                   && isPageScrollingEnabled() == true) {
+        document.documentElement.classList.toggle("no-scroll", true);
+        addScrollListener(preventScroll, "preventScroll");
+        removeScrollListener("updateScrollStateScrollListener");
+    }
+  }
+
+  /******************/
+  /* BROWSER EVENTS */
+  /******************/
+
+  /*      We know this is false here, because this script is inlined in the <head>
+        of the page; so the page body has not yet loaded when this code runs.
+  */
+  GW.DOMContentLoaded = false;
+
+  GWLog("document.readyState." + document.readyState, "browser event");
+  window.addEventListener("DOMContentLoaded", () => {
+    GWLog("window.DOMContentLoaded", "browser event");
+    GW.DOMContentLoaded = true;
+    GW.notificationCenter.fireEvent("GW.contentDidLoad", {
+        source: "DOMContentLoaded",
+        document: document,
+        location: new URL(location.href),
+        flags: (  GW.contentDidLoadEventFlags.isMainDocument
+                        | GW.contentDidLoadEventFlags.needsRewrite
+                        | GW.contentDidLoadEventFlags.clickable
+                        | GW.contentDidLoadEventFlags.collapseAllowed
+                        | GW.contentDidLoadEventFlags.isFullPage
+                        | GW.contentDidLoadEventFlags.fullWidthPossible)
+    });
+  });
+  window.addEventListener("load", () => {
+    GWLog("window.load", "browser event");
+  });
+  document.addEventListener("readystatechange", () => {
+    GWLog("document.readyState." + document.readyState, "browser event");
+  });
+  </script>
+<script>
+  /*      This code is part of darkmode.js by Said Achmiz.
+        See the file `darkmode.js` for license and more information.
+  */
+
+  /*      Dark mode: before anything else loads, check browser localStorage for dark 
+        mode preference and immediately toggle sets of CSS color variables/classes 
+        to avoid any ‘flash of white’ or delayed loading. Note: CSS falls back to 
+        the media-query browser/OS variable preference, so still works if JS is 
+        blocked! (The JS is only necessary for the theme switcher widget allowing 
+        ‘force light’/‘force dark’ options. If users block JS, set the dark mode 
+        preference, and are unhappy when they get dark mode, well, they made their 
+        bed and must lie in it.)
+  */
+
+  /*  Set specified color mode (auto, light, dark).
+
+        Called by: this file (immediately upon load)
+        Called by: GW.darkMode.modeSelectButtonClicked (darkmode.js)
+  */
+  function setMode(modeOption) {
+    GWLog("setMode", "darkmode.js", 1);
+
+    //  The style block should be inlined (and already loaded).
+    let darkModeStyles = document.querySelector("#inlined-dark-mode-styles");
+    if (darkModeStyles == null)
+        return;
+
+        //      Set `media` attribute of style block to match requested mode.
+    if (modeOption == 'auto') {
+        darkModeStyles.media = "all and (prefers-color-scheme: dark)";
+    } else if (modeOption == 'dark') {
+        darkModeStyles.media = "all";
+    } else {
+        darkModeStyles.media = "not all";
+    }
+
+    /*  Update selector state (if darkmode.js has been loaded; if it has not, 
+        then the selector also doesn’t exist yet, and thus needn’t be updated).
+     */
+    if (window.updateModeSelectorState)
+            updateModeSelectorState();
+  }
+
+  //      Get saved mode setting (or default).
+  let currentMode = localStorage.getItem("selected-mode") || 'auto';
+
+  //      Activate saved mode.
+  setMode(currentMode);
+  </script>
+<script>
+  ReaderMode = {
+        active: false,
+
+        styles:
+                _π("body.reader-mode-active ", [
+                   "#sidebar-links",
+                   "#page-metadata",
+                   "#TOC ul li::before",
+                   "#footer",
+                   "#navigation",
+                   "#sidenote-column-left",
+                   "#sidenote-column-right",
+                    ".inflationAdjusted .supsub",
+            ".footnote-ref"
+                ]).join(",\n") + ` {
+                        display: none;
+                }` + `
+                body.reader-mode-active #logo {
+                        border-color: transparent;
+                }
+                @media only screen and (max-width: 649px) {
+                        body.reader-mode-active #TOC {
+                                margin-top: 1em;
+                        }
+                }
+                body.reader-mode-active #TOC ul li {
+                        padding-left: 0.125em;
+                }
+                ` + _π("body.reader-mode-active .spawns-", [ "popup", "popin" ]).join(",\n") + ` {
+                        margin: 0;
+                }
+                ` + _π("body.reader-mode-active .spawns-", [ "popup", "popin" ], " .indicator-hook").join(",\n") + ` {
+                        padding-left: 0;
+                }
+                ` + _π("body.reader-mode-active .spawns-", [ "popup", "popin" ], " .indicator-hook::before").join(",\n") + ` {
+                        left: -0.3em;
+                        box-shadow:
+                                -0.17em 0.05em 0 0 var(--GW-reader-mode-masked-link-bracket-background-color),
+                                -0.17em -0.05em 0 0 var(--GW-reader-mode-masked-link-bracket-background-color),
+                                -0.17em 0 0 0 var(--GW-reader-mode-masked-link-bracket-background-color);
+                }
+                ` + _π("body.reader-mode-active.masked-links-hidden .spawns-", [ "popup", "popin" ], " .indicator-hook").join(",\n") + ",\n" +
+                        _π("body.reader-mode-active #markdownBody ", [ "p", "li", "figcaption" ], " a::after").join(",\n") + ` {
+                        display: none;
+                }
+                ` + _π("body.reader-mode-active.masked-links-hidden #markdownBody ", [ "p", "li", "figcaption" ], " a:not(.popup-open)", [ "", ":visited", ":hover" ]).join(",\n") + ` {
+                        color: inherit;
+                        background: none;
+                        cursor: text;
+                }
+                body.reader-mode-active.masked-links-hidden a:link,
+                body.reader-mode-active.masked-links-hidden a:link * {
+                        text-shadow: none;
+                }
+                @media only screen and (max-width: 649px) {
+                        body.reader-mode-active #sidebar {
+                                position: relative;
+                                margin: 1em 0 0 0;
+                        }
+                        body.reader-mode-active #sidebar #logo {
+                                width: 100%;
+                                justify-content: center;
+                                margin: 0;
+                                padding: 0;
+                        }
+                        body.reader-mode-active #sidebar #logo svg {
+                                width: 1.5rem;
+                                background-color: var(--GW-body-background-color);
+                                padding: 0 10px 0 11px;
+                        }
+                        body.reader-mode-active #sidebar #logo::before {
+                                content: "";
+                                position: absolute;
+                                width: 100%;
+                                height: 0;
+                                border-bottom: 1px dotted var(--GW-index-page-bottom-ornament-line-color);
+                                left: 0;
+                                top: 50%;
+                                z-index: -1;
+                        }
+                        body.reader-mode-active header h1 {
+                                margin: 0.625em 0 0.375em 0;
+                        }
+                }
+        `,
+
+        /*      Inject a style block with the given content and element ID.
+         */
+        //      Called by: this file (immediately on load)
+        injectStyleBlock: (styleBlockContent, styleBlockID) => {
+                document.querySelector("head").insertAdjacentHTML("beforeend", `<style id='${styleBlockID}'>${styleBlockContent}</style>`);
+        },
+
+        /*      Activate or deactivate reader mode, as determined by the current setting
+                and the selected mode.
+         */
+        //      Called by: this file (doWhenBodyExists)
+        //      Called by: ReaderMode.modeSelectButtonClicked
+        setMode: (selectedMode = ReaderMode.currentMode()) => {
+                GWLog("ReaderMode.setMode", "reader-mode.js", 1);
+
+                //      Activate (if needed).
+                if (ReaderMode.enabled() == true)
+                        ReaderMode.activate();
+        },
+
+        /*      Returns true if reader mode is set to be enabled for the current page,
+                false otherwise.
+         */
+    enabled: () => {
+                let currentMode = ReaderMode.currentMode();
+        return (   currentMode == "on"
+                        || (   currentMode == "auto"
+                                && document.body.classList.contains("reader-mode")))
+    },
+
+        /*      Returns current (saved) mode (on, off, or auto).
+         */
+        currentMode: () => {
+                return (localStorage.getItem("reader-mode-setting") || "auto");
+        },
+
+        /*      Masks links and hide other elements, as appropriate. This will hide
+                linkicons and pop-frame indicators, and will thus cause reflow.
+         */
+        //      Called by: ReaderMode.setMode
+        activate: () => {
+                GWLog("ReaderMode.activate", "reader-mode.js", 1);
+
+                ReaderMode.active = true;
+
+                //      Add body classes.
+                document.body.classList.add("reader-mode-active", "masked-links-hidden");
+        },
+  };
+
+  //      Inject initial style block.
+  ReaderMode.injectStyleBlock(ReaderMode.styles, "reader-mode-styles");
+
+  //      Activate saved mode, once the <body> element is loaded (and classes known).
+  doWhenBodyExists(ReaderMode.setMode);
+
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>  
+
+
+<link rel="stylesheet" type="text/css" href="/watchmaking.io/assets/css/fonts.css?v=1649292882">
+<link rel="stylesheet" type="text/css" href="/watchmaking.io/assets/css/default.css?v=1651155103">
+<link rel="stylesheet" type="text/css" href="/watchmaking.io/assets/css/links.css?v=1651113434">
+  <link rel="stylesheet" type="text/css" href="/watchmaking.io/css/tufte.css">
+  <link rel="stylesheet" type="text/css" href="/watchmaking.io/assets/css/gallery.css">
+  <link rel="stylesheet" type="text/css" href="/watchmaking.io/assets/css/tweak.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/watchmaking.io/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="/watchmaking.io/articles/20/Edge-Cases">
+
+  <link rel="alternate" type="application/rss+xml" title="Watchmaking.io" href="/watchmaking.io/feed.xml" />
+</head>
+
+  <body>
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+	<a href="/watchmaking.io/"><img class="badge" src="/watchmaking.io/assets/MKR_Logo.svg" alt="MKR"></a>
+	
+		
+		    
+			<a href="/watchmaking.io/home/top2"><div style="display: inline-block;opacity: 0.0;">&lt;</div><div style="display: inline-block;">Top Two</div><div style="display: inline-block;opacity: 0.0;">&gt;</div></a>
+		    
+	    
+  	
+		
+		    
+			<a href="/watchmaking.io/home/blog"><div style="display: inline-block;opacity: 0.0;">&lt;</div><div style="display: inline-block;">blog</div><div style="display: inline-block;opacity: 0.0;">&gt;</div></a>
+		    
+	    
+  	
+		
+		    
+			<a href="/watchmaking.io/home/about"><div style="display: inline-block;opacity: 0.0;">&lt;</div><div style="display: inline-block;">About</div><div style="display: inline-block;opacity: 0.0;">&gt;</div></a>
+		    
+	    
+  	
+	</nav>
+</header>
+    <article class="group">
+
+      
+
+<!--The metadata line which appears at the top of pages-->
+<div class="markdownBody" id="page-metadata">
+    <div id="page-metadata-block" >
+        <span id="page-type" title="Page type, either 'Article' or 'Bubble'">
+            <em>
+            
+            Article
+            
+            </em>
+        </span>
+        <span id="page-date-range"><span id="page-publication" title="Date of first publication"><em>April 13, 2020</em></span>
+            
+        </span>
+
+        <span id="page-status"
+            title="Writing status of current page: Abandoned, Notes, In Progress, Draft, Published">Status: <em>Notes</em></span>
+        
+    </div>
+</div>
+ 
+<div id="markdownBody" class="markdownBody">
+    <article>
+        <h1>Edge Cases</h1>
+        <p>Some edge cases and cautionary examples on using Markdown for writing content using this theme. In particular, list syntax can really knot things up.
+<!--more--></p>
+
+<p><a href="/articles/20/tufte-style-jekyll-blog">This links to another post</a></p>
+
+<h3 id="mathjax-improperly-parsing-greater-and-less-than-and-ampersands-inside-blocks">Mathjax improperly parsing greater and less than and ampersands inside blocks</h3>
+
+<p>The mathjax HTML <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> scripts have been modified to properly render block style mathjax expressions inside a <code class="language-plaintext highlighter-rouge">$$ ... $$</code> set of character pairs,
+using the standard Kramdown parser. Some examples sent to me by Quxiaofeng are now parsing correctly, I believe.</p>
+
+<p>This code:</p>
+
+<div class="language-latex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">$$</span><span class="nb">
+  D </span><span class="o">=</span><span class="nb"> </span><span class="nv">\left</span><span class="o">(</span><span class="nv">\begin</span><span class="p">{</span><span class="nb">matrix</span><span class="p">}</span><span class="nb">
+  </span><span class="m">1</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="o">-</span><span class="m">1</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+  </span><span class="p">&amp;</span><span class="nb">    </span><span class="p">&amp;</span><span class="nb"> </span><span class="nv">\cdots</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb">   </span><span class="p">&amp;</span><span class="nb"> </span><span class="nv">\\</span><span class="nb">
+  </span><span class="p">&amp;</span><span class="nb">    </span><span class="p">&amp;</span><span class="nb">        </span><span class="p">&amp;</span><span class="nb"> </span><span class="m">1</span><span class="nb"> </span><span class="p">&amp;</span><span class="nb"> </span><span class="o">-</span><span class="m">1</span><span class="nb">
+ </span><span class="nv">\end</span><span class="p">{</span><span class="nb">matrix</span><span class="p">}</span><span class="nb">
+ </span><span class="nv">\right</span><span class="o">)</span><span class="nb">
+</span><span class="p">$$</span>
+</code></pre></div></div>
+<p>yields this:</p>
+
+\[D = \left(\begin{matrix}
+  1 &amp; -1 &amp; &amp; &amp; &amp; \\
+  &amp;    &amp; \cdots &amp;   &amp; \\
+  &amp;    &amp;        &amp; 1 &amp; -1
+\end{matrix}
+\right)\]
+
+<p>Other examples from the <a href="http://latex.wikia.com/wiki/Matrix_environments">wikia Tex reference</a>:</p>
+
+\[\begin{matrix}
+\alpha&amp; \beta^{*}\\
+\gamma^{*}&amp; \delta
+\end{matrix}\]
+
+\[\begin{bmatrix}
+\alpha&amp; \beta^{*}\\
+\gamma^{*}&amp; \delta
+\end{bmatrix}\]
+
+\[\begin{Bmatrix}
+\alpha&amp; \beta^{*}\\
+\gamma^{*}&amp; \delta
+\end{Bmatrix}\]
+
+\[\begin{vmatrix}
+\alpha&amp; \beta^{*}\\
+\gamma^{*}&amp; \delta
+\end{vmatrix}\]
+
+\[\begin{Vmatrix}
+\alpha&amp; \beta^{*}\\
+\gamma^{*}&amp; \delta
+\end{Vmatrix}\]
+
+\[\begin{Vmatrix}
+\alpha&amp; \beta^{*}\\
+\gamma^{*}&amp; \delta
+\end{Vmatrix}\]
+
+<p>However, a problem still exists for inline matrix notation, from an example <a href="https://en.wikibooks.org/wiki/LaTeX/Mathematics#Matrices_in_running_text">here</a>:</p>
+
+<p>A matrix in text must be set smaller: \(\bigl(\begin{smallmatrix}a &amp; b \\ c &amp; d\end{smallmatrix} \bigr)\) to not increase leading in a portion of text. The way this inline matrix is written is: <code class="language-plaintext highlighter-rouge">$$ \bigl(\begin{smallmatrix}a &amp; b \\ c &amp; d\end{smallmatrix} \bigr) $$</code></p>
+
+<h2 id="gallery-test">Gallery Test</h2>
+<div class="image-gallery"><div class="gallery-box"><a href="/watchmaking.io/assets/galleries/test/zzz1fr.png" class="no-popin" title="zzz1fr"><img src="/watchmaking.io/assets/galleries/test/thumbs/zzz1fr.png
+" alt="zzz1fr" class="img-gallery" /> </a></div><div class="gallery-box"><a href="/watchmaking.io/assets/galleries/test/2sdf.jpeg" class="no-popin" title="2sdf"><img src="/watchmaking.io/assets/galleries/test/thumbs/2sdf.jpeg
+" alt="2sdf" class="img-gallery" /> </a></div><div class="gallery-box"><a href="/watchmaking.io/assets/galleries/test/bbb19.png" class="no-popin" title="bbb19"><img src="/watchmaking.io/assets/galleries/test/thumbs/bbb19.png
+" alt="bbb19" class="img-gallery" /> </a></div><div class="gallery-box"><a href="/watchmaking.io/assets/galleries/test/a20sdf.jpeg" class="no-popin" title="a20sdf"><img src="/watchmaking.io/assets/galleries/test/thumbs/a20sdf.jpeg
+" alt="a20sdf" class="img-gallery" /> </a></div><div class="gallery-box"><a href="/watchmaking.io/assets/galleries/test/a.jpeg" class="no-popin" title="a"><img src="/watchmaking.io/assets/galleries/test/thumbs/a.jpeg
+" alt="a" class="img-gallery" /> </a></div></div>
+<blockquote>
+
+</blockquote>
+
+<h2 id="edge-case-1-from-quxiaofeng">Edge Case 1 from Quxiaofeng:</h2>
+
+<h3 id="no-blank-lines-between-markdown-list-items">No blank lines between Markdown list items</h3>
+
+<p>The issue arises when sidenotes and marginnotes are put into list items.  As mentioned in the main documentation page, lists can be problematic not only for semantic clarity, but also because they can creating formatting issues. For example:</p>
+
+<h3 id="related-algorithms">Related algorithms</h3>
+
+<ul>
+  <li>Split Bregman iteration <label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle" /><span class="sidenote">Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343. </span></li>
+  <li>Dykstra’s alternating projection algorithm <label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle" /><span class="sidenote">Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842. </span></li>
+  <li>Proximal point algorithm applied to the dual</li>
+  <li>Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …</li>
+  <li>Embraces distributed computing for big data <label for="3" class="margin-toggle sidenote-number"></label><input type="checkbox" id="3" class="margin-toggle" /><span class="sidenote">Boyd, S., Parikh, N., Chu, E., Peleato, B., and Eckstein, J. (2011). Distributed optimization and statistical learning via the alternating direction method of multipliers. Found. Trends Mach. learn., 3(1):1-122. </span></li>
+</ul>
+
+<h3 id="why-this-matters">Why this matters</h3>
+
+<p>Notice how the sidenotes display properly, but the fact that sidenotes have more display ‘volume’ than the list items themselves causes a horizontal mismatch between the sidenote item’s number and its corresponding list item.</p>
+
+<p>Please note that there must be <em>no blank lines between your list items</em>. This is due to a really strange thing about the Jekyll Markdown engine I have never noticed before. If you have a list, and you put a blank line between the items like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  + list item 1
+
+  + list item 2
+</code></pre></div></div>
+
+<p>It will create an html tag structure like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul&gt;
+   &lt;li&gt;
+      &lt;p&gt;list item 1&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+      &lt;p&gt;list item 2&lt;/p&gt;
+   &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div></div>
+<p>Which <em>totally</em> goofs up the layout CSS.</p>
+
+<p>However, if your Markdown is this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    + list item 1
+    + list item 2
+</code></pre></div></div>
+
+<p>It will create a tag structure like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;ul&gt;
+   &lt;li&gt;list item 1&lt;/li&gt;
+   &lt;li&gt;list item 2&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre></div></div>
+
+<p>Here is the same content as above, with a blank line separating the list items. Notice how the sidenotes get squashed into the main content area:</p>
+
+<h3 id="remarks-on-admm-version-2---one-blank-line-between-markdown-list-items">Remarks on ADMM version 2 - <strong>one blank line</strong> between Markdown list items</h3>
+
+<p>Related algorithms</p>
+
+<ul>
+  <li>
+    <p>Split Bregman iteration <label for="1" class="margin-toggle sidenote-number"></label><input type="checkbox" id="1" class="margin-toggle" /><span class="sidenote">Goldstein, T. and Osher, S. (2009). The split Bregman method for l1-regularized problems. SIAM J. Img. Sci., 2:323-343. </span></p>
+  </li>
+  <li>
+    <p>Dykstra’s alternating projection algorithm <label for="2" class="margin-toggle sidenote-number"></label><input type="checkbox" id="2" class="margin-toggle" /><span class="sidenote">Dykstra, R. L. (1983). An algorithm for restricted least squares regression. J. Amer. Statist. Assoc., 78(384):837-842. </span></p>
+  </li>
+  <li>
+    <p>Proximal point algorithm applied to the dual</p>
+  </li>
+  <li>
+    <p>Numerous applications in statistics and machine learning: lasso, gen. lasso, graphical lasso, (overlapping) group lasso, …
+<br />
+<br />
+<br />
+<br /></p>
+  </li>
+</ul>
+
+<h3 id="liquid-tag-parsing-strangeness">Liquid tag parsing strangeness</h3>
+
+<p>Example of the proper way to write an url inside a <em>Liquid</em> full-width image tag.</p>
+
+<p>This code: <code class="language-plaintext highlighter-rouge">{% fullwidth "assets/img/rhino.png" "Tuftes pet rhino (via &lt;a href=\"//www.edwardtufte.com/tufte/\"&gt;Edward Tufte&lt;/a&gt;)"  %}</code></p>
+
+<p>produces the following image with a title. Notice that I have had to escape the double quotes in the HTML with a backslash. Also, the example above leaves out the single quote in ‘Tufte’s” because of the topsy-turvy way that you have to escape the escapes in code sections that are used for illustrative purposes in this text. Bottom line is that there are occasionally some odd interactions between the Markdown parser, custom <em>Liquid</em> tags and HTML.</p>
+<figure class="fullwidth"><img src="/watchmaking.io/assets/img/rhino.png" /><figcaption>Tufte&#8217;s pet rhino (via <a href="//www.edwardtufte.com/tufte/">Edward Tufte</a>)</figcaption></figure>
+
+    </article>
+
+    
+<!--Backlinks list, typically shown at the bottom of the page.-->
+
+
+
+
+
+</div>
+
+    </article>
+    <span class="print-footer">Edge Cases - April 13, 2020 - The Watchmaker</span>
+
+
+
+    <footer>
+  <script>
+    var headings = document.querySelectorAll("h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]");
+
+    for (var i = 0; i < headings.length; i++) {
+        headings[i].innerHTML =
+            '<a href="#' + headings[i].id + '">' +
+                headings[i].innerText +
+            '</a>';
+    }
+</script>
+  <hr class="slender">
+  <ul class="footer-links">
+    <li><a href="mailto:hate@spam.net"><span class="icon-mail3"></span></a></li>    
+    
+      <li>
+        <a href="//www.twitter.com/twitter_handle"><span class="icon-twitter"></span></a>
+      </li>
+    
+      <li>
+        <a href="//plus.google.com/+googlePlusName"><span class="icon-google2"></span></a>
+      </li>
+    
+      <li>
+        <a href="//github.com/GithubHandle"><span class="icon-github"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.flickr.com/photos/FlickrUserID"><span class="icon-flickr3"></span></a>
+      </li>
+    
+      <li>
+        <a href="/feed"><span class="icon-rss2"></span></a>
+      </li>
+    
+      <li>
+        <a href="//vimeo.com/vimeo-id"><span class="icon-vimeo2"></span></a>
+      </li>
+    
+      <li>
+        <a href="//www.linkedin.com/"><span class="icon-linkedin"></span></a>
+      </li>
+      
+  </ul>
+<div class="credits">
+  <a>mkr.net</a>
+</div>
+
+<script src="/watchmaking.io/assets/js/popups.js?v=1650985358" defer></script>
+<script src="/watchmaking.io/assets/js/popins.js?v=1650617058" defer></script> 
+<script src="/watchmaking.io/assets/js/annotations.js?v=1651100175" defer></script>
+<script src="/watchmaking.io/assets/js/extracts.js?v=1651162646" defer></script>
+<script src="/watchmaking.io/assets/js/extracts-annotations.js?v=1650997383" defer></script>
+<script src="/watchmaking.io/assets/js/extracts-content.js?v=1651020041" defer></script>
+<script src="/watchmaking.io/assets/js/extracts-options.js?v=1649625806" defer></script> 
+</footer>
+  </body>
+
+</html>
