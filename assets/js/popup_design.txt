@@ -1,0 +1,10 @@
+- Find Eligible Links
+        - Any Link within a node which has a class of articleBody
+        - Or Any Link with the forceAnnotate class
+    - Add visual decoration
+    - Attach Rollover Code
+        - Rollover opens popup
+        - popup shows preview & title
+        - popup show webpage
+    - Attach Poppin HRef
+    

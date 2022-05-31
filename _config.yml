@@ -37,3 +37,10 @@ collections:
     sort_by: page_order
     output: true
 
+typescript:
+  temp_dir: .typescript
+  extensions: ['.ts', '.tsx']
+  copy_ext: []
+  command: ['tsc']
+  cache: true
+  

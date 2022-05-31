@@ -1,7 +1,7 @@
 Bundle install
 Then use bundle exec and the Jekyll commands
 bundle exec jekyll build     
-bundle exec jekyll serve -w --baseurl ''
+bundle exec jekyll serve -w --baseurl '/watchmaking.io'
 
 
 Installing RMagick
@@ -14,7 +14,7 @@ bundle install
 
 
 x Make menu bar static
-H Make logo and FavIcon
+X Make logo and FavIcon
 H Analytics
 X Gallery Module
 X TODO - Generate thumbnails
@@ -28,7 +28,7 @@ X TODO - Generate thumbnails
 Get popup-preview working
 1 Use my own future-proof markdown to create popup links
 3 Fix local pages looking squished
-2 Fix Background Colour
+X Fix Background Colour
 X Fix page title not showing for local posts
 - Understand the page metadata
 X Remove option to disable popups
